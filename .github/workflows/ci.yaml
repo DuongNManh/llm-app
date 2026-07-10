@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [main, develop]
+    branches: [main, dev]
   pull_request:
-    branches: [main, develop]
+    branches: [main, dev]
 
 jobs:
   lint:
@@ -21,7 +21,7 @@ jobs:
           python-version-file: ".python-version"
 
       - name: Install dependencies
-        run: uv sync --all-packages --frozen-lockfile
+        run: uv sync --locked --all-extras --dev
 
       - name: Lint with ruff
         run: uv run ruff check --diff
