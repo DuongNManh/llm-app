@@ -70,6 +70,7 @@ def logger(func):
     return inner
 
 
+@retry(3)
 async def summarize(text: str) -> Summary:
     if text in _cache:
         return _cache[text]
@@ -94,6 +95,17 @@ async def rate_limited_summarize(text: str) -> Summary:
 
 
 @logger
-@retry(times=3)
 async def call_llm(doc: list[str]) -> list[Summary]:
     return await asyncio.gather(*[rate_limited_summarize(d) for d in doc])
+
+
+async def main():
+    with measure_time():
+        results = await call_llm(list_str)
+        for r in results:
+            print(f"Summary: {r.text[:30]}... ({r.word_count} words)")
+
+
+# await main()
+
+asyncio.run(main())
