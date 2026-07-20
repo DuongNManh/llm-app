@@ -1,0 +1,136 @@
+============================================================
+TEST CASE 1
+============================================================
+Input          : Sản phẩm rất tốt!
+Expected       : positive
+Actual         : positive
+Result         : Correct
+Prompt Tokens  : 130
+============================================================
+TEST CASE 2
+============================================================
+Input          : Dịch vụ khách hàng tệ quá.
+Expected       : negative
+Actual         : negative
+Result         : Correct
+Prompt Tokens  : 133
+============================================================
+TEST CASE 3
+============================================================
+Input          : Hôm nay trời mưa.
+Expected       : neutral
+Actual         : neutral
+Result         : Correct
+Prompt Tokens  : 131
+============================================================
+TEST CASE 4
+============================================================
+Input          : Tôi hài lòng với trải nghiệm mua sắm.
+Expected       : positive
+Actual         : positive
+Result         : Correct
+Prompt Tokens  : 136
+============================================================
+TEST CASE 5
+============================================================
+Input          : Giao hàng chậm trễ và không đúng hẹn.
+Expected       : negative
+Actual         : negative
+Result         : Correct
+Prompt Tokens  : 137
+============================================================
+TEST CASE 6
+============================================================
+Input          : Sản phẩm tốt, nhưng giao hàng chậm trễ.
+Expected       : negative
+Actual         : neutral
+Result         : Wrong
+Prompt Tokens  : 137
+============================================================
+TEST CASE 7
+============================================================
+Input          : Dịch vụ hỗ trợ khách hàng rất nhanh chóng.
+Expected       : positive
+Actual         : positive
+Result         : Correct
+Prompt Tokens  : 135
+============================================================
+TEST CASE 8
+============================================================
+Input          : Sản phẩm bị lỗi và không hoạt động.
+Expected       : negative
+Actual         : negative
+Result         : Correct
+Prompt Tokens  : 134
+============================================================
+TEST CASE 9
+============================================================
+Input          : Chỉ comment để kiếm xu, chưa thử sản phẩm.
+Expected       : neutral
+Actual         : neutral
+Result         : Correct
+Prompt Tokens  : 136
+============================================================
+TEST CASE 10
+============================================================
+Input          : Gà rán ở đây ngon tuyệt!
+Expected       : positive
+Actual         : positive
+Result         : Correct
+Prompt Tokens  : 133
+============================================================
+TEST CASE 11
+============================================================
+Input          : Tôi không hài lòng với chất lượng sản phẩm.
+Expected       : negative
+Actual         : negative
+Result         : Correct
+Prompt Tokens  : 136
+============================================================
+TEST CASE 12
+============================================================
+Input          : Sản phẩm ổn, nhưng không có gì đặc biệt.
+Expected       : neutral
+Actual         : neutral
+Result         : Correct
+Prompt Tokens  : 137
+============================================================
+TEST CASE 13
+============================================================
+Input          : Dịch vụ giao hàng rất nhanh chóng.
+Expected       : positive
+Actual         : positive
+Result         : Correct
+Prompt Tokens  : 133
+============================================================
+TEST CASE 14
+============================================================
+Input          : Tôi hi vọng được cưới nhân viên tư vấn.
+Expected       : neutral
+Actual         : positive
+Result         : Wrong
+Prompt Tokens  : 136
+============================================================
+TEST CASE 15
+============================================================
+Input          : Sản phẩm không đúng như mô tả.
+Expected       : negative
+Actual         : negative
+Result         : Correct
+Prompt Tokens  : 134
+
+============================================================
+SUMMARY
+============================================================
+Total Cases    : 15
+Correct        : 13
+Wrong          : 2
+Format Error   : 0
+Accuracy       : 86.67%
+Average Tokens : 134.53
+Tổng số ca test: 15
+Số ca đoán đúng: 13
+Số ca đoán sai: 2
+Số ca hỏng định dạng: 0
+Độ chính xác (Accuracy): 86.67 %
+Trung bình số token sử dụng: 134.53
