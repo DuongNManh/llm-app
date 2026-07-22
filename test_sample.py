@@ -1,6 +1,6 @@
 import pytest
-from idiomatic import Summary
-from weathercontroller import get_weather, Weather
+from home_works.idiomatic import Summary
+from home_works.weathercontroller import get_weather, Weather
 
 
 def calculator(x: int, y: int, op: str):
@@ -32,7 +32,7 @@ def test_summary():
 
 
 def test_call_llm():
-    from idiomatic import call_llm
+    from home_works.idiomatic import call_llm
     import asyncio
 
     async def test():
