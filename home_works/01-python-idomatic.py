@@ -14,7 +14,8 @@ def add(a: int, b: int) -> int:  # type hint cho input và output
 
 
 def fuction(texts: list[str]) -> list[list[str]]:  # type hint cho input và output
-    return texts  # lỗi kiểu dữ liệu, ide sẽ cảnh báo ngay, nhưng Python vẫn chạy được vì type hint chỉ là gợi ý, không bắt buộc
+    # return texts  # lỗi kiểu dữ liệu, ide sẽ cảnh báo ngay, nhưng Python vẫn chạy được vì type hint chỉ là gợi ý, không bắt buộc
+    return [texts]  # đúng kiểu dữ liệu, ide sẽ không cảnh báo lỗi
 
 
 print(
@@ -165,6 +166,7 @@ async def limited_fetch_data(q: str):
         return await fetch_data(q)
 
 
+# tại hàm main hoặc hàm
 print("Start limited fetch at " + str(datetime.datetime.now()))
 # chạy 20 task nhưng tối đa 5 vé cùng lúc
 # các task còn lại sẽ chờ đến khi có vé (xếp hàng đợi vé)

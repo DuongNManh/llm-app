@@ -401,5 +401,5 @@
 # .anthropic_api_key)
 
 # vì sao hơn os.getenv ?
-# os.getenv trả chuỗi hoặc None, dễ quên kiểm tra. Settings validate sẵn, tự 
+# os.getenv trả chuỗi hoặc None, dễ quên kiểm tra. Settings validate sẵn, tự
 # ép kiểu, gợi ý (autocomplete) — cấu hình sạch như dữ liệu
