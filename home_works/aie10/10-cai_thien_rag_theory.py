@@ -21,4 +21,4 @@ def split_documents(docs: list, chunk_size: int = 1000, chunk_overlap: int = 200
     )
     return splitter.split_documents(docs)
 
-# 2. hybrid: kết hợp nhiều vectorstore khác nhau, ví dụ: Chroma + FAISS, để tăng khả năng tìm kiếm ngữ cảnh.
+# 2. hybrid: kết hợp BM25 + embeddings để tìm kiếm ngữ cảnh, BM25 sẽ tìm kiếm các đoạn có từ khóa liên quan, embeddings sẽ tìm kiếm các đoạn có ngữ nghĩa liên quan. kết hợp 2 phương pháp này sẽ tăng khả năng tìm kiếm ngữ cảnh tốt hơn.
