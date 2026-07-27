@@ -36,15 +36,21 @@ RETRIEVER_K = 4
 # ─────────────── INDEXING ───────────────
 
 def load_pdf(file_path: str = PDF_PATH) -> list:
+    """Load PDF và trả về danh sách các trang dưới dạng Document."""
+    # sử dụng PyPDFLoader đặc biệt của langchain_community, giữ nguyên metadata của từng trang, bao gồm số trang, để có thể trích dẫn chính xác trong câu trả lời
     loader = PyPDFLoader(file_path)
     return loader.load()
 
 
 def split_documents(docs: list, chunk_size: int = 1000, chunk_overlap: int = 200) -> list:
+    """Split các trang thành các đoạn nhỏ hơn để tạo embeddings."""
+    # RecursiveCharacterTextSplitter sẽ thử nhiều separator khác nhau, từ separator dài đến separator ngắn, để tách văn bản.
+    # CharacterTextSplitter chỉ tách theo một separator duy nhất, nên có thể tách không tốt, ví dụ tách giữa 2 câu, hoặc giữa 2 đoạn văn.
     splitter = RecursiveCharacterTextSplitter(
         chunk_size=chunk_size,
         chunk_overlap=chunk_overlap,
         add_start_index=True,
+        separators=["\n\n", "\n", ".", "?", "!", ";", ",", " ", ""],
     )
     return splitter.split_documents(docs)
 
@@ -75,6 +81,7 @@ def create_vectorstore(
     )
 
     total = len(documents)
+    # em sử dụng batch và sleep để tránh bị rate limit của Gemini Embeddings API
     for i in range(0, total, batch_size):
         batch = documents[i : i + batch_size]
         vectorstore.add_documents(batch)
@@ -131,8 +138,29 @@ def build_rag_chain(vectorstore: Chroma, k: int = RETRIEVER_K):
     return chain
 
 
-def ask(chain, question: str) -> str:
-    return chain.invoke(question)
+
+# ─────────────── PIPELINE ───────────────
+
+def index_pipeline(pdf_path: str = PDF_PATH):
+    print("[1/4] Đang load PDF...")
+    docs = load_pdf(pdf_path)
+    print(f"  → {len(docs)} trang")
+
+    print("[2/4] Đang split documents...")
+    chunks = split_documents(docs)
+    print(f"  → {len(chunks)} chunks")
+
+    print("[3/4] Đang tạo embeddings và lưu Chroma (rate-limited)...")
+    vectorstore = create_vectorstore(chunks)
+    print(f"  → Đã lưu tại {CHROMA_DIR}")
+
+    print("[4/4] Xây dựng RAG chain...")
+    chain = build_rag_chain(vectorstore)
+
+    print("\n>>> Test 3 câu hỏi:")
+    test_queries(chain)
+
+    return chain
 
 
 # ─────────────── CHAT (KHÔNG RE-INDEX) ───────────────
@@ -169,30 +197,8 @@ def test_queries(chain=None):
         print(f"Trả lời: {ask(chain, q)}")
     print()
 
-
-# ─────────────── PIPELINE ───────────────
-
-def index_pipeline(pdf_path: str = PDF_PATH):
-    print("[1/4] Đang load PDF...")
-    docs = load_pdf(pdf_path)
-    print(f"  → {len(docs)} trang")
-
-    print("[2/4] Đang split documents...")
-    chunks = split_documents(docs)
-    print(f"  → {len(chunks)} chunks")
-
-    print("[3/4] Đang tạo embeddings và lưu Chroma (rate-limited)...")
-    vectorstore = create_vectorstore(chunks)
-    print(f"  → Đã lưu tại {CHROMA_DIR}")
-
-    print("[4/4] Xây dựng RAG chain...")
-    chain = build_rag_chain(vectorstore)
-
-    print("\n>>> Test 3 câu hỏi:")
-    test_queries(chain)
-
-    return chain
-
+def ask(chain, question: str) -> str:
+    return chain.invoke(question)
 
 if __name__ == "__main__":
     if not settings.GEMINI_API_KEY:

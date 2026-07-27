@@ -1,5 +1,5 @@
 import pytest
-from home_works.idiomatic import Summary
+from home_works.aie01.idiomatic import Summary
 from home_works.weathercontroller import get_weather, Weather
 
 
@@ -32,7 +32,7 @@ def test_summary():
 
 
 def test_call_llm():
-    from home_works.idiomatic import call_llm
+    from home_works.aie01.idiomatic import call_llm
     import asyncio
 
     async def test():
