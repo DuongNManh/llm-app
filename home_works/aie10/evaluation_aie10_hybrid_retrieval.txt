@@ -1,0 +1,83 @@
+============================================================
+EVALUATION REPORT: hybrid
+============================================================
+  Total cases : 15
+  Context Rec : 0.9231
+  Keyword Cov : None
+  Avg Latency : 0.068s
+============================================================
+
+#1 [✓] general         CR=True  KW=0.00  0.2s
+     pages -> [97, 22, 15, 70, 95, 95, 22, 2, 92, 66, 5, 4, 37, 7, 94, 6, 35, 68, 4, 3, 81, 65, 66, 66, 80, 90, 21, 20] (expected [65, 66])
+     Q: Hãy hướng dẫn kết nối Wifi cho điện thoại Samsung.
+     A: (skipped - no LLM)
+
+#2 [✓] general         CR=True  KW=0.00  0.1s
+     pages -> [42, 44, 37, 30, 35, 42, 15, 25, 12, 92, 90, 44, 84, 80, 25, 73, 5, 45, 36, 40, 48, 36, 78, 43, 11, 23, 3, 79] (expected [30])
+     Q: Cách chụp màn hình trên điện thoại Samsung?
+     A: (skipped - no LLM)
+
+#3 [✓] general         CR=True  KW=0.00  0.1s
+     pages -> [93, 6, 13, 14, 13, 13, 14, 6, 15, 93, 14, 37, 7, 35, 15, 16, 90, 11, 97, 2, 3, 18, 94] (expected [13, 14])
+     Q: Pin điện thoại Samsung nên sạc như thế nào cho đúng?
+     A: (skipped - no LLM)
+
+#4 [✓] general         CR=True  KW=0.00  0.1s
+     pages -> [22, 22, 21, 81, 81, 21, 82, 81, 81, 82, 22, 43, 70, 65, 18, 95, 82, 41, 22, 2] (expected [21, 22])
+     Q: Làm thế nào để chuyển dữ liệu từ máy cũ sang máy Samsung mới?
+     A: (skipped - no LLM)
+
+#5 [✓] semantic_gap    CR=True  KW=0.00  0.1s
+     pages -> [22, 22, 81, 21, 66, 70, 95, 38, 81, 41, 4, 65, 20, 22, 66, 83, 81, 21, 82, 80, 66, 65, 20, 23, 67] (expected [65, 66])
+     Q: Làm sao để vào Internet qua Wifi trên máy Samsung?
+     A: (skipped - no LLM)
+
+#6 [✓] semantic_gap    CR=True  KW=0.00  0.1s
+     pages -> [92, 92, 6, 16, 11, 35, 36, 2, 11, 84, 7, 2, 95, 91, 13, 80, 37, 19, 4, 95, 78, 4, 35, 4, 9] (expected [19])
+     Q: Điện thoại Samsung bị treo logo, làm thế nào để khắc phục?
+     A: (skipped - no LLM)
+
+#7 [✗] semantic_gap    CR=False  KW=0.00  0.1s
+     pages -> [4, 91, 92, 2, 92, 43, 7, 13, 6, 95, 20, 11, 2, 94, 56, 95, 76, 15, 22, 4, 11, 21, 9, 82, 96, 81, 78, 80] (expected [19])
+     Q: Máy Samsung của tôi bị đơ, không bấm được gì, phải làm sao?
+     A: (skipped - no LLM)
+
+#8 [✓] semantic_gap    CR=True  KW=0.00  0.1s
+     pages -> [6, 15, 6, 8, 82, 7, 6, 82, 81, 93, 82, 7, 81, 7, 21, 8, 82, 92, 21, 2, 81, 8, 4, 20, 11, 4] (expected [6, 7, 8])
+     Q: Samsung của tôi bị nóng quá, có sao không?
+     A: (skipped - no LLM)
+
+#9 [✓] semantic_gap    CR=True  KW=0.00  0.1s
+     pages -> [22, 22, 81, 81, 81, 82, 82, 21, 82, 97, 94, 52, 21, 70, 43, 42, 82, 94, 80, 38, 67] (expected [22])
+     Q: Làm cách nào sao chép ảnh từ Samsung qua máy vi tính?
+     A: (skipped - no LLM)
+
+#10 [✓] code_model      CR=True  KW=0.00  0.1s
+     pages -> [15, 16, 1, 16, 66, 16, 91, 18, 18, 17, 17, 76, 91, 90, 2, 49, 7, 15, 18, 78, 65] (expected [15, 16])
+     Q: SM-A125F/DS dùng loại thẻ SIM nào?
+     A: (skipped - no LLM)
+
+#11 [✓] code_model      CR=True  KW=0.00  0.1s
+     pages -> [97, 94, 56, 68, 35, 72, 2, 7, 89, 9, 4, 35, 18, 4, 84, 11, 89, 63, 21, 20, 90, 11, 37, 36, 4, 94] (expected [72])
+     Q: Điện thoại Samsung có hỗ trợ Dolby Atmos không?
+     A: (skipped - no LLM)
+
+#12 [✓] code_model      CR=True  KW=0.00  0.1s
+     pages -> [81, 21, 22, 21, 22, 81, 81, 81, 68, 88, 21, 22, 96, 67, 69, 4, 62, 77, 68, 66, 18] (expected [21, 22])
+     Q: Smart Switch có thể chuyển dữ liệu bằng cách nào?
+     A: (skipped - no LLM)
+
+#13 [✓] code_model      CR=True  KW=0.00  0.1s
+     pages -> [56, 91, 4, 94, 4, 92, 93, 93, 11, 49, 4, 95, 2, 7, 6, 95, 9, 49, 23, 96, 60, 80, 20, 76, 94] (expected [56])
+     Q: Samsung Members giúp ích gì khi máy gặp vấn đề?
+     A: (skipped - no LLM)
+
+#14 [✓] out_of_scope    CR=True  KW=0.00  0.1s
+     pages -> [9, 4, 97, 97, 9, 5, 47, 7, 1, 47, 96, 49, 22, 3, 25, 3, 81, 66, 63, 18, 69, 97, 5, 80] (expected [])
+     Q: Giá bán của sản phẩm này là bao nhiêu?
+     A: (skipped - no LLM)
+
+#15 [✓] out_of_scope    CR=True  KW=0.00  0.1s
+     pages -> [93, 4, 7, 87, 37, 9, 35, 11, 15, 92, 97, 15, 3, 6, 92, 95, 80, 90, 11, 2, 91, 84, 78, 87, 18, 75, 18, 92] (expected [])
+     Q: Bảo hành điện thoại Samsung bao lâu?
+     A: (skipped - no LLM)

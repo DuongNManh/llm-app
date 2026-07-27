@@ -1,0 +1,122 @@
+============================================================
+EVALUATION REPORT: chunking
+============================================================
+  Total cases : 15
+  Context Rec : 0.8462
+  Keyword Cov : 0.9333
+  Avg Latency : 11.054s
+============================================================
+
+#1 [✓] general         CR=True  KW=1.00  5.9s
+     pages -> [70, 95, 2, 66] (expected [65, 66])
+     Q: Hãy hướng dẫn kết nối Wifi cho điện thoại Samsung.
+     A: **Hướng dẫn kết nối Wi‑Fi cho điện thoại Samsung**
+
+1. Mở **Cài đặt** → **Kết nối** → **Wi‑Fi**.  
+2. Chạm vào công tắc để **bật** Wi‑Fi.  
+3. Chọn một mạng Wi‑Fi từ danh sách hiện ra.  
+4. Nếu mạng c
+
+#2 [✓] general         CR=True  KW=1.00  3.6s
+     pages -> [30, 42, 25, 12] (expected [30])
+     Q: Cách chụp màn hình trên điện thoại Samsung?
+     A: Cách chụp màn hình trên điện thoại Samsung là **nhấn đồng thời phím Cạnh và phím Giảm âm lượng**. Sau khi chụp, bạn có thể xem ảnh trong Bộ sưu tập. Lưu ý rằng một số ứng dụng hoặc tính năng có thể ch
+
+#3 [✓] general         CR=True  KW=0.67  12.0s
+     pages -> [6, 13, 93, 15] (expected [13, 14])
+     Q: Pin điện thoại Samsung nên sạc như thế nào cho đúng?
+     A: **Trả lời:**  
+Pin điện thoại Samsung nên được sạc bằng **bộ sạc và cáp được Samsung chứng nhận**, kết nối đúng cách, trước khi sử dụng lần đầu hoặc khi không dùng pin trong thời gian dài. Trong quá t
+
+#4 [✓] general         CR=True  KW=1.00  15.0s
+     pages -> [21, 81, 22, 22] (expected [21, 22])
+     Q: Làm thế nào để chuyển dữ liệu từ máy cũ sang máy Samsung mới?
+     A: Bạn có thể chuyển dữ liệu từ máy cũ sang máy Samsung mới bằng cách sử dụng **Smart Switch** – ứng dụng chuyển dữ liệu của Samsung. Dưới đây là các bước được mô tả trong tài liệu:
+
+---
+
+**Trang 20**  
+
+
+#5 [✓] semantic_gap    CR=True  KW=0.67  5.4s
+     pages -> [70, 95, 66, 21] (expected [65, 66])
+     Q: Làm sao để vào Internet qua Wifi trên máy Samsung?
+     A: Bạn có thể vào Internet qua Wi‑Fi trên điện thoại Samsung bằng cách thực hiện các bước sau (trích từ trang 65 của tài liệu):
+
+**Wi‑Fi**  
+- Bật tính năng Wi‑Fi để kết nối với mạng Wi‑Fi và truy cập mạ
+
+#6 [✗] semantic_gap    CR=False  KW=1.00  13.8s
+     pages -> [92, 92, 11, 7] (expected [19])
+     Q: Điện thoại Samsung bị treo logo, làm thế nào để khắc phục?
+     A: **Trả lời:**  
+Nếu điện thoại Samsung của bạn treo ở màn hình logo (boot loop), bạn có thể thực hiện các bước sau theo thứ tự:
+
+1. **Khởi động lại thiết bị** – tắt máy rồi bật lại hoặc tắt các ứng dụn
+
+#7 [✗] semantic_gap    CR=False  KW=1.00  6.8s
+     pages -> [92, 92, 7, 6] (expected [19])
+     Q: Máy Samsung của tôi bị đơ, không bấm được gì, phải làm sao?
+     A: Theo tài liệu, khi máy Samsung của bạn bị đơ hoặc không bấm được gì, bạn có thể thực hiện các bước sau:
+
+- **Khởi động lại thiết bị**  
+  > “Khởi động lại thiết bị  
+  > Nếu thiết bị của bạn bị đơ hoặ
+
+#8 [✓] semantic_gap    CR=True  KW=1.00  65.3s
+     pages -> [7, 6, 15, 93] (expected [6, 7, 8])
+     Q: Samsung của tôi bị nóng quá, có sao không?
+     A: **Trả lời:**  
+Thiết bị Samsung có thể nóng lên khi đang sạc – đây là hiện tượng bình thường và không ảnh hưởng đến hiệu suất hay tuổi thọ của thiết bị. Tuy nhiên, nếu thiết bị nóng quá mức (ví dụ: pi
+
+#9 [✓] semantic_gap    CR=True  KW=1.00  7.2s
+     pages -> [22, 82, 22, 81] (expected [22])
+     Q: Làm cách nào sao chép ảnh từ Samsung qua máy vi tính?
+     A: Bạn có thể sao chép ảnh từ điện thoại Samsung sang máy tính bằng cách sử dụng ứng dụng **Smart Switch** trên PC. Các bước cụ thể được mô tả trong tài liệu như sau:
+
+> **[Trang 21]**  
+> 1 Trên máy tín
+
+#10 [✓] code_model      CR=True  KW=1.00  2.9s
+     pages -> [1, 15, 16, 16] (expected [15, 16])
+     Q: SM-A125F/DS dùng loại thẻ SIM nào?
+     A: SM-A125F/DS dùng **thẻ nano SIM** (hoặc USIM nano SIM).  
+
+**Trích dẫn từ tài liệu:**  
+- Trang 14: “Thẻ SIM hoặc USIM (thẻ nano SIM) … Bạn có thể gắn hai thẻ SIM hoặc USIM …”  
+- Trang 15: “• Chỉ sử 
+
+#11 [✓] code_model      CR=True  KW=0.67  5.0s
+     pages -> [97, 94, 72, 7] (expected [72])
+     Q: Điện thoại Samsung có hỗ trợ Dolby Atmos không?
+     A: Có, điện thoại Samsung của bạn hỗ trợ Dolby Atmos.  
+
+**Trích dẫn từ tài liệu (Trang 71):**  
+> **Dolby Atmos:** Chọn một chế độ âm thanh vòm được tối ưu hóa cho các thể loại âm thanh đa dạng như phim
+
+#12 [✓] code_model      CR=True  KW=1.00  11.6s
+     pages -> [81, 21, 22, 22] (expected [21, 22])
+     Q: Smart Switch có thể chuyển dữ liệu bằng cách nào?
+     A: Smart Switch có thể truyền dữ liệu theo ba cách chính được nêu trong tài liệu:
+
+1. **Truyền dữ liệu không dây qua Wi‑Fi Direct**  
+   - “Truyền dữ liệu không dây  
+     Truyền dữ liệu không dây từ thi
+
+#13 [✓] code_model      CR=True  KW=1.00  7.9s
+     pages -> [56, 91, 92, 4] (expected [56])
+     Q: Samsung Members giúp ích gì khi máy gặp vấn đề?
+     A: Samsung Members hỗ trợ người dùng khi máy gặp vấn đề bằng cách:
+
+- **Chẩn đoán vấn đề thiết bị** và cho phép người dùng **gửi báo cáo lỗi và câu hỏi**.  
+- **Chia sẻ thông tin** với những người dùng G
+
+#14 [✓] out_of_scope    CR=True  KW=1.00  1.8s
+     pages -> [4, 7, 9, 1] (expected [])
+     Q: Giá bán của sản phẩm này là bao nhiêu?
+     A: Tài liệu không đề cập đến vấn đề này.
+
+#15 [✓] out_of_scope    CR=True  KW=1.00  1.6s
+     pages -> [7, 4, 9, 11] (expected [])
+     Q: Bảo hành điện thoại Samsung bao lâu?
+     A: Tài liệu không đề cập đến vấn đề này.

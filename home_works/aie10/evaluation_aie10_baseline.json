@@ -1,0 +1,284 @@
+{
+  "variant": "baseline",
+  "num_cases": 15,
+  "context_recall": 0.8462,
+  "keyword_coverage": 0.9222,
+  "avg_latency": 10.776,
+  "details": [
+    {
+      "id": 1,
+      "category": "general",
+      "question": "Hãy hướng dẫn kết nối Wifi cho điện thoại Samsung.",
+      "answer_preview": "**Hướng dẫn kết nối Wi‑Fi cho điện thoại Samsung (trích từ tài liệu, trang 65):**\n\n> **Wi‑Fi**  \n> Bật tính năng Wi‑Fi để kết nối với mạng Wi‑Fi và truy cập mạng Internet hoặc các thiết bị mạng khác.  \n> **Kết nối với mạng Wi‑Fi**  \n> 1. Trên màn hình Cài đặt, chạm vào **Kết nối → Wi‑Fi** và chạm vào công tắc để bật.  \n> 2. Chọn một mạng từ danh sách mạng Wi‑Fi.  \n>    - Các mạng với biểu tượng kh",
+      "context_recall": true,
+      "keyword_coverage": 0.5,
+      "latency_total": 8.155,
+      "retrieved_pages": [
+        70,
+        97,
+        66,
+        92
+      ],
+      "expected_pages": [
+        65,
+        66
+      ]
+    },
+    {
+      "id": 2,
+      "category": "general",
+      "question": "Cách chụp màn hình trên điện thoại Samsung?",
+      "answer_preview": "**Trích dẫn từ tài liệu (Trang 29):**\n\n```\n[Trang 29] Thông tin cơ bản\n30\nChụp màn hình\nChụp ảnh màn hình khi đang sử dụng thiết bị. Nhấn phím Cạnh và phím Giảm âm lượng cùng lúc. Bạn \ncó thể xem ảnh chụp màn hình đã chụp trong Bộ sưu tập.\nKhông thể chụp ảnh màn hình khi đang sử dụng một số ứng dụng và tính năng.\n```\n\n**Cách chụp màn hình trên điện thoại Samsung:**  \nBạn chỉ cần **nhấn đồng thời p",
+      "context_recall": true,
+      "keyword_coverage": 1.0,
+      "latency_total": 5.832,
+      "retrieved_pages": [
+        30,
+        42,
+        12,
+        73
+      ],
+      "expected_pages": [
+        30
+      ]
+    },
+    {
+      "id": 3,
+      "category": "general",
+      "question": "Pin điện thoại Samsung nên sạc như thế nào cho đúng?",
+      "answer_preview": "**Pin điện thoại Samsung nên sạc như sau (dựa trên tài liệu):**\n\n- Sạc pin trước khi sử dụng lần đầu hoặc khi không sử dụng pin trong thời gian dài.  \n- Chỉ sử dụng pin, bộ sạc và cáp được thiết kế đặc biệt dành cho thiết bị và đã được Samsung chứng nhận; không dùng pin, bộ sạc hoặc dây cáp không tương thích.  \n- Chỉ dùng cáp USB‑Type‑C được cung cấp cùng với thiết bị; không dùng cáp Micro USB.  \n",
+      "context_recall": true,
+      "keyword_coverage": 1.0,
+      "latency_total": 36.674,
+      "retrieved_pages": [
+        13,
+        93,
+        15,
+        14
+      ],
+      "expected_pages": [
+        13,
+        14
+      ]
+    },
+    {
+      "id": 4,
+      "category": "general",
+      "question": "Làm thế nào để chuyển dữ liệu từ máy cũ sang máy Samsung mới?",
+      "answer_preview": "Bạn có thể chuyển dữ liệu từ máy cũ sang máy Samsung mới bằng cách sử dụng **Smart Switch** theo một trong hai cách sau:\n\n### 1. Sử dụng Smart Switch trên máy tính (PC)  \n> **[Trang 21]**  \n> 1. Trên máy tính, hãy truy cập **www.samsung.com/smartswitch** để tải về Smart Switch.  \n> 2. Trên máy tính, khởi chạy Smart Switch.  \n> 3. Nếu thiết bị trước của bạn không phải là thiết bị Samsung, hãy sao l",
+      "context_recall": true,
+      "keyword_coverage": 1.0,
+      "latency_total": 16.973,
+      "retrieved_pages": [
+        22,
+        81,
+        21,
+        81
+      ],
+      "expected_pages": [
+        21,
+        22
+      ]
+    },
+    {
+      "id": 5,
+      "category": "semantic_gap",
+      "question": "Làm sao để vào Internet qua Wifi trên máy Samsung?",
+      "answer_preview": "**Trả lời:**  \nĐể vào Internet qua Wi‑Fi trên điện thoại Samsung, bạn thực hiện các bước sau (trích từ trang 65 của tài liệu):\n\n> **Wi‑Fi**  \n> Bật tính năng Wi‑Fi để kết nối với mạng Wi‑Fi và truy cập mạng Internet hoặc các thiết bị mạng khác.  \n> **Kết nối với mạng Wi‑Fi**  \n> 1. Trên màn hình Cài đặt, chạm vào **Kết nối → Wi‑Fi** và chạm vào công tắc để bật.  \n> 2. Chọn một mạng từ danh sách mạ",
+      "context_recall": true,
+      "keyword_coverage": 0.6667,
+      "latency_total": 16.141,
+      "retrieved_pages": [
+        70,
+        22,
+        66,
+        20
+      ],
+      "expected_pages": [
+        65,
+        66
+      ]
+    },
+    {
+      "id": 6,
+      "category": "semantic_gap",
+      "question": "Điện thoại Samsung bị treo logo, làm thế nào để khắc phục?",
+      "answer_preview": "Nếu điện thoại Samsung của bạn bị treo ở màn hình logo (không phản hồi), cách khắc phục đầu tiên là **thực hiện khởi động lại buộc** (force restart) theo hướng dẫn sau:\n\n- **Nhấn và giữ đồng thời phím Cạnh (nút nguồn) và phím Giảm âm lượng** trong **hơn 7 giây** cho đến khi thiết bị khởi động lại.\n\n> **Trích dẫn từ tài liệu:**  \n> “**Buộc khởi động lại**  \n> Nếu thiết bị của bạn bị treo và không p",
+      "context_recall": false,
+      "keyword_coverage": 1.0,
+      "latency_total": 4.822,
+      "retrieved_pages": [
+        92,
+        92,
+        11,
+        7
+      ],
+      "expected_pages": [
+        19,
+        92
+      ]
+    },
+    {
+      "id": 7,
+      "category": "semantic_gap",
+      "question": "Máy Samsung của tôi bị đơ, không bấm được gì, phải làm sao?",
+      "answer_preview": "Nếu máy Samsung của bạn bị đơ và không bấm được gì, bạn có thể thực hiện các bước sau theo hướng dẫn trong tài liệu:\n\n**1. Khởi động lại thiết bị**  \n> “Nếu thiết bị của bạn bị đơ hoặc treo máy, bạn có thể cần phải tắt các ứng dụng hoặc tắt thiết bị và bật lại.”  \n\n**2. Buộc khởi động lại (nếu thiết bị không phản hồi)**  \n> “Nếu thiết bị của bạn bị treo và không phản hồi, nhấn và giữ phím Cạnh và ",
+      "context_recall": false,
+      "keyword_coverage": 1.0,
+      "latency_total": 11.38,
+      "retrieved_pages": [
+        92,
+        92,
+        96,
+        91
+      ],
+      "expected_pages": [
+        19
+      ]
+    },
+    {
+      "id": 8,
+      "category": "semantic_gap",
+      "question": "Samsung của tôi bị nóng quá, có sao không?",
+      "answer_preview": "Theo tài liệu, thiết bị Samsung có thể nóng lên trong một số trường hợp như:  \n- Sạc pin (sạc có dây, không dây hoặc sạc nhanh)  \n- Sử dụng điểm truy cập di động và chia sẻ kết nối internet  \n- Thiết bị trong khu vực tín hiệu yếu hoặc bắt sóng kém  \n- Sạc pin bằng cáp USB bị hỏng  \n- Khe cắm đa năng bị hỏng hoặc tiếp xúc với chất lỏng, bụi, bột kim loại, ruột bút chì  \n- Đang chuyển vùng dữ liệu  ",
+      "context_recall": true,
+      "keyword_coverage": 1.0,
+      "latency_total": 24.418,
+      "retrieved_pages": [
+        7,
+        93,
+        6,
+        8
+      ],
+      "expected_pages": [
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "id": 9,
+      "category": "semantic_gap",
+      "question": "Làm cách nào sao chép ảnh từ Samsung qua máy vi tính?",
+      "answer_preview": "Bạn có thể sao chép ảnh (và các dữ liệu khác) từ thiết bị Samsung sang máy tính bằng cách sử dụng ứng dụng **Smart Switch** theo các bước sau:\n\n1. Trên máy tính, truy cập **www.samsung.com/smartswitch** để tải về Smart Switch.  \n2. Khởi chạy Smart Switch trên máy tính.  \n3. Kết nối thiết bị Samsung của bạn với máy tính bằng cáp USB của thiết bị.  \n4. Làm theo hướng dẫn trên màn hình để **sao lưu d",
+      "context_recall": true,
+      "keyword_coverage": 1.0,
+      "latency_total": 6.034,
+      "retrieved_pages": [
+        22,
+        82,
+        81,
+        22
+      ],
+      "expected_pages": [
+        22
+      ]
+    },
+    {
+      "id": 10,
+      "category": "code_model",
+      "question": "SM-A125F/DS dùng loại thẻ SIM nào?",
+      "answer_preview": "SM-A125F/DS dùng **thẻ nano SIM**.\n\n**Trích dẫn từ tài liệu (Trang 15):**\n\n> • Chỉ sử dụng thẻ nano SIM.  \n> • Hãy thận trọng không để mất hoặc cho người khác sử dụng thẻ SIM hoặc USIM. Samsung không chịu trách nhiệm cho bất kỳ thiệt hại hay sự bất tiện nào bị gây ra bởi các thẻ bị mất hoặc bị đánh cắp.  \n> • Đảm bảo rằng chân chốt đẩy vuông góc với lỗ. Nếu không, thiết bị có thể bị hỏng.  \n> • Nế",
+      "context_recall": true,
+      "keyword_coverage": 1.0,
+      "latency_total": 5.674,
+      "retrieved_pages": [
+        1,
+        15,
+        16,
+        18
+      ],
+      "expected_pages": [
+        15,
+        16
+      ]
+    },
+    {
+      "id": 11,
+      "category": "code_model",
+      "question": "Điện thoại Samsung có hỗ trợ Dolby Atmos không?",
+      "answer_preview": "Có, điện thoại Samsung hỗ trợ Dolby Atmos.  \n\n**Trích dẫn từ tài liệu (Trang 71):**  \n> **Dolby Atmos:** Chọn một chế độ âm thanh vòm được tối ưu hóa cho các thể loại âm thanh đa dạng như phim, nhạc và giọng nói. Với Dolby Atmos, bạn có thể trải nghiệm dòng chảy âm thanh chuyển động vòng quanh bạn.  \n\nDo đó, thiết bị có thể bật và sử dụng tính năng Dolby Atmos để cải thiện trải nghiệm âm thanh.",
+      "context_recall": true,
+      "keyword_coverage": 0.6667,
+      "latency_total": 2.638,
+      "retrieved_pages": [
+        97,
+        72,
+        4,
+        4
+      ],
+      "expected_pages": [
+        72
+      ]
+    },
+    {
+      "id": 12,
+      "category": "code_model",
+      "question": "Smart Switch có thể chuyển dữ liệu bằng cách nào?",
+      "answer_preview": "Smart Switch hỗ trợ truyền dữ liệu theo ba cách chính:\n\n1. **Truyền dữ liệu không dây (Wi‑Fi Direct)**  \n   - Trang 20:  \n     > “Truyền dữ liệu không dây  \n     > Truyền dữ liệu không dây từ thiết bị trước sang thiết bị của bạn qua Wi‑Fi Direct.  \n     > 1 Trên thiết bị trước, khởi chạy Smart Switch.  \n     > …  \n     > 2 Trên thiết bị của bạn, khởi chạy ứng dụng Cài đặt và chạm vào Tài khoản và ",
+      "context_recall": true,
+      "keyword_coverage": 1.0,
+      "latency_total": 13.414,
+      "retrieved_pages": [
+        21,
+        22,
+        22,
+        81
+      ],
+      "expected_pages": [
+        21,
+        22
+      ]
+    },
+    {
+      "id": 13,
+      "category": "code_model",
+      "question": "Samsung Members giúp ích gì khi máy gặp vấn đề?",
+      "answer_preview": "Samsung Members giúp bạn khi máy gặp vấn đề bằng cách cung cấp các dịch vụ hỗ trợ như chẩn đoán vấn đề thiết bị, cho phép bạn gửi báo cáo lỗi và câu hỏi, chia sẻ thông tin với người dùng Galaxy khác, xem tin tức và gợi ý mới nhất, từ đó giúp giải quyết bất kỳ vấn đề nào bạn có thể gặp trong quá trình sử dụng thiết bị.\n\n**Trích dẫn từ tài liệu (Trang 55):**\n\n> “Samsung Members mang lại các dịch vụ ",
+      "context_recall": true,
+      "keyword_coverage": 1.0,
+      "latency_total": 5.902,
+      "retrieved_pages": [
+        56,
+        91,
+        92,
+        4
+      ],
+      "expected_pages": [
+        56
+      ]
+    },
+    {
+      "id": 14,
+      "category": "out_of_scope",
+      "question": "Giá bán của sản phẩm này là bao nhiêu?",
+      "answer_preview": "Tài liệu không đề cập đến vấn đề này.",
+      "context_recall": true,
+      "keyword_coverage": 1.0,
+      "latency_total": 1.055,
+      "retrieved_pages": [
+        9,
+        97,
+        1,
+        4
+      ],
+      "expected_pages": []
+    },
+    {
+      "id": 15,
+      "category": "out_of_scope",
+      "question": "Bảo hành điện thoại Samsung bao lâu?",
+      "answer_preview": "Tài liệu không đề cập đến vấn đề này.",
+      "context_recall": true,
+      "keyword_coverage": 1.0,
+      "latency_total": 2.526,
+      "retrieved_pages": [
+        4,
+        4,
+        87,
+        81
+      ],
+      "expected_pages": []
+    }
+  ]
+}
