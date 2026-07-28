@@ -1,0 +1,570 @@
+============================================================
+VARIANT: vector_only_1000/200
+============================================================
+  Total cases : 10
+  Context Rec : None
+  Keyword Cov : 1.0
+  Avg Latency : 0.0s
+============================================================
+
+#1  [OK]  general  CR=True  KW=1.00  3.2s
+     pages => [66, 20, 70, 67]  (expected [])
+     Q: Hãy hướng dẫn kết nối Wifi cho điện thoại Samsung.
+     Q: Chào bạn, để kết nối điện thoại Samsung của bạn với mạng Wi-Fi, bạn có thể thực hiện theo các bước đơn giản sau đây dựa trên tài liệu hướng dẫn:
+
+1. Trên màn hình **Cài đặt**, bạn hãy chạm vào mục **Kết nối**.
+2. Chọn **Wi-Fi** và chạm vào công tắc để bật tính năng này lên.
+3. Chọn một mạng từ danh sách mạng Wi-Fi hiện ra. Nếu mạng có biểu tượng khóa, bạn sẽ cần nhập mật mã để kết nối.
+
+**Một số lưu ý nhỏ:**
+* Sau khi đã kết nối thành công, thiết bị sẽ tự động kết nối lại với mạng đó mỗi khi khả dụng mà không cần nhập lại mật mã. Nếu bạn muốn tắt tính năng tự động kết nối này, hãy chạm vào biểu tượng bên cạnh mạng đó và tắt công tắc **Tự động kết nối lại**.
+* Nếu bạn gặp khó khăn khi kết nối, hãy thử khởi động lại tính năng Wi-Fi trên thiết bị.
+
+Dưới đây là đoạn trích dẫn chi tiết từ tài liệu:
+> "Wi-Fi
+> Bật tính năng Wi-Fi để kết nối với mạng Wi-Fi và truy cập mạng Internet hoặc các thiết bị mạng khác.
+> Kết nối với mạng Wi-Fi
+> 1 Trên màn hình Cài đặt, chạm vào Kết nối → Wi-Fi và chạm vào công tắc để bật.
+> 2 Chọn một mạng từ danh sách mạng Wi-Fi.
+> Các mạng với biểu tượng khóa cần có mật mã.
+> • Sau khi thiết bị kết nối với mạng Wi-Fi, thiết bị sẽ kết nối lại với mạng đó mỗi lần mạng này khả dụng mà không yêu cầu mật mã. Để tránh việc thiết bị tự động kết nối mạng, chạm vào bên cạnh mạng đó rồi chạm vào công tắc Tự động kết nối lại để tắt.
+> • Nếu bạn không thể kết nối đúng với mạng Wi-Fi, khởi động lại tính năng Wi-Fi của thiết bị" (Trang 65).
+
+Hy vọng thông tin này giúp ích cho bạn!
+
+#2  [OK]  general  CR=True  KW=1.00  2.5s
+     pages => [30, 12, 42, 42]  (expected [])
+     Q: Cách chụp màn hình trên điện thoại Samsung?
+     Q: Chào bạn, để chụp màn hình trên điện thoại Samsung, bạn có thể thực hiện theo hướng dẫn sau đây:
+
+**Cách chụp màn hình:**
+Bạn hãy nhấn đồng thời **phím Cạnh** và **phím Giảm âm lượng** cùng lúc. Sau khi chụp, bạn có thể xem lại ảnh trong ứng dụng Bộ sưu tập.
+
+**Lưu ý:**
+*   Bạn không thể chụp ảnh màn hình khi đang sử dụng một số ứng dụng và tính năng nhất định (ví dụ như khi đang sử dụng chế độ bí mật).
+
+Dưới đây là đoạn trích dẫn từ tài liệu để bạn tham khảo thêm:
+
+> "[Trang 29] Chụp màn hình
+> Chụp ảnh màn hình khi đang sử dụng thiết bị. Nhấn phím Cạnh và phím Giảm âm lượng cùng lúc. Bạn có thể xem ảnh chụp màn hình đã chụp trong Bộ sưu tập.
+> Không thể chụp ảnh màn hình khi đang sử dụng một số ứng dụng và tính năng."
+
+> "[Trang 11] Phím Cạnh + phím Giảm âm lượng: Nhấn cùng lúc để chụp màn hình."
+
+> "[Trang 41] Trong chế độ bí mật, bạn không thể sử dụng một số tính năng như chụp màn hình."
+
+#5  [OK]  semantic_gap  CR=True  KW=1.00  3.2s
+     pages => [66, 20, 70, 65]  (expected [])
+     Q: Làm sao để vào Internet qua Wifi trên máy Samsung?
+     Q: Chào bạn, để kết nối Internet qua Wi-Fi trên thiết bị Samsung, bạn có thể thực hiện theo các bước hướng dẫn sau đây (trích từ tài liệu trang 65):
+
+1. Trên màn hình **Cài đặt**, chạm vào **Kết nối** → **Wi-Fi** và chạm vào công tắc để bật tính năng này.
+2. Chọn một mạng từ danh sách mạng Wi-Fi hiện ra. (Lưu ý: Các mạng có biểu tượng khóa sẽ yêu cầu bạn nhập mật mã).
+
+**Một số lưu ý nhỏ:**
+* Sau khi thiết bị đã kết nối thành công với một mạng Wi-Fi, thiết bị sẽ tự động kết nối lại với mạng đó mỗi khi mạng khả dụng mà không cần nhập lại mật mã. Nếu bạn muốn tắt tính năng tự động kết nối này, hãy chạm vào biểu tượng bên cạnh mạng đó rồi chạm vào công tắc **Tự động kết nối lại** để tắt.
+* Nếu bạn gặp khó khăn khi kết nối, hãy thử khởi động lại tính năng Wi-Fi trên thiết bị.
+
+---
+**Trích dẫn từ tài liệu:**
+"[Trang 65] Wi-Fi
+Bật tính năng Wi-Fi để kết nối với mạng Wi-Fi và truy cập mạng Internet hoặc các thiết bị mạng khác.
+Kết nối với mạng Wi-Fi
+1 Trên màn hình Cài đặt, chạm vào Kết nối → Wi-Fi và chạm vào công tắc để bật.
+2 Chọn một mạng từ danh sách mạng Wi-Fi.
+Các mạng với biểu tượng khóa cần có mật mã.
+• Sau khi thiết bị kết nối với mạng Wi-Fi, thiết bị sẽ kết nối lại với mạng đó mỗi lần mạng này khả dụng mà không yêu cầu mật mã. Để tránh việc thiết bị tự động kết nối mạng, chạm vào bên cạnh mạng đó rồi chạm vào công tắc Tự động kết nối lại để tắt.
+• Nếu bạn không thể kết nối đúng với mạng Wi-Fi, khởi động lại tính năng Wi-Fi của thiết bị"
+
+#7  [OK]  semantic_gap  CR=True  KW=1.00  3.2s
+     pages => [92, 92, 91, 96]  (expected [])
+     Q: Máy Samsung của tôi bị đơ, không bấm được gì, phải làm sao?
+     Q: Chào bạn, rất tiếc khi biết bạn đang gặp vấn đề với thiết bị Samsung của mình. Để khắc phục tình trạng máy bị đơ hoặc treo, bạn có thể thực hiện theo các hướng dẫn sau từ tài liệu:
+
+**1. Khởi động lại thiết bị:**
+Nếu thiết bị của bạn bị đơ hoặc treo máy, bạn có thể cần phải tắt các ứng dụng hoặc tắt thiết bị và bật lại.
+
+**2. Buộc khởi động lại:**
+Nếu thiết bị của bạn bị treo và không phản hồi, nhấn và giữ phím Cạnh và phím Giảm âm lượng cùng lúc trong hơn 7 giây để khởi động lại.
+
+**3. Cài đặt lại thiết bị (Khôi phục cài đặt gốc):**
+Nếu các phương pháp trên vẫn không giải quyết được vấn đề, bạn có thể thực hiện khôi phục lại cài đặt gốc:
+*   Khởi chạy ứng dụng **Cài đặt** và chạm vào **Quản lý chung** → **Đặt lại** → **Khôi phục cài đặt gốc** → **Đặt lại** → **Xóa hết**.
+*   *Lưu ý:* Trước khi khôi phục lại cài đặt gốc, hãy nhớ sao lưu toàn bộ dữ liệu quan trọng được lưu trong thiết bị.
+
+**4. Liên hệ hỗ trợ:**
+Nếu sau khi thử các giải pháp trên mà vấn đề vẫn chưa được giải quyết, bạn vui lòng liên hệ với Trung tâm bảo hành của Samsung để được hỗ trợ thêm.
+
+---
+*Trích dẫn từ tài liệu:*
+> "Khởi động lại thiết bị: Nếu thiết bị của bạn bị đơ hoặc treo máy, bạn có thể cần phải tắt các ứng dụng hoặc tắt thiết bị và bật lại."
+> "Buộc khởi động lại: Nếu thiết bị của bạn bị treo và không phản hồi, nhấn và giữ phím Cạnh và phím Giảm âm lượng cùng lúc trong hơn 7 giây để khởi động lại."
+> "Cài đặt lại thiết bị: Nếu các phương pháp trên vẫn không giải quyết được vấn đề, thực hiện khôi phục lại cài đặt gốc. Khởi chạy ứng dụng Cài đặt và chạm vào Quản lý chung → Đặt lại → Khôi phục cài đặt gốc → Đặt lại → Xóa hết. Trước khi khôi phục lại cài đặt gốc, hãy nhớ sao lưu toàn bộ dữ liệu quan trọng được lưu trong thiết bị."
+> "Thiết bị bị treo máy hoặc có lỗi nghiêm trọng: Hãy thử các giải pháp sau. Nếu vẫn chưa giải quyết được vấn đề, liên hệ với Trung tâm bảo hành của Samsung."
+
+#8  [OK]  semantic_gap  CR=True  KW=1.00  4.3s
+     pages => [7, 8, 6, 8]  (expected [])
+     Q: Samsung của tôi bị nóng quá, có sao không?
+     Q: Chào bạn, việc điện thoại Samsung bị nóng có thể do nhiều nguyên nhân khác nhau. Dưới đây là thông tin chi tiết để bạn tham khảo:
+
+**1. Tại sao thiết bị bị nóng?**
+Theo tài liệu, thiết bị có thể nóng lên trong các trường hợp sau:
+*   **Trong quá trình sạc:** Việc thiết bị và bộ sạc nóng lên khi đang sạc (đặc biệt là sạc không dây hoặc sạc nhanh) là hiện tượng bình thường, không ảnh hưởng đến hiệu suất hay tuổi thọ của máy.
+*   **Các tình huống sử dụng:**
+    *   Sử dụng tính năng điểm truy cập di động và chia sẻ kết nối internet.
+    *   Sử dụng thiết bị trong khu vực có tín hiệu yếu hoặc bắt sóng kém.
+    *   Sử dụng cáp USB bị hỏng hoặc khe cắm đa năng bị hỏng/bám bụi bẩn, chất lỏng, kim loại.
+    *   Đang chuyển vùng dữ liệu.
+    *   Do môi trường: Để thiết bị dưới ánh nắng trực tiếp, trong xe hơi vào mùa hè, gần bếp, lò vi sóng hoặc trên thảm sưởi điện.
+
+**2. Bạn cần làm gì khi thiết bị nóng lên?**
+*   **Đối với việc sạc pin:** Ngắt bộ sạc, tắt các ứng dụng đang chạy và chờ thiết bị hạ nhiệt rồi mới sạc lại. Nếu chỉ phần dưới máy bị nóng, hãy thay cáp USB mới đã được Samsung chứng nhận.
+*   **Đối với việc sử dụng thông thường:**
+    *   Cập nhật phần mềm mới nhất.
+    *   Khởi động lại thiết bị để tránh xung đột ứng dụng.
+    *   Tắt Wi-Fi, GPS, Bluetooth khi không dùng.
+    *   Đóng các ứng dụng chạy ngầm hoặc ứng dụng tiêu tốn pin.
+    *   Xóa các file không cần thiết và giảm độ sáng màn hình.
+    *   Nếu thiết bị nóng trong thời gian dài, hãy ngưng sử dụng một lúc. Nếu vẫn không cải thiện, hãy liên hệ Trung tâm bảo hành Samsung.
+
+**3. Lưu ý quan trọng về an toàn:**
+*   Nếu bạn cảm thấy không thoải mái do thiết bị quá nóng, hãy ngưng sử dụng ngay.
+*   Khi thiết bị đạt đến nhiệt độ nhất định, máy sẽ tự động giới hạn hiệu năng, đóng ứng dụng hoặc tắt nguồn để bảo vệ thiết bị và tránh tổn thương da. Trong trường hợp này, bạn tuyệt đối không sử dụng thiết bị cho đến khi nhiệt độ giảm xuống dưới mức chỉ định.
+
+---
+**Trích dẫn từ tài liệu:**
+*[Trang 5] Thiết bị nóng lên trong quá trình sạc pin: Trong khi đang sạc, thiết bị và bộ sạc có thể bị nóng lên... Điều này không ảnh hưởng đến hiệu suất hay tuổi thọ của thiết bị và nằm trong phạm vi hoạt động bình thường của thiết bị.*
+*[Trang 6] Khi thiết bị nóng lên, hãy thực hiện các bước sau: [Danh sách các bước xử lý như cập nhật phần mềm, khởi động lại, tắt tính năng không dùng, v.v.]*
+*[Trang 7] Cẩn trọng khi thiết bị quá nhiệt: Nếu bạn bắt đầu cảm thấy không thoải mái do thiết bị quá nóng, hãy ngưng sử dụng thiết bị... Nếu xuất hiện thông báo thứ hai do nhiệt độ thiết bị tiếp tục tăng, thiết bị sẽ tắt nguồn. Không sử dụng thiết bị cho đến khi nhiệt độ giảm xuống dưới mức chỉ định.*
+
+#10  [OK]  code_model  CR=True  KW=1.00  1.8s
+     pages => [1, 16, 15, 16]  (expected [])
+     Q: SM-A125F/DS dùng loại thẻ SIM nào?
+     Q: Chào bạn, cảm ơn bạn đã liên hệ với bộ phận hỗ trợ kỹ thuật của Samsung.
+
+Đối với thiết bị SM-A125F/DS, bạn cần sử dụng loại **thẻ nano SIM**.
+
+Thông tin chi tiết được trích dẫn từ tài liệu hướng dẫn sử dụng như sau:
+
+*   **Tại trang 14:** "Thẻ SIM hoặc USIM (thẻ nano SIM). Gắn thẻ SIM hoặc USIM được nhà cung cấp dịch vụ điện thoại di động cung cấp."
+*   **Tại trang 15:** "Chỉ sử dụng thẻ nano SIM."
+
+Hy vọng thông tin này hữu ích với bạn! Nếu cần hỗ trợ thêm, bạn đừng ngần ngại đặt câu hỏi nhé.
+
+#11  [OK]  code_model  CR=True  KW=1.00  2.3s
+     pages => [1, 72, 97, 3]  (expected [])
+     Q: Điện thoại SM-A125F/DS có hỗ trợ Dolby Atmos không?
+     Q: Chào bạn, cảm ơn bạn đã liên hệ với bộ phận hỗ trợ kỹ thuật của Samsung.
+
+Dựa trên tài liệu hướng dẫn sử dụng của thiết bị SM-A125F/DS, điện thoại của bạn **có hỗ trợ tính năng Dolby Atmos**.
+
+Dưới đây là thông tin chi tiết được trích dẫn từ tài liệu:
+
+**[Trang 71] Cài đặt**
+> **Hiệu ứng và chất lượng âm thanh**
+> Cài đặt chất lượng và hiệu ứng âm thanh của thiết bị.
+> Trên màn hình Cài đặt, chạm vào Âm thanh và rung → Hiệu ứng và chất lượng âm thanh.
+> • **Dolby Atmos**: Chọn một chế độ âm thanh vòm được tối ưu hóa cho các thể loại âm thanh đa dạng như phim, nhạc và giọng nói. Với Dolby Atmos, bạn có thể trải nghiệm dòng chảy âm thanh chuyển động vòng quanh bạn.
+
+Hy vọng thông tin này giúp ích cho bạn! Nếu cần hỗ trợ thêm, bạn đừng ngần ngại đặt câu hỏi nhé.
+
+#13  [OK]  code_model  CR=True  KW=1.00  2.8s
+     pages => [56, 91, 92, 95]  (expected [])
+     Q: Samsung Members giúp ích gì khi máy gặp vấn đề?
+     Q: Chào bạn, rất vui được hỗ trợ bạn!
+
+Khi thiết bị gặp vấn đề, ứng dụng **Samsung Members** sẽ giúp ích cho bạn thông qua các tính năng sau:
+
+*   **Chẩn đoán thiết bị:** Hỗ trợ kiểm tra và chẩn đoán các vấn đề đang xảy ra trên thiết bị.
+*   **Hỗ trợ kỹ thuật:** Cho phép bạn gửi các báo cáo lỗi và câu hỏi về cho Samsung.
+*   **Cộng đồng và thông tin:** Bạn có thể chia sẻ thông tin với những người dùng khác trong cộng đồng Galaxy hoặc xem các tin tức, gợi ý mới nhất.
+*   **Giải quyết vấn đề:** Ứng dụng có thể giúp bạn giải quyết bất kỳ vấn đề nào phát sinh trong quá trình sử dụng thiết bị.
+
+Dưới đây là đoạn trích dẫn từ tài liệu để bạn tham khảo thêm:
+
+> **[Trang 55] Samsung Members**
+> Samsung Members mang lại các dịch vụ hỗ trợ cho khách hàng như chẩn đoán vấn đề thiết bị và cho phép người dùng gửi về các báo cáo lỗi và câu hỏi. Bạn cũng có thể chia sẻ thông tin với những người khác trong cộng đồng người dùng Galaxy hoặc xem các tin và gợi ý mới nhất. Samsung Members có thể giúp giải quyết bất kỳ vấn đề nào bạn có thể gặp phải trong lúc sử dụng thiết bị.
+
+> **[Trang 90]**
+> Bạn cũng có thể sử dụng Samsung Members để giải quyết bất cứ vấn đề nào bạn có thể gặp khi sử dụng thiết bị.
+
+Hy vọng thông tin này hữu ích với bạn!
+
+#14  [OK]  out_of_scope  CR=True  KW=1.00  1.5s
+     pages => [1, 9, 4, 10]  (expected [])
+     Q: Giá bán của sản phẩm này là bao nhiêu?
+     Q: Chào bạn, rất tiếc là tài liệu không đề cập đến vấn đề này. Trong các trang thông tin được cung cấp không có nội dung nào nói về giá bán của sản phẩm.
+
+#15  [OK]  out_of_scope  CR=True  KW=1.00  2.4s
+     pages => [4, 4, 92, 93]  (expected [])
+     Q: Bảo hành điện thoại Samsung bao lâu?
+     Q: Chào bạn, cảm ơn bạn đã liên hệ với bộ phận hỗ trợ kỹ thuật của Samsung.
+
+Về câu hỏi của bạn, tài liệu không đề cập đến thời hạn bảo hành cụ thể cho điện thoại Samsung là bao lâu.
+
+Tuy nhiên, tài liệu có lưu ý về các trường hợp làm mất hiệu lực bảo hành như sau:
+*   **[Trang 3]:** "Việc sửa đổi hệ điều hành của thiết bị hoặc cài đặt phần mềm từ các nguồn không chính thức có thể dẫn đến lỗi thiết bị, sai lạc hoặc mất dữ liệu. Những hành động này là vi phạm thỏa thuận bản quyền của bạn với Samsung và sẽ làm mất hiệu lực bảo hành của bạn."
+
+Nếu bạn có thắc mắc cụ thể về các ứng dụng được cung cấp cùng thiết bị, tài liệu hướng dẫn bạn nên liên hệ với Trung tâm bảo hành của Samsung để được hỗ trợ.
+
+============================================================
+VARIANT: vector_only_512/128
+============================================================
+  Total cases : 10
+  Context Rec : None
+  Keyword Cov : 1.0
+  Avg Latency : 0.0s
+============================================================
+
+#1  [OK]  general  CR=True  KW=1.00  2.3s
+     pages => [66, 20, 70, 67]  (expected [])
+     Q: Hãy hướng dẫn kết nối Wifi cho điện thoại Samsung.
+     Q: Chào bạn, rất vui được hỗ trợ bạn kết nối Wi-Fi trên điện thoại Samsung. Dựa trên tài liệu hướng dẫn, bạn có thể thực hiện theo các bước sau:
+
+**Cách kết nối với mạng Wi-Fi:**
+1. Trên màn hình **Cài đặt**, bạn chạm vào **Kết nối** → **Wi-Fi**.
+2. Chạm vào công tắc để bật tính năng này lên.
+3. Chọn một mạng từ danh sách mạng Wi-Fi hiện ra. (Lưu ý: Các mạng có biểu tượng khóa sẽ yêu cầu bạn nhập mật mã).
+
+**Trích dẫn từ tài liệu:**
+> "[Trang 65] Kết nối với mạng Wi-Fi
+> 1 Trên màn hình Cài đặt, chạm vào Kết nối → Wi-Fi và chạm vào công tắc để bật.
+> 2 Chọn một mạng từ danh sách mạng Wi-Fi.
+> Các mạng với biểu tượng khóa cần có mật mã."
+
+Hy vọng thông tin này giúp ích cho bạn! Nếu cần hỗ trợ thêm, bạn cứ đặt câu hỏi nhé.
+
+#2  [OK]  general  CR=True  KW=1.00  2.3s
+     pages => [30, 12, 43, 2]  (expected [])
+     Q: Cách chụp màn hình trên điện thoại Samsung?
+     Q: Chào bạn, để chụp màn hình trên điện thoại Samsung, bạn có thể thực hiện theo hướng dẫn sau:
+
+Bạn hãy **nhấn phím Cạnh và phím Giảm âm lượng cùng lúc**. Sau khi chụp, bạn có thể xem lại ảnh trong ứng dụng Bộ sưu tập.
+
+Lưu ý rằng bạn sẽ không thể chụp ảnh màn hình khi đang sử dụng một số ứng dụng và tính năng nhất định.
+
+Dưới đây là đoạn trích dẫn thông tin từ tài liệu để bạn tham khảo:
+> "[Trang 29] Thông tin cơ bản
+> 30
+> Chụp màn hình
+> Chụp ảnh màn hình khi đang sử dụng thiết bị. Nhấn phím Cạnh và phím Giảm âm lượng cùng lúc. Bạn có thể xem ảnh chụp màn hình đã chụp trong Bộ sưu tập.
+> Không thể chụp ảnh màn hình khi đang sử dụng một số ứng dụng và tính năng."
+
+Hy vọng thông tin này hữu ích với bạn!
+
+#5  [OK]  semantic_gap  CR=True  KW=1.00  2.7s
+     pages => [66, 20, 66, 65]  (expected [])
+     Q: Làm sao để vào Internet qua Wifi trên máy Samsung?
+     Q: Chào bạn, để kết nối Internet qua Wi-Fi trên điện thoại Samsung, bạn có thể thực hiện theo các bước hướng dẫn sau đây:
+
+1. Trên màn hình **Cài đặt**, bạn chạm vào mục **Kết nối**.
+2. Chọn **Wi-Fi** và chạm vào công tắc để bật tính năng này lên.
+3. Chọn một mạng từ danh sách mạng Wi-Fi hiện ra. (Lưu ý: Các mạng có biểu tượng khóa cần phải nhập mật mã mới có thể kết nối).
+
+Sau khi thiết bị đã kết nối thành công với mạng Wi-Fi, thiết bị sẽ tự động kết nối lại với mạng đó mỗi khi bạn ở trong phạm vi phủ sóng.
+
+**Nội dung trích dẫn từ tài liệu:**
+> "[Trang 65] Wi-Fi: Bật tính năng Wi-Fi để kết nối với mạng Wi-Fi và truy cập mạng Internet hoặc các thiết bị mạng khác.
+> Kết nối với mạng Wi-Fi
+> 1. Trên màn hình Cài đặt, chạm vào Kết nối → Wi-Fi và chạm vào công tắc để bật.
+> 2. Chọn một mạng từ danh sách mạng Wi-Fi.
+> Các mạng với biểu tượng khóa cần có mật mã.
+> • Sau khi thiết bị kết nối với mạng Wi-Fi, thiết bị sẽ kết nối lại với mạng đó mỗi lần mạng này [khả dụng]."
+
+#7  [OK]  semantic_gap  CR=True  KW=1.00  2.9s
+     pages => [92, 92, 91, 95]  (expected [])
+     Q: Máy Samsung của tôi bị đơ, không bấm được gì, phải làm sao?
+     Q: Chào bạn, rất tiếc khi biết bạn đang gặp vấn đề với thiết bị Samsung của mình. Dựa trên tài liệu hướng dẫn, bạn có thể thử các cách sau để khắc phục tình trạng máy bị đơ hoặc treo:
+
+1. **Khởi động lại thiết bị:** Nếu thiết bị bị đơ hoặc treo máy, bạn có thể thử tắt các ứng dụng hoặc tắt thiết bị rồi bật lại.
+2. **Buộc khởi động lại:** Nếu thiết bị bị treo và không phản hồi, hãy nhấn và giữ phím Cạnh và phím Giảm âm lượng cùng lúc trong hơn 7 giây để khởi động lại.
+3. **Cài đặt lại thiết bị:** Nếu các phương pháp trên vẫn không giải quyết được vấn đề, bạn có thể thực hiện khôi phục cài đặt gốc bằng cách vào: **Cài đặt → Quản lý chung → Đặt lại → Khôi phục cài đặt gốc → Đặt**.
+4. **Liên hệ hỗ trợ:** Nếu các cách trên vẫn không giải quyết được vấn đề, bạn hãy liên hệ với Trung tâm bảo hành của Samsung.
+
+**Trích dẫn từ tài liệu:**
+> "[Trang 91] Khởi động lại thiết bị: Nếu thiết bị của bạn bị đơ hoặc treo máy, bạn có thể cần phải tắt các ứng dụng hoặc tắt thiết bị và bật lại.
+> Buộc khởi động lại: Nếu thiết bị của bạn bị treo và không phản hồi, nhấn và giữ phím Cạnh và phím Giảm âm lượng cùng lúc trong hơn 7 giây để khởi động lại.
+> Cài đặt lại thiết bị: Nếu các phương pháp trên vẫn không giải quyết được vấn đề, thực hiện khôi phục lại cài đặt gốc. Khởi chạy ứng dụng Cài đặt và chạm vào Quản lý chung → Đặt lại → Khôi phục cài đặt gốc → Đặt."
+> "[Trang 94] Nếu các hướng dẫn trên không giúp giải quyết được vấn đề, hãy liên hệ với Trung tâm bảo hành của Samsung."
+
+Hy vọng những thông tin này sẽ giúp bạn khắc phục được lỗi trên thiết bị!
+
+#8  [OK]  semantic_gap  CR=True  KW=1.00  19.7s
+     pages => [7, 6, 6, 8]  (expected [])
+     Q: Samsung của tôi bị nóng quá, có sao không?
+     Q: Chào bạn, tôi rất hiểu sự lo lắng của bạn khi điện thoại Samsung bị nóng. Dựa trên tài liệu hướng dẫn, tôi xin giải đáp như sau:
+
+Khi thiết bị nóng lên, các tính năng và hiệu năng có thể bị giới hạn hoặc thiết bị có thể tự tắt để nguội đi. Nếu thiết bị quá nóng và đạt đến một nhiệt độ nhất định, một thông điệp cảnh báo sẽ xuất hiện để ngăn ngừa hỏng hóc thiết bị, kích ứng, tổn thương da và rò rỉ pin.
+
+**Bạn nên thực hiện các bước sau để xử lý:**
+
+*   **Đóng tất cả ứng dụng** đang chạy và ngưng sử dụng thiết bị một lúc.
+*   **Giảm độ sáng màn hình.**
+*   Nếu bạn đang sạc, hãy **ngắt bộ sạc** ra khỏi thiết bị, chờ đến khi thiết bị hạ nhiệt rồi mới bắt đầu sạc lại.
+*   Nếu chỉ có phần dưới của thiết bị bị nóng quá mức, có thể cáp USB đã bị hỏng, hãy thay bằng cáp mới đã được Samsung chứng nhận.
+*   Nếu bạn cảm thấy không thoải mái do thiết bị quá nóng, hãy ngưng sử dụng thiết bị.
+*   Nếu thiết bị vẫn nóng trong một thời gian dài hoặc trở nên quá nóng, hãy liên hệ với Trung tâm bảo hành của Samsung.
+
+---
+**Trích dẫn từ tài liệu:**
+
+*   [Trang 5]: "Đóng tất cả ứng dụng đang chạy và ngưng sử dụng thiết bị một lúc."
+*   [Trang 5]: "Ngắt bộ sạc ra khỏi thiết bị và tắt tất cả các ứng dụng đang chạy. Chờ đến khi thiết bị hạ nhiệt rồi bắt đầu sạc lại."
+*   [Trang 5]: "Nếu chỉ có phần dưới của thiết bị bị nóng quá mức, có thể cáp USB kết nối đã bị hỏng. Hãy thay cáp USB hỏng bằng một cáp USB mới đã được Samsung chứng nhận."
+*   [Trang 6]: "Giảm độ sáng màn hình."
+*   [Trang 6]: "Nếu thiết bị nóng trong một thời gian dài hoặc trở nên quá nóng, hãy ngưng sử dụng thiết bị một lúc. Nếu thiết bị vẫn nóng, hãy liên hệ với Trung tâm bảo hành của Samsung."
+*   [Trang 7]: "Nếu bạn bắt đầu cảm thấy không thoải mái do thiết bị quá nóng, hãy ngưng sử dụng thiết bị. Khi thiết bị nóng lên, các tính năng và hiệu năng có thể bị giới hạn hoặc thiết bị có thể tắt để nguội đi... Nếu thiết bị quá nóng và đạt đến một nhiệt độ nhất định, một thông điệp cảnh báo sẽ xuất hiện để ngăn ngừa hỏng hóc thiết bị, kích ứng, tổn thương da và rò rỉ pin."
+
+#10  [OK]  code_model  CR=True  KW=1.00  1.8s
+     pages => [15, 1, 16, 16]  (expected [])
+     Q: SM-A125F/DS dùng loại thẻ SIM nào?
+     Q: Chào bạn, cảm ơn bạn đã liên hệ hỗ trợ kỹ thuật Samsung.
+
+Đối với thiết bị SM-A125F/DS, bạn cần sử dụng loại **thẻ nano SIM**.
+
+Thông tin chi tiết được trích dẫn từ tài liệu hướng dẫn sử dụng như sau:
+
+*   **[Trang 14]** "Thẻ SIM hoặc USIM (thẻ nano SIM). Gắn thẻ SIM hoặc USIM được nhà cung cấp dịch vụ điện thoại di động cung cấp."
+*   **[Trang 15]** "Chỉ sử dụng thẻ nano SIM."
+
+Hy vọng thông tin này giúp ích cho bạn! Nếu cần hỗ trợ thêm, bạn đừng ngần ngại đặt câu hỏi nhé.
+
+#11  [OK]  code_model  CR=True  KW=1.00  2.4s
+     pages => [1, 72, 97, 97]  (expected [])
+     Q: Điện thoại SM-A125F/DS có hỗ trợ Dolby Atmos không?
+     Q: Chào bạn, cảm ơn bạn đã liên hệ hỗ trợ Samsung.
+
+Dựa trên tài liệu hướng dẫn sử dụng của thiết bị SM-A125F/DS, điện thoại của bạn **có hỗ trợ tính năng Dolby Atmos**.
+
+Dưới đây là thông tin chi tiết được trích dẫn từ tài liệu:
+
+**[Trang 71] Cài đặt**
+> "Hiệu ứng và chất lượng âm thanh
+> Cài đặt chất lượng và hiệu ứng âm thanh của thiết bị.
+> Trên màn hình Cài đặt, chạm vào Âm thanh và rung → Hiệu ứng và chất lượng âm thanh.
+> • Dolby Atmos: Chọn một chế độ âm thanh vòm được tối ưu hóa cho các thể loại âm thanh đa dạng như phim, nhạc và giọng nói. Với Dolby Atmos, bạn có thể trải nghiệm dòng chảy âm thanh chuyển động vòng quanh bạn."
+
+**[Trang 96] Thương hiệu**
+> "Sản xuất theo giấy phép của Dolby Laboratories. Dolby, Dolby Atmos và biểu tượng hai chữ D là các thương hiệu của Dolby Laboratories."
+
+Hy vọng thông tin này hữu ích với bạn! Nếu cần hỗ trợ thêm, bạn đừng ngần ngại đặt câu hỏi nhé.
+
+#13  [OK]  code_model  CR=True  KW=1.00  2.6s
+     pages => [56, 91, 92, 4]  (expected [])
+     Q: Samsung Members giúp ích gì khi máy gặp vấn đề?
+     Q: Chào bạn, rất vui được hỗ trợ bạn! Khi thiết bị Samsung của bạn gặp vấn đề, ứng dụng **Samsung Members** sẽ giúp ích cho bạn như sau:
+
+*   **Chẩn đoán thiết bị:** Ứng dụng hỗ trợ chẩn đoán các vấn đề mà thiết bị đang gặp phải.
+*   **Hỗ trợ kỹ thuật:** Cho phép bạn gửi các báo cáo lỗi và câu hỏi về cho Samsung.
+*   **Cộng đồng và thông tin:** Bạn có thể chia sẻ thông tin với cộng đồng người dùng Galaxy hoặc xem các tin tức, gợi ý mới nhất.
+*   **Giải quyết vấn đề:** Samsung Members có thể giúp bạn giải quyết bất kỳ vấn đề nào phát sinh trong quá trình sử dụng thiết bị.
+
+Dưới đây là nội dung trích dẫn từ tài liệu để bạn tham khảo thêm:
+
+> **[Trang 55] Samsung Members**
+> Samsung Members mang lại các dịch vụ hỗ trợ cho khách hàng như chẩn đoán vấn đề thiết bị và cho phép người dùng gửi về các báo cáo lỗi và câu hỏi. Bạn cũng có thể chia sẻ thông tin với những người khác trong cộng đồng người dùng Galaxy hoặc xem các tin và gợi ý mới nhất. Samsung Members có thể giúp giải quyết bất kỳ vấn đề nào bạn có thể gặp phải trong lúc sử dụng thiết bị.
+
+> **[Trang 90] Khắc phục sự cố**
+> Bạn cũng có thể sử dụng Samsung Members để giải quyết bất cứ vấn đề nào bạn có thể gặp khi sử dụng thiết bị.
+
+Hy vọng thông tin này hữu ích với bạn! Nếu cần hỗ trợ thêm, bạn cứ thoải mái đặt câu hỏi nhé.
+
+#14  [OK]  out_of_scope  CR=True  KW=1.00  1.5s
+     pages => [9, 9, 4, 4]  (expected [])
+     Q: Giá bán của sản phẩm này là bao nhiêu?
+     Q: Chào bạn, rất vui được hỗ trợ bạn.
+
+Về câu hỏi của bạn, tài liệu không đề cập đến vấn đề này. Các thông tin được cung cấp chỉ bao gồm các lưu ý về phụ kiện, dịch vụ dữ liệu và bản quyền nội dung, không có thông tin về giá bán của sản phẩm.
+
+#15  [OK]  out_of_scope  CR=True  KW=1.00  2.3s
+     pages => [4, 9, 92, 97]  (expected [])
+     Q: Bảo hành điện thoại Samsung bao lâu?
+     Q: Chào bạn, cảm ơn bạn đã liên hệ với bộ phận hỗ trợ kỹ thuật của Samsung.
+
+Về câu hỏi của bạn, tài liệu không đề cập đến thời hạn bảo hành cụ thể (số tháng hoặc số năm) cho điện thoại Samsung.
+
+Tuy nhiên, tài liệu có lưu ý về các trường hợp làm mất hiệu lực bảo hành như sau:
+
+*   **[Trang 3]:** "Việc sửa đổi hệ điều hành của thiết bị hoặc cài đặt phần mềm từ các nguồn không chính thức có thể dẫn đến lỗi thiết bị, sai lạc hoặc mất dữ liệu. Những hành động này là vi phạm thỏa thuận bản quyền của bạn với Samsung và sẽ làm mất hiệu lực bảo hành của bạn."
+*   **[Trang 8]:** "Chỉ sử dụng các phụ kiện được Samsung chứng nhận. Việc sử dụng phụ kiện chưa được phê duyệt có thể gây ra sự cố hoạt động và lỗi sản phẩm không được bảo hành."
+
+Nếu bạn cần biết chính xác thời hạn bảo hành cho thiết bị của mình, bạn vui lòng liên hệ trực tiếp với Trung tâm bảo hành của Samsung để được hỗ trợ chi tiết nhé!
+
+============================================================
+VARIANT: hybrid
+============================================================
+  Total cases : 10
+  Context Rec : None
+  Keyword Cov : 1.0
+  Avg Latency : 0.0s
+============================================================
+
+#1  [OK]  general  CR=True  KW=1.00  2.8s
+     pages => [65, 66, 90, 15, 66, 95, 20, 22, 70, 92, 67, 5, 67, 94, 66, 37, 35, 70, 68, 95, 3, 69, 22, 4, 97, 21, 20]  (expected [])
+     Q: Hãy hướng dẫn kết nối Wifi cho điện thoại Samsung.
+     Q: Chào bạn, để kết nối Wi-Fi cho điện thoại Samsung, bạn có thể thực hiện theo các bước hướng dẫn sau đây:
+
+1. Trên màn hình **Cài đặt**, chạm vào **Kết nối** → **Wi-Fi**.
+2. Chạm vào công tắc để bật tính năng Wi-Fi.
+3. Chọn một mạng từ danh sách mạng Wi-Fi hiện ra. (Lưu ý: Các mạng có biểu tượng khóa cần phải nhập mật mã).
+
+Sau khi thiết bị đã kết nối với mạng Wi-Fi, thiết bị sẽ tự động kết nối lại với mạng đó mỗi khi mạng khả dụng. Nếu bạn gặp khó khăn trong việc kết nối, hãy thử khởi động lại tính năng Wi-Fi hoặc bộ định tuyến không dây của bạn.
+
+*Trích dẫn từ tài liệu:*
+> "[Trang 65] Kết nối với mạng Wi-Fi
+> 1 Trên màn hình Cài đặt, chạm vào Kết nối → Wi-Fi và chạm vào công tắc để bật.
+> 2 Chọn một mạng từ danh sách mạng Wi-Fi.
+> Các mạng với biểu tượng khóa cần có mật mã.
+> • Sau khi thiết bị kết nối với mạng Wi-Fi, thiết bị sẽ kết nối lại với mạng đó mỗi lần mạng này khả dụng mà không yêu cầu mật mã. Để tránh việc thiết bị tự động kết nối mạng, chạm vào bên cạnh mạng đó rồi chạm vào công tắc Tự động kết nối lại để tắt.
+> • Nếu bạn không thể kết nối đúng với mạng Wi-Fi, khởi động lại tính năng Wi-Fi của thiết bị hoặc bộ định tuyến không dây."
+
+#2  [OK]  general  CR=True  KW=1.00  2.7s
+     pages => [30, 42, 43, 45, 42, 45, 37, 35, 12, 15, 2, 25, 90, 55, 84, 92, 92, 55, 44, 45, 23, 97, 83, 44]  (expected [])
+     Q: Cách chụp màn hình trên điện thoại Samsung?
+     Q: Chào bạn, để chụp màn hình trên điện thoại Samsung, bạn có thể thực hiện theo hướng dẫn sau:
+
+**Cách chụp màn hình:**
+Nhấn phím **Cạnh** và phím **Giảm âm lượng** cùng lúc. Bạn có thể xem lại các ảnh đã chụp trong ứng dụng **Bộ sưu tập**.
+
+Dưới đây là đoạn trích dẫn từ tài liệu để bạn tham khảo thêm:
+> "[Trang 29] Chụp màn hình
+> Chụp ảnh màn hình khi đang sử dụng thiết bị. Nhấn phím Cạnh và phím Giảm âm lượng cùng lúc. Bạn có thể xem ảnh chụp màn hình đã chụp trong Bộ sưu tập.
+> Không thể chụp ảnh màn hình khi đang sử dụng một số ứng dụng và tính năng."
+
+**Lưu ý quan trọng:**
+*   Bạn không thể chụp ảnh màn hình khi đang sử dụng một số ứng dụng hoặc tính năng nhất định (ví dụ: trong chế độ bí mật).
+*   Nếu bạn cần hỗ trợ thêm về cài đặt ảnh chụp màn hình, bạn có thể tìm thấy trong phần cài đặt của thiết bị (như được đề cập tại trang 82).
+
+Hy vọng thông tin này hữu ích với bạn!
+
+#5  [OK]  semantic_gap  CR=True  KW=1.00  2.6s
+     pages => [66, 21, 22, 22, 20, 38, 66, 81, 65, 81, 70, 69, 65, 70, 22, 41, 41, 4, 83, 67, 81, 70, 82, 67, 23, 66, 39, 69]  (expected [])
+     Q: Làm sao để vào Internet qua Wifi trên máy Samsung?
+     Q: Chào bạn, để kết nối Internet qua Wi-Fi trên thiết bị Samsung, bạn có thể thực hiện theo các bước hướng dẫn sau đây:
+
+1. Trên màn hình **Cài đặt**, chạm vào **Kết nối** → **Wi-Fi**.
+2. Chạm vào công tắc để bật tính năng Wi-Fi.
+3. Chọn một mạng từ danh sách mạng Wi-Fi hiện ra. (Lưu ý: Các mạng có biểu tượng khóa yêu cầu bạn phải nhập mật mã).
+
+Sau khi thiết bị đã kết nối thành công với mạng Wi-Fi, thiết bị sẽ tự động kết nối lại với mạng đó mỗi khi bạn ở trong phạm vi phủ sóng.
+
+**Trích dẫn từ tài liệu (Trang 65):**
+> "Kết nối với mạng Wi-Fi
+> 1 Trên màn hình Cài đặt, chạm vào Kết nối → Wi-Fi và chạm vào công tắc để bật.
+> 2 Chọn một mạng từ danh sách mạng Wi-Fi.
+> Các mạng với biểu tượng khóa cần có mật mã.
+> • Sau khi thiết bị kết nối với mạng Wi-Fi, thiết bị sẽ kết nối lại với mạng đó mỗi lần mạng này"
+
+#7  [OK]  semantic_gap  CR=True  KW=1.00  3.2s
+     pages => [4, 91, 4, 92, 2, 92, 43, 13, 95, 95, 19, 20, 56, 91, 22, 11, 76, 7, 11, 21, 95, 82, 94, 81, 93, 78, 81, 96]  (expected [])
+     Q: Máy Samsung của tôi bị đơ, không bấm được gì, phải làm sao?
+     Q: Chào bạn, rất tiếc khi biết thiết bị của bạn đang gặp tình trạng bị đơ. Để khắc phục vấn đề này, bạn có thể thực hiện theo các hướng dẫn từ tài liệu như sau:
+
+**1. Khởi động lại thiết bị:**
+Nếu thiết bị của bạn bị đơ hoặc treo máy, bạn có thể cần phải tắt các ứng dụng hoặc tắt thiết bị và bật lại.
+
+**2. Buộc khởi động lại (nếu thiết bị không phản hồi):**
+Nếu thiết bị của bạn bị treo và không phản hồi, hãy nhấn và giữ **phím Cạnh** và **phím Giảm âm lượng** cùng lúc trong hơn 7 giây để khởi động lại.
+
+**3. Cài đặt lại thiết bị (Khôi phục cài đặt gốc):**
+Nếu các phương pháp trên vẫn không giải quyết được vấn đề, bạn có thể thực hiện khôi phục lại cài đặt gốc bằng cách: Khởi chạy ứng dụng **Cài đặt** và chạm vào **Quản lý chung** → **Đặt lại** → **Khôi phục cài đặt gốc** → **Đặt**.
+
+---
+**Trích dẫn từ tài liệu:**
+> "[Trang 91] Khởi động lại thiết bị: Nếu thiết bị của bạn bị đơ hoặc treo máy, bạn có thể cần phải tắt các ứng dụng hoặc tắt thiết bị và bật lại.
+> Buộc khởi động lại: Nếu thiết bị của bạn bị treo và không phản hồi, nhấn và giữ phím Cạnh và phím Giảm âm lượng cùng lúc trong hơn 7 giây để khởi động lại.
+> Cài đặt lại thiết bị: Nếu các phương pháp trên vẫn không giải quyết được vấn đề, thực hiện khôi phục lại cài đặt gốc. Khởi chạy ứng dụng Cài đặt và chạm vào Quản lý chung → Đặt lại → Khôi phục cài đặt gốc → Đặt"
+
+Nếu sau khi thực hiện các bước trên mà vấn đề vẫn chưa được giải quyết, bạn vui lòng liên hệ với Trung tâm bảo hành của Samsung để được hỗ trợ thêm nhé.
+
+#8  [OK]  semantic_gap  CR=True  KW=1.00  4.1s
+     pages => [6, 6, 8, 15, 82, 7, 6, 81, 82, 8, 81, 7, 8, 21, 7, 82, 8, 82, 21, 6, 81, 7, 93, 20, 81, 8]  (expected [])
+     Q: Samsung của tôi bị nóng quá, có sao không?
+     Q: Chào bạn, về vấn đề thiết bị Samsung của bạn bị nóng, mình xin giải đáp dựa trên thông tin từ tài liệu như sau:
+
+Việc thiết bị nóng lên có thể là bình thường hoặc là dấu hiệu cần lưu ý tùy vào tình huống:
+
+**1. Khi nào là bình thường?**
+*   **Trong quá trình sạc:** Thiết bị và bộ sạc có thể nóng lên khi đang sạc (đặc biệt là sạc nhanh hoặc sạc không dây). Điều này không ảnh hưởng đến hiệu suất hay tuổi thọ của thiết bị.
+*   **Trong quá trình sử dụng:** Nếu bạn dùng các ứng dụng cần nhiều điện năng hoặc sử dụng trong thời gian dài (như chơi game chất lượng cao, quay video, xem video trực tuyến, chạy đa nhiệm...), thiết bị có thể tạm thời nóng lên do tăng tiêu thụ pin.
+
+**2. Các trường hợp cần lưu ý và cách xử lý:**
+Nếu thiết bị nóng quá mức, bạn nên thực hiện các bước sau:
+*   **Đóng ứng dụng:** Đóng tất cả các ứng dụng đang chạy và ngưng sử dụng thiết bị một lúc để máy hạ nhiệt.
+*   **Kiểm tra bộ sạc:** Nếu chỉ phần dưới thiết bị nóng quá mức, có thể cáp USB đã hỏng. Hãy thay bằng cáp mới đã được Samsung chứng nhận. Khi sạc không dây, không để vật lạ (kim loại, nam châm, thẻ từ) giữa thiết bị và bộ sạc.
+*   **Cài đặt và bảo trì:** Cập nhật phần mềm mới nhất, khởi động lại thiết bị để tránh xung đột ứng dụng, giảm độ sáng màn hình, tắt Wi-Fi/GPS/Bluetooth khi không dùng, và xóa các file không cần thiết.
+*   **Môi trường:** Tránh để thiết bị ở nơi quá nóng (trong xe hơi mùa hè, dưới ánh nắng trực tiếp, trên thảm sưởi, gần bếp/lò vi sóng).
+*   **Cảnh báo quá nhiệt:** Nếu thiết bị quá nóng, một thông điệp cảnh báo sẽ xuất hiện. Lúc này, các tính năng sẽ bị giới hạn (giảm độ sáng, giảm tốc độ xử lý, dừng sạc, đóng ứng dụng) để bảo vệ thiết bị. Nếu xuất hiện thông báo thứ hai, thiết bị sẽ tự tắt nguồn. Bạn không nên sử dụng thiết bị cho đến khi nhiệt độ giảm xuống.
+
+**Lưu ý quan trọng:** Nếu thiết bị nóng trong một thời gian dài hoặc trở nên quá nóng dù đã thực hiện các bước trên, bạn hãy liên hệ với **Trung tâm bảo hành của Samsung**.
+
+*Trích dẫn từ tài liệu:*
+> "[Trang 5] Thiết bị nóng lên trong quá trình sạc pin... Điều này không ảnh hưởng đến hiệu suất hay tuổi thọ của thiết bị và nằm trong phạm vi hoạt động bình thường của thiết bị."
+> "[Trang 5] Nếu bạn dùng các tính năng hoặc ứng dụng nào lâu hay cần nhiều điện năng hơn, thiết bị có thể tạm thời nóng lên do sự gia tăng tiêu thụ pin. Đóng tất cả ứng dụng đang chạy và ngưng sử dụng thiết bị một lúc."
+> "[Trang 6] Nếu thiết bị nóng trong một thời gian dài hoặc trở nên quá nóng, hãy ngưng sử dụng thiết bị một lúc. Nếu thiết bị vẫn nóng, hãy liên hệ với Trung tâm bảo hành của Samsung."
+
+#10  [OK]  code_model  CR=True  KW=1.00  1.8s
+     pages => [15, 16, 1, 16, 66, 16, 17, 17, 91, 18, 15, 91, 2, 17, 10, 49, 18, 9, 18, 78]  (expected [])
+     Q: SM-A125F/DS dùng loại thẻ SIM nào?
+     Q: Chào bạn, dựa trên tài liệu hướng dẫn sử dụng của thiết bị SM-A125F/DS, mình xin giải đáp thắc mắc của bạn như sau:
+
+Thiết bị Samsung SM-A125F/DS sử dụng loại **thẻ nano SIM**.
+
+Thông tin này được trích dẫn từ tài liệu như sau:
+*   **[Trang 14]:** "Thẻ SIM hoặc USIM (thẻ nano SIM)"
+*   **[Trang 15]:** "• Chỉ sử dụng thẻ nano SIM."
+
+Hy vọng thông tin này hữu ích với bạn! Nếu cần hỗ trợ thêm, bạn cứ thoải mái đặt câu hỏi nhé.
+
+#11  [OK]  code_model  CR=True  KW=1.00  2.6s
+     pages => [97, 1, 35, 72, 94, 89, 97, 35, 3, 72, 84, 4, 89, 71, 90, 9, 37, 71, 36, 56, 94, 9, 34, 88, 36, 3, 4, 4]  (expected [])
+     Q: Điện thoại SM-A125F/DS có hỗ trợ Dolby Atmos không?
+     Q: Chào bạn, cảm ơn bạn đã liên hệ với bộ phận hỗ trợ kỹ thuật của Samsung.
+
+Dựa trên tài liệu hướng dẫn sử dụng được cung cấp, thiết bị của bạn có hỗ trợ tính năng **Dolby Atmos**. Bạn có thể tìm thấy và tùy chỉnh tính năng này theo hướng dẫn sau:
+
+*   **Cách truy cập:** Trên màn hình **Cài đặt**, chạm vào **Âm thanh và rung** → **Hiệu ứng và chất lượng âm thanh**.
+*   **Thông tin về tính năng:** "Dolby Atmos: Chọn một chế độ âm thanh vòm được tối ưu hóa cho các thể loại âm thanh đa dạng như phim, nhạc và giọng nói. Với Dolby Atmos, bạn có thể trải nghiệm dòng chảy âm thanh chuyển động vòng quanh bạn."
+
+**Lưu ý:** Tài liệu cũng có đề cập rằng "Tùy vào kiểu máy, bạn phải kết nối tai nghe để sử dụng một số tính năng" và "Một số tính năng có thể không khả dụng tùy theo mẫu máy" (Trang 70, 71).
+
+Hy vọng thông tin này hữu ích với bạn!
+
+#13  [OK]  code_model  CR=True  KW=1.00  2.6s
+     pages => [56, 91, 95, 93, 4, 2, 4, 94, 92, 93, 4, 94, 49, 92, 11, 95, 75, 49, 23, 60, 11, 76, 63]  (expected [])
+     Q: Samsung Members giúp ích gì khi máy gặp vấn đề?
+     Q: Chào bạn, khi thiết bị gặp vấn đề, ứng dụng **Samsung Members** sẽ hỗ trợ bạn thông qua các tính năng sau:
+
+*   **Chẩn đoán vấn đề thiết bị:** Giúp bạn kiểm tra tình trạng hoạt động của máy.
+*   **Gửi báo cáo lỗi và câu hỏi:** Cho phép bạn gửi phản hồi trực tiếp về các sự cố hoặc thắc mắc của mình.
+*   **Cộng đồng và thông tin:** Bạn có thể chia sẻ thông tin với những người dùng Galaxy khác hoặc xem các tin tức và gợi ý mới nhất.
+*   **Giải quyết vấn đề:** Samsung Members có thể giúp giải quyết bất kỳ vấn đề nào bạn gặp phải trong lúc sử dụng thiết bị.
+
+Dưới đây là đoạn trích dẫn từ tài liệu để bạn tham khảo thêm:
+
+> **[Trang 56] Samsung Members**
+> Samsung Members mang lại các dịch vụ hỗ trợ cho khách hàng như chẩn đoán vấn đề thiết bị và cho phép người dùng gửi về các báo cáo lỗi và câu hỏi. Bạn cũng có thể chia sẻ thông tin với những người khác trong cộng đồng người dùng Galaxy hoặc xem các tin và gợi ý mới nhất. Samsung Members có thể giúp giải quyết bất kỳ vấn đề nào bạn có thể gặp phải trong lúc sử dụng thiết bị.
+
+> **[Trang 90]**
+> Bạn cũng có thể sử dụng Samsung Members để giải quyết bất cứ vấn đề nào bạn có thể gặp khi sử dụng thiết bị.
+
+#14  [OK]  out_of_scope  CR=True  KW=1.00  1.8s
+     pages => [9, 4, 96, 9, 97, 47, 4, 97, 1, 47, 17, 10, 22, 25, 2, 81, 5, 63, 94, 5, 2, 18, 9, 97, 4]  (expected [])
+     Q: Giá bán của sản phẩm này là bao nhiêu?
+     Q: Chào bạn, cảm ơn bạn đã liên hệ với bộ phận hỗ trợ kỹ thuật của Samsung.
+
+Về câu hỏi của bạn, tài liệu không đề cập đến vấn đề này. Các thông tin trong tài liệu chỉ cung cấp hướng dẫn sử dụng, thông số kỹ thuật và các lưu ý về thiết bị, không bao gồm thông tin về giá bán sản phẩm.
+
+#15  [OK]  out_of_scope  CR=True  KW=1.00  2.4s
+     pages => [93, 97, 4, 90, 87, 9, 37, 92, 35, 15, 9, 3, 92, 4, 92, 80, 11, 7, 2, 96, 84, 95, 87, 91, 94, 18]  (expected [])
+     Q: Bảo hành điện thoại Samsung bao lâu?
+     Q: Chào bạn, cảm ơn bạn đã liên hệ với bộ phận hỗ trợ kỹ thuật của Samsung.
+
+Về câu hỏi của bạn, tài liệu không đề cập đến vấn đề thời hạn bảo hành cụ thể cho điện thoại Samsung là bao lâu.
+
+Tuy nhiên, tài liệu có lưu ý rằng việc sửa đổi hệ điều hành hoặc cài đặt phần mềm từ các nguồn không chính thức sẽ làm mất hiệu lực bảo hành của bạn:
+
+> **[Trang 3]**
+> • Việc sửa đổi hệ điều hành của thiết bị hoặc cài đặt phần mềm từ các nguồn không chính thức có thể dẫn đến lỗi thiết bị, sai lạc hoặc mất dữ liệu. Những hành động này là vi phạm thỏa thuận bản quyền của bạn với Samsung và sẽ làm mất hiệu lực bảo hành của bạn.
+
+Nếu bạn cần biết thông tin chi tiết về thời hạn bảo hành, bạn có thể liên hệ trực tiếp với Trung tâm bảo hành của Samsung để được hỗ trợ chính xác nhất.
