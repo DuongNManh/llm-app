@@ -38,13 +38,21 @@ def create_embeddings() -> GoogleGenerativeAIEmbeddings:
         api_key=gemini_api_key,
     )
 
-def load_vectorstore(persist_dir: str = CHROMA_DIR) -> Chroma:
-    """Tải vectorstore từ thư mục lưu trữ Chroma."""
-    # Tạo embeddings để sử dụng cho vectorstore, bắt buộc sử dụng cùng embeddings với lúc tạo vectorstore
+
+CHUNK1000va200 = "chunk1000va200"
+CHUNK512va128 = "chunk512va128"
+
+def load_vectorstore(
+    per_dir: str = CHROMA_DIR,
+    collection_name : str = CHUNK512va128) -> Chroma:
+    
+    """load lại vector store đã persite (theo collection name)"""
+    # collection_name để load collection giữa 2 chunk size
     embeddings = create_embeddings()
     return Chroma(
         embedding_function=embeddings,
-        persist_directory=persist_dir,
+        persist_directory=per_dir,
+        collection_name=collection_name
     )
 
 def format_docs(docs: list) -> str:
@@ -54,36 +62,40 @@ def format_docs(docs: list) -> str:
         f"[Trang {doc.metadata.get('page', '?')}] {doc.page_content}"
         for doc in docs
     )
+    
+from langchain_classic.retrievers import EnsembleRetriever
+from langchain_community.retrievers import BM25Retriever
+from langchain_core.vectorstores import VectorStoreRetriever
 
-def build_rag_chain(vectorstore: Chroma, k: int = RETRIEVER_K):
-    """Xây dựng rag chain với langchain"""
-    # model llm
+def build_rag_chain(retriever: EnsembleRetriever | VectorStoreRetriever, system_prompt: str = SYSTEM_PROMPT):
+    """tạo RAG chain với prompt template"""
+
+    gemini_api_key = settings.GEMINI_API_KEY
     llm = ChatGoogleGenerativeAI(
-        model="gemini-3.1-flash-lite",
-        temperature=0,
-        google_api_key=settings.GEMINI_API_KEY,
+        model = "gemini-3.1-flash-lite",
+        gemini_api_key = gemini_api_key,
+        temperature = 0.0,
     )
-    # prompt template, sử dụng ChatPromptTemplate để định nghĩa prompt cho LLM
-    # có 2 thành phần: system prompt và human prompt
-    # system prompt: định nghĩa vai trò của LLM, cách trả lời câu hỏi dựa trên ngữ cảnh
-    # human prompt: định nghĩa cách người dùng sẽ hỏi câu hỏi, và cách LLM sẽ nhận ngữ cảnh và câu hỏi từ người dùng
-    prompt = ChatPromptTemplate.from_messages([
-        ("system", SYSTEM_PROMPT),
-        ("human", "NGỮ CẢNH:\n{context}\n\nCâu hỏi: {question}\n\nTrả lời:"),
+
+    # tạo prompt template với system prompt và human prompt
+    # tương tự như pure template gọi gemini thay vì sử dụng ChatGoogleGenerativeAI
+    # ví dụ cho pure template, ko dùng ChatPromptTemplate:
+    # [{"role": "system", "content": system_prompt}, {"role": "user", "content": "NGỮ CẢNH:\n{question}\n\nCâu hỏi: {context}\n\n Trả lời:"}]
+    # llm = google_genai.Client(model="gemini-3.1-flash-lite", gemini_api_key=gemini_api_key)
+    # response = llm.chat([{"role": "system", "content": system_prompt}, {"role": "user", "content": f"NGỮ CẢNH:\n{question}\n\nCâu hỏi: {context}\n\n Trả lời:"}])
+    prompt_template = ChatPromptTemplate.from_messages([
+        ("system", system_prompt),
+        ("human", "NGỮ CẢNH:\n{question}\n\nCâu hỏi: {context}\n\n Trả lời:"),
     ])
 
-    # retriever, sử dụng vectorstore để tìm kiếm các đoạn trích liên quan đến câu hỏi của người dùng
-    retriever = vectorstore.as_retriever(search_kwargs={"k": k})
-
-    # chain của langchain, kết hợp retriever, prompt và llm để tạo ra một pipeline hoàn chỉnh
-    # biến context: là kết quả của retriever, được format lại thành str bằng format_docs
-    # biến question: là câu hỏi của người dùng, được truyền trực tiếp vào chain
-    # RunnablePassthrough() là một runnable đặc biệt, cho phép truyền trực tiếp giá trị của biến question vào chain mà không cần phải định nghĩa lại
-    # prompt sẽ nhận 2 biến context và question, và tạo ra một prompt hoàn chỉnh để gửi vào llm
-    # llm sẽ trả về một str, được parse bởi StrOutputParser() để lấy
+    # tạo chain: retriever -> format_docs -> prompt_template -> llm -> StrOutputParser
+    # biến context: là ngữ cảnh được format từ các Document đã retrieve và sử dụng format_docs để biến thành str
+    # biến question: là câu hỏi của người dùng
+    # prompt_template sẽ nhận 2 biến context và question để tạo prompt cho llm
+    # llm sẽ trả về str, và StrOutputParser sẽ parse str thành output cuối cùng
     chain = (
         {"context": retriever | format_docs, "question": RunnablePassthrough()}
-        | prompt
+        | prompt_template
         | llm
         | StrOutputParser()
     )
@@ -95,9 +107,9 @@ def ask(chain, question: str) -> str:
 
 def main():
     # load vectorstore từ thư mục lưu trữ Chroma
-    vectorstore = load_vectorstore()
+    vectorstore1 = load_vectorstore(per_dir=CHROMA_DIR, collection_name=CHUNK512va128)
     # build rag chain
-    chain = build_rag_chain(vectorstore)
+    chain = build_rag_chain(vectorstore1)
     # hỏi câu hỏi mẫu
     # question = "Làm thế nào để reset điện thoại Samsung?"
     # print(f"Câu hỏi: {question}")

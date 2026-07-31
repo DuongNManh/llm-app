@@ -9,6 +9,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
 from google import genai
+from pydantic import BaseModel
 
 
 class Settings(BaseSettings):
@@ -17,6 +18,37 @@ class Settings(BaseSettings):
 
 
 settings = Settings()
+
+
+# ─────────────── PYDANTIC MODELS ───────────────
+
+class TestCase(BaseModel):
+    id: int
+    question: str
+    expected_answer_contains: list[str]
+    expected_source_pages: list[int]
+    category: str
+
+
+class CaseResult(BaseModel):
+    id: int
+    category: str
+    question: str
+    answer_preview: str
+    context_recall: bool
+    keyword_coverage: float
+    latency_total: float
+    retrieved_pages: list
+    expected_pages: list[int]
+
+
+class VariantResult(BaseModel):
+    variant: str
+    num_cases: int
+    context_recall: float | None = None
+    keyword_coverage: float | None = None
+    avg_latency: float | None = None
+    details: list[CaseResult]
 
 SYSTEM_PROMPT = """Bạn là trợ lý AI chuyên gia hỗ trợ kỹ thuật và chăm sóc khách hàng của sản phẩm Samsung Smart Phone. Nhiệm vụ của bạn là trả lời câu hỏi của người dùng bằng cách DỰA TRÊN NGỮ CẢNH được cung cấp từ tài liệu. Hãy tuân thủ nghiêm ngặt các yêu cầu sau:
 1. Chỉ trả lời dựa trên thông tin trong đoạn trích. không suy đoán hoặc thêm thông tin bên ngoài.
@@ -35,37 +67,43 @@ HYBRID_K = 15
 # ─────────────── TEST CASES ───────────────
 
 TEST_CASES = [
-    {"id": 1, "question": "Hãy hướng dẫn kết nối Wifi cho điện thoại Samsung.",
-     "expected_answer_contains": ["Cài đặt", "Kết nối", "Wi-Fi", "mạng Wi-Fi"], "expected_source_pages": [65, 66], "category": "general"},
-    {"id": 2, "question": "Cách chụp màn hình trên điện thoại Samsung?",
-     "expected_answer_contains": ["phím Cạnh", "Giảm âm lượng", "cùng lúc"], "expected_source_pages": [30], "category": "general"},
-    {"id": 3, "question": "Pin điện thoại Samsung nên sạc như thế nào cho đúng?",
-     "expected_answer_contains": ["sạc", "pin", "USB Type-C"], "expected_source_pages": [13, 14], "category": "general"},
-    {"id": 4, "question": "Làm thế nào để chuyển dữ liệu từ máy cũ sang máy Samsung mới?",
-     "expected_answer_contains": ["Smart Switch", "dữ liệu", "chuyển"], "expected_source_pages": [21, 22], "category": "general"},
-    {"id": 5, "question": "Làm sao để vào Internet qua Wifi trên máy Samsung?",
-     "expected_answer_contains": ["Cài đặt", "Kết nối", "Wi-Fi"], "expected_source_pages": [65, 66], "category": "semantic_gap"},
-    {"id": 6, "question": "Điện thoại Samsung bị treo logo, làm thế nào để khắc phục?",
-     "expected_answer_contains": ["nhấn và giữ", "phím Cạnh", "phím Giảm âm lượng", "7 giây", "khởi động lại"], "expected_source_pages": [19], "category": "semantic_gap"},
-    {"id": 7, "question": "Máy Samsung của tôi bị đơ, không bấm được gì, phải làm sao?",
-     "expected_answer_contains": ["nhấn và giữ", "phím Cạnh", "phím Giảm âm lượng", "khởi động lại"], "expected_source_pages": [19], "category": "semantic_gap"},
-    {"id": 8, "question": "Samsung của tôi bị nóng quá, có sao không?",
-     "expected_answer_contains": ["nóng", "thiết bị", "sạc", "ứng dụng"], "expected_source_pages": [6, 7, 8], "category": "semantic_gap"},
-    {"id": 9, "question": "Làm cách nào sao chép ảnh từ Samsung qua máy vi tính?",
-     "expected_answer_contains": ["Smart Switch", "máy tính", "dữ liệu"], "expected_source_pages": [22], "category": "semantic_gap"},
-    {"id": 10, "question": "SM-A125F/DS dùng loại thẻ SIM nào?",
-     "expected_answer_contains": ["nano SIM", "SIM"], "expected_source_pages": [15, 16], "category": "code_model"},
-    {"id": 11, "question": "Điện thoại Samsung có hỗ trợ Dolby Atmos không?",
-     "expected_answer_contains": ["Dolby Atmos", "âm thanh", "Cài đặt"], "expected_source_pages": [72], "category": "code_model"},
-    {"id": 12, "question": "Smart Switch có thể chuyển dữ liệu bằng cách nào?",
-     "expected_answer_contains": ["Smart Switch", "Không dây", "máy tính", "dữ liệu"], "expected_source_pages": [21, 22], "category": "code_model"},
-    {"id": 13, "question": "Samsung Members giúp ích gì khi máy gặp vấn đề?",
-     "expected_answer_contains": ["Samsung Members", "hỗ trợ", "chẩn đoán"], "expected_source_pages": [56], "category": "code_model"},
-    {"id": 14, "question": "Giá bán của sản phẩm này là bao nhiêu?",
-     "expected_answer_contains": ["Tài liệu không đề cập", "không đề cập"], "expected_source_pages": [], "category": "out_of_scope"},
-    {"id": 15, "question": "Bảo hành điện thoại Samsung bao lâu?",
-     "expected_answer_contains": ["Tài liệu không đề cập", "không đề cập"], "expected_source_pages": [], "category": "out_of_scope"},
+    TestCase(id=1, question="Hãy hướng dẫn kết nối Wifi cho điện thoại Samsung.",
+             expected_answer_contains=["Cài đặt", "Kết nối", "Wi-Fi", "mạng Wi-Fi"], expected_source_pages=[65, 66], category="general"),
+    TestCase(id=2, question="Cách chụp màn hình trên điện thoại Samsung?",
+             expected_answer_contains=["phím Cạnh", "Giảm âm lượng", "cùng lúc"], expected_source_pages=[30], category="general"),
+    TestCase(id=3, question="Pin điện thoại Samsung nên sạc như thế nào cho đúng?",
+             expected_answer_contains=["sạc", "pin", "USB Type-C"], expected_source_pages=[13, 14], category="general"),
+    TestCase(id=4, question="Làm thế nào để chuyển dữ liệu từ máy cũ sang máy Samsung mới?",
+             expected_answer_contains=["Smart Switch", "dữ liệu", "chuyển"], expected_source_pages=[21, 22], category="general"),
+    TestCase(id=5, question="Làm sao để vào Internet qua Wifi trên máy Samsung?",
+             expected_answer_contains=["Cài đặt", "Kết nối", "Wi-Fi"], expected_source_pages=[65, 66], category="semantic_gap"),
+    TestCase(id=6, question="Điện thoại Samsung bị treo logo, làm thế nào để khắc phục?",
+             expected_answer_contains=["nhấn và giữ", "phím Cạnh", "phím Giảm âm lượng", "7 giây", "khởi động lại"], expected_source_pages=[19], category="semantic_gap"),
+    TestCase(id=7, question="Máy Samsung của tôi bị đơ, không bấm được gì, phải làm sao?",
+             expected_answer_contains=["nhấn và giữ", "phím Cạnh", "phím Giảm âm lượng", "khởi động lại"], expected_source_pages=[19], category="semantic_gap"),
+    TestCase(id=8, question="Samsung của tôi bị nóng quá, có sao không?",
+             expected_answer_contains=["nóng", "thiết bị", "sạc", "ứng dụng"], expected_source_pages=[6, 7, 8], category="semantic_gap"),
+    TestCase(id=9, question="Làm cách nào sao chép ảnh từ Samsung qua máy vi tính?",
+             expected_answer_contains=["Smart Switch", "máy tính", "dữ liệu"], expected_source_pages=[22], category="semantic_gap"),
+    TestCase(id=10, question="SM-A125F/DS dùng loại thẻ SIM nào?",
+             expected_answer_contains=["nano SIM", "SIM"], expected_source_pages=[15, 16], category="code_model"),
+    TestCase(id=11, question="Điện thoại Samsung có hỗ trợ Dolby Atmos không?",
+             expected_answer_contains=["Dolby Atmos", "âm thanh", "Cài đặt"], expected_source_pages=[72], category="code_model"),
+    TestCase(id=12, question="Smart Switch có thể chuyển dữ liệu bằng cách nào?",
+             expected_answer_contains=["Smart Switch", "Không dây", "máy tính", "dữ liệu"], expected_source_pages=[21, 22], category="code_model"),
+    TestCase(id=13, question="Samsung Members giúp ích gì khi máy gặp vấn đề?",
+             expected_answer_contains=["Samsung Members", "hỗ trợ", "chẩn đoán"], expected_source_pages=[56], category="code_model"),
+    TestCase(id=14, question="Giá bán của sản phẩm này là bao nhiêu?",
+             expected_answer_contains=["Tài liệu không đề cập", "không đề cập"], expected_source_pages=[], category="out_of_scope"),
+    TestCase(id=15, question="Bảo hành điện thoại Samsung bao lâu?",
+             expected_answer_contains=["Tài liệu không đề cập", "không đề cập"], expected_source_pages=[], category="out_of_scope"),
 ]
+
+
+def get_test_cases(category: str | None = None) -> list[TestCase]:
+    if category is None:
+        return TEST_CASES
+    return [tc for tc in TEST_CASES if tc.category == category]
 
 
 # ─────────────── INDEXING ───────────────
@@ -174,52 +212,51 @@ def check_context_recall(retrieved_docs: list, expected_pages: list) -> bool:
     return any(ep in retrieved_pages for ep in expected_pages)
 
 
-def save_report(all_results: dict, path: str):
+def save_report(all_results: dict[str, VariantResult], path: str):
     with open(path, "w", encoding="utf-8") as f:
-        json.dump(all_results, f, ensure_ascii=False, indent=2)
-    txt_path = path.replace(".json", ".txt")
-    lines = []
+        json.dump({k: v.model_dump() for k, v in all_results.items()}, f, ensure_ascii=False, indent=2)
+
     for variant_name, result in all_results.items():
-        lines.append(f"{'='*60}")
-        lines.append(f"VARIANT: {variant_name}")
-        lines.append(f"{'='*60}")
-        lines.append(f"  Total cases : {result['num_cases']}")
-        lines.append(f"  Context Rec : {result['context_recall']}")
-        lines.append(f"  Keyword Cov : {result['keyword_coverage']}")
-        lines.append(f"  Avg Latency : {result['avg_latency']}s")
-        lines.append(f"{'='*60}")
-        lines.append("")
-        for r in result["details"]:
-            status = "✓" if (r["context_recall"] if r["expected_pages"] else True) else "✗"
-            lines.append(f"#{r['id']} [{status}] {r['category']:14s}  CR={r['context_recall']}  KW={r['keyword_coverage']:.2f}  {r['latency_total']:.1f}s")
-            lines.append(f"     pages -> {r['retrieved_pages']} (expected {r['expected_pages']})")
-            lines.append(f"     Q: {r['question'][:80]}")
-            lines.append(f"     A: {r['answer_preview'][:200]}")
+        txt_path = path.replace(".json", f"_{variant_name}.txt")
+        lines = [
+            f"{'='*60}",
+            f"VARIANT: {variant_name}",
+            f"{'='*60}",
+            f"  Total cases : {result.num_cases}",
+            f"  Context Rec : {result.context_recall}",
+            f"  Keyword Cov : {result.keyword_coverage}",
+            f"  Avg Latency : {result.avg_latency}s",
+            f"{'='*60}",
+            "",
+        ]
+        for r in result.details:
+            status = "✓" if (r.context_recall if r.expected_pages else True) else "✗"
+            lines.append(f"#{r.id} [{status}] {r.category:14s}  CR={r.context_recall}  KW={r.keyword_coverage:.2f}  {r.latency_total:.1f}s")
+            lines.append(f"     pages -> {r.retrieved_pages} (expected {r.expected_pages})")
+            lines.append(f"     Q: {r.question[:80]}")
+            lines.append(f"     A: {r.answer_preview[:200]}")
             lines.append("")
-    with open(txt_path, "w", encoding="utf-8") as f:
-        f.write("\n".join(lines))
-    print(f"  → Saved {path} and {txt_path}")
+        with open(txt_path, "w", encoding="utf-8") as f:
+            f.write("\n".join(lines))
+        print(f"  → Saved {txt_path}")
+    print(f"  → Saved {path}")
 
 
-def run_evaluation(name: str, retriever, chain, test_cases: list) -> dict:
-    results = []
+def run_evaluation(name: str, retriever, chain, test_cases: list[TestCase]) -> VariantResult:
+    details: list[CaseResult] = []
     total_cr = total_latency = 0
     total_kw = 0.0
     cr_count = kw_count = 0
 
     for tc in test_cases:
-        question = tc["question"]
-        expected_kw = tc.get("expected_answer_contains", [])
-        expected_pages = tc.get("expected_source_pages", [])
-
         t0 = time.time()
-        retrieved_docs = retriever.invoke(question)
+        retrieved_docs = retriever.invoke(tc.question)
         t1 = time.time()
-        answer = chain.invoke(question)
+        answer = chain.invoke(tc.question)
         t2 = time.time()
 
-        cr = check_context_recall(retrieved_docs, expected_pages)
-        kw = keyword_coverage(answer, expected_kw)
+        cr = check_context_recall(retrieved_docs, tc.expected_source_pages)
+        kw = keyword_coverage(answer, tc.expected_answer_contains)
 
         retrieved_page_list = []
         for d in retrieved_docs:
@@ -232,29 +269,29 @@ def run_evaluation(name: str, retriever, chain, test_cases: list) -> dict:
             else:
                 retrieved_page_list.append(None)
 
-        results.append({
-            "id": tc["id"], "category": tc["category"], "question": question,
-            "answer_preview": answer[:400], "context_recall": cr,
-            "keyword_coverage": round(kw, 4), "latency_total": round(t2 - t0, 3),
-            "retrieved_pages": retrieved_page_list, "expected_pages": expected_pages,
-        })
+        details.append(CaseResult(
+            id=tc.id, category=tc.category, question=tc.question,
+            answer_preview=answer[:400], context_recall=cr,
+            keyword_coverage=round(kw, 4), latency_total=round(t2 - t0, 3),
+            retrieved_pages=retrieved_page_list, expected_pages=tc.expected_source_pages,
+        ))
 
-        if expected_pages:
+        if tc.expected_source_pages:
             total_cr += int(cr); cr_count += 1
-        if expected_kw:
+        if tc.expected_answer_contains:
             total_kw += kw; kw_count += 1
         total_latency += t2 - t0
 
-        status = "✓" if (cr if expected_pages else True) else "✗"
-        print(f"  [{status}] #{tc['id']} {tc['category']:14s} | CR={cr} KW={kw:.2f} | pages={retrieved_page_list} | {t2-t0:.1f}s")
+        status = "✓" if (cr if tc.expected_source_pages else True) else "✗"
+        print(f"  [{status}] #{tc.id} {tc.category:14s} | CR={cr} KW={kw:.2f} | pages={retrieved_page_list} | {t2-t0:.1f}s")
 
-    return {
-        "variant": name, "num_cases": len(results),
-        "context_recall": round(total_cr / cr_count, 4) if cr_count else None,
-        "keyword_coverage": round(total_kw / kw_count, 4) if kw_count else None,
-        "avg_latency": round(total_latency / len(results), 3),
-        "details": results,
-    }
+    return VariantResult(
+        variant=name, num_cases=len(details),
+        context_recall=round(total_cr / cr_count, 4) if cr_count else None,
+        keyword_coverage=round(total_kw / kw_count, 4) if kw_count else None,
+        avg_latency=round(total_latency / len(details), 3),
+        details=details,
+    )
 
 
 # ─────────────── RETRIEVAL ───────────────
@@ -435,10 +472,10 @@ def compare_retrievers():
     chunks = split_documents_v1(docs)
     print(f"  → {len(chunks)} chunks")
     print("[3/4] Đang tạo embeddings và lưu Chroma...")
-    vectorstore = load_vectorstore()
+    vectorstore = create_vectorstore(chunks)
     print(f"  → Đã lưu tại {CHROMA_DIR}")
 
-    all_results = {}
+    all_results: dict[str, VariantResult] = {}
 
     for variant_name, build_fn in [
         ("vector_only", lambda: build_vector_retriever(vectorstore, k=RETRIEVER_K)),
@@ -452,11 +489,11 @@ def compare_retrievers():
         result = run_evaluation(variant_name, retriever, chain, TEST_CASES)
         all_results[variant_name] = result
 
-        kw_str = f"{result['keyword_coverage']}" if result['keyword_coverage'] is not None else "N/A"
+        kw_str = f"{result.keyword_coverage}" if result.keyword_coverage is not None else "N/A"
         print(f"\n>>> {variant_name} SUMMARY:")
-        print(f"    Context Recall : {result['context_recall']}")
+        print(f"    Context Recall : {result.context_recall}")
         print(f"    Keyword Coverage: {kw_str}")
-        print(f"    Avg Latency    : {result['avg_latency']}s")
+        print(f"    Avg Latency    : {result.avg_latency}s")
 
     print(f"\n{'='*60}")
     print("COMPARISON SUMMARY")
@@ -464,8 +501,8 @@ def compare_retrievers():
     print(f"{'Variant':14s} {'Context Rec':>12s} {'Keyword Cov':>12s} {'Avg Latency':>12s}")
     print(f"{'─'*14} {'─'*12} {'─'*12} {'─'*12}")
     for name, res in all_results.items():
-        kw = f"{res['keyword_coverage']:.4f}" if res['keyword_coverage'] is not None else "N/A"
-        print(f"{name:14s} {str(res['context_recall']):>12s} {kw:>12s} {str(res['avg_latency'])+'s':>12s}")
+        kw = f"{res.keyword_coverage:.4f}" if res.keyword_coverage is not None else "N/A"
+        print(f"{name:14s} {str(res.context_recall):>12s} {kw:>12s} {str(res.avg_latency)+'s':>12s}")
     print(f"{'='*60}\n")
 
     save_report(all_results, "comparison_report.json")

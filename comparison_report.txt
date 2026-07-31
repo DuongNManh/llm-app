@@ -1,14 +1,14 @@
 ============================================================
 VARIANT: vector_only_1000/200
 ============================================================
-  Total cases : 10
-  Context Rec : None
+  Total cases : 15
+  Context Rec : 0.8462
   Keyword Cov : 1.0
-  Avg Latency : 0.0s
+  Avg Latency : 3.044s
 ============================================================
 
 #1  [OK]  general  CR=True  KW=1.00  3.2s
-     pages => [66, 20, 70, 67]  (expected [])
+     pages => [66, 20, 70, 67]  (expected [65, 66])
      Q: Hãy hướng dẫn kết nối Wifi cho điện thoại Samsung.
      Q: Chào bạn, để kết nối điện thoại Samsung của bạn với mạng Wi-Fi, bạn có thể thực hiện theo các bước đơn giản sau đây dựa trên tài liệu hướng dẫn:
 
@@ -32,8 +32,8 @@ Dưới đây là đoạn trích dẫn chi tiết từ tài liệu:
 
 Hy vọng thông tin này giúp ích cho bạn!
 
-#2  [OK]  general  CR=True  KW=1.00  2.5s
-     pages => [30, 12, 42, 42]  (expected [])
+#2  [OK]  general  CR=True  KW=1.00  2.7s
+     pages => [30, 12, 42, 42]  (expected [30])
      Q: Cách chụp màn hình trên điện thoại Samsung?
      Q: Chào bạn, để chụp màn hình trên điện thoại Samsung, bạn có thể thực hiện theo hướng dẫn sau đây:
 
@@ -53,8 +53,70 @@ Dưới đây là đoạn trích dẫn từ tài liệu để bạn tham khảo 
 
 > "[Trang 41] Trong chế độ bí mật, bạn không thể sử dụng một số tính năng như chụp màn hình."
 
-#5  [OK]  semantic_gap  CR=True  KW=1.00  3.2s
-     pages => [66, 20, 70, 65]  (expected [])
+#3  [OK]  general  CR=True  KW=1.00  4.1s
+     pages => [13, 14, 14, 93]  (expected [13, 14])
+     Q: Pin điện thoại Samsung nên sạc như thế nào cho đúng?
+     Q: Chào bạn, để sạc pin điện thoại Samsung đúng cách và an toàn, bạn vui lòng tham khảo các hướng dẫn từ tài liệu như sau:
+
+**1. Lưu ý quan trọng khi sạc:**
+*   **Sử dụng phụ kiện chính hãng:** Chỉ sử dụng pin, bộ sạc và cáp được thiết kế đặc biệt cho thiết bị của bạn và đã được Samsung chứng nhận. Việc sử dụng thiết bị không tương thích có thể gây hư hỏng nghiêm trọng hoặc chấn thương.
+*   **Cáp sạc:** Chỉ sử dụng cáp USB Type-C đi kèm thiết bị. Không sử dụng cáp Micro USB vì có thể gây hỏng máy.
+*   **Kết nối:** Đảm bảo kết nối bộ sạc đúng cách.
+*   **Tiết kiệm điện:** Hãy tháo bộ sạc khỏi ổ cắm điện khi không sử dụng để tránh lãng phí điện năng.
+
+**2. Cách sạc:**
+*   Sạc pin trước khi sử dụng lần đầu hoặc khi không sử dụng pin trong thời gian dài.
+*   Để sạc có dây: Gắn cáp USB vào bộ cấp nguồn USB và gắn cáp vào khe cắm đa năng của thiết bị.
+*   Nếu pin đã cạn hoàn toàn, hãy để thiết bị sạc trong vài phút trước khi bật nguồn.
+
+**3. Một số lời khuyên khác:**
+*   Bạn có thể sạc nhanh hơn khi tắt thiết bị hoặc tắt màn hình.
+*   Việc sử dụng nguồn điện không phải từ bộ sạc (như máy tính) có thể làm tốc độ sạc chậm hơn.
+*   Bạn có thể sử dụng thiết bị trong khi sạc, nhưng việc này sẽ làm quá trình sạc đầy mất nhiều thời gian hơn.
+*   Nếu thiết bị nhận nguồn điện không ổn định khi sạc khiến màn hình cảm ứng không hoạt động, hãy rút bộ sạc ra.
+
+---
+**Trích dẫn từ tài liệu:**
+> "[Trang 12] Sạc pin: Sạc pin trước khi sử dụng lần đầu hoặc khi không sử dụng pin trong thời gian dài. Chỉ sử dụng pin, bộ sạc và cáp được thiết kế đặc biệt dành cho thiết bị của bạn và đã được Samsung chứng nhận... Chỉ sử dụng cáp USB Type-C được cung cấp cùng với thiết bị... Để tiết kiệm điện năng, hãy tháo bộ sạc khi không sử dụng... Sạc có dây: Gắn cáp USB vào bộ cấp nguồn USB và gắn cáp vào khe cắm đa năng của thiết bị để sạc pin."
+>
+> "[Trang 13] Sạc nhanh: Bạn có thể sạc pin nhanh hơn khi tắt thiết bị hoặc màn hình... Nếu pin hoàn toàn hết, bạn không thể bật thiết bị ngay khi mới kết nối vào bộ sạc. Hãy để pin đã cạn được sạc trong vài phút trước khi bật thiết bị... Việc dùng nguồn điện không phải từ bộ sạc, như máy tính, có thể làm cho tốc độ sạc chậm hơn... Bạn có thể sử dụng thiết bị trong khi đang sạc nhưng sẽ làm cho quá trình sạc đầy pin mất nhiều thời gian hơn. Nếu thiết bị nhận được nguồn điện không ổn định trong khi sạc, màn hình cảm ứng có thể không hoạt động. Nếu điều này xảy ra, hãy rút bộ sạc ra khỏi thiết bị."
+>
+> "[Trang 92] Pin sạc không đúng cách (Đối với những bộ sạc được Samsung chứng nhận): Đảm bảo kết nối bộ sạc đúng cách."
+
+#4  [OK]  general  CR=True  KW=1.00  4.6s
+     pages => [22, 21, 81, 22]  (expected [21, 22])
+     Q: Làm thế nào để chuyển dữ liệu từ máy cũ sang máy Samsung mới?
+     Q: Chào bạn! Để chuyển dữ liệu từ máy cũ sang máy Samsung mới, bạn có thể thực hiện theo các cách sau đây dựa trên hướng dẫn của chúng tôi:
+
+### 1. Truyền dữ liệu không dây (qua Wi-Fi Direct)
+Bạn có thể đặt hai thiết bị gần nhau và thực hiện như sau:
+*   **Trên thiết bị trước:** Khởi chạy Smart Switch (nếu chưa có, hãy tải từ Galaxy Store hoặc CH Play). Chạm vào **Gửi dữ liệu** → **Không dây** → **Cho phép**.
+*   **Trên thiết bị mới:** Vào **Cài đặt** → **Tài khoản và sao lưu** → **Smart Switch**. Chọn các mục muốn nhận và chạm vào **Truyền**.
+
+### 2. Truyền dữ liệu bằng máy tính
+Bạn cần tải ứng dụng Smart Switch từ [www.samsung.com/smartswitch](http://www.samsung.com/smartswitch) về máy tính:
+1. Khởi chạy Smart Switch trên máy tính.
+2. Kết nối thiết bị trước với máy tính bằng cáp USB và làm theo hướng dẫn trên màn hình để sao lưu dữ liệu. Sau đó ngắt kết nối thiết bị cũ.
+3. Kết nối thiết bị mới với máy tính bằng cáp USB.
+4. Làm theo hướng dẫn trên màn hình để truyền dữ liệu sang thiết bị mới.
+*(Lưu ý: Nếu thiết bị trước không phải là Samsung, hãy sao lưu dữ liệu bằng chương trình của nhà sản xuất thiết bị đó trước khi thực hiện bước 5).*
+
+### 3. Sử dụng thiết bị lưu trữ gắn ngoài (như thẻ nhớ microSD)
+1. Sao lưu dữ liệu từ thiết bị trước sang bộ nhớ gắn ngoài.
+2. Gắn thiết bị lưu trữ này vào máy Samsung mới.
+3. Trên máy mới, vào **Cài đặt** → **Tài khoản và sao lưu** → **Smart Switch** → chọn biểu tượng menu (dấu ba chấm) → **Khôi phục**.
+4. Làm theo hướng dẫn trên màn hình để hoàn tất.
+
+---
+**Trích dẫn từ tài liệu:**
+> "[Trang 20] Truyền dữ liệu không dây: Truyền dữ liệu không dây từ thiết bị trước sang thiết bị của bạn qua Wi-Fi Direct. 1 Trên thiết bị trước, khởi chạy Smart Switch. Nếu bạn không có ứng dụng, hãy tải về từ Galaxy Store hoặc CH Play. 2 Trên thiết bị của bạn, khởi chạy ứng dụng Cài đặt và chạm vào Tài khoản và sao lưu → Smart Switch. [Trang 21] 3 Đặt các thiết bị gần nhau. 4 Trên thiết bị trước đây, chạm vào Gửi dữ liệu → Không dây. 5 Trên thiết bị trước, chạm vào Cho phép. 6 Trên thiết bị, chọn một mục để nhận và chạm vào Truyền."
+
+> "[Trang 21] Truyền dữ liệu sao lưu từ máy tính: Truyền dữ liệu giữa thiết bị và máy tính. Bạn phải tải ứng dụng Smart Switch phiên bản cho máy tính về từ www.samsung.com/smartswitch. Sao lưu dữ liệu từ thiết bị trước sang máy tính và nhập dữ liệu vào thiết bị của bạn. 1 Trên máy tính, hãy truy cập www.samsung.com/smartswitch để tải về Smart Switch. 2 Trên máy tính, khởi chạy Smart Switch. Nếu thiết bị trước của bạn không phải là thiết bị Samsung, hãy sao lưu dữ liệu sang máy tính bằng cách sử dụng chương trình được nhà sản xuất thiết bị cung cấp. Sau đó, bỏ qua bước 5. 3 Kết nối thiết bị trước của bạn với máy tính bằng cáp USB của thiết bị. 4 Trên máy tính, làm theo hướng dẫn trên màn hình để sao lưu dữ liệu từ thiết bị. Sau đó ngắt kết nối thiết bị trước ra khỏi máy tính. 5 Kết nối thiết bị của bạn với máy tính bằng cáp USB. 6 Trên máy tính, làm theo hướng dẫn trên màn hình để truyền dữ liệu sang thiết bị của bạn."
+
+> "[Trang 21] Sao lưu và khôi phục dữ liệu bằng thiết bị lưu trữ gắn ngoài: Truyền dữ liệu bằng bộ nhớ gắn ngoài chẳng hạn như thẻ microSD. 1 Sao lưu dữ liệu từ thiết bị trước sang bộ nhớ gắn ngoài của bạn. 2 Gắn hoặc kết nối thiết bị lưu trữ gắn ngoài vào thiết bị của bạn. 3 Trên thiết bị của bạn, khởi chạy ứng dụng Cài đặt và chạm vào Tài khoản và sao lưu → Smart Switch → → Khôi phục. 4 Làm theo hướng dẫn trên màn hình để truyền dữ liệu từ bộ nhớ gắn ngoài."
+
+#5  [OK]  semantic_gap  CR=True  KW=1.00  3.1s
+     pages => [66, 20, 70, 65]  (expected [65, 66])
      Q: Làm sao để vào Internet qua Wifi trên máy Samsung?
      Q: Chào bạn, để kết nối Internet qua Wi-Fi trên thiết bị Samsung, bạn có thể thực hiện theo các bước hướng dẫn sau đây (trích từ tài liệu trang 65):
 
@@ -76,8 +138,24 @@ Các mạng với biểu tượng khóa cần có mật mã.
 • Sau khi thiết bị kết nối với mạng Wi-Fi, thiết bị sẽ kết nối lại với mạng đó mỗi lần mạng này khả dụng mà không yêu cầu mật mã. Để tránh việc thiết bị tự động kết nối mạng, chạm vào bên cạnh mạng đó rồi chạm vào công tắc Tự động kết nối lại để tắt.
 • Nếu bạn không thể kết nối đúng với mạng Wi-Fi, khởi động lại tính năng Wi-Fi của thiết bị"
 
-#7  [OK]  semantic_gap  CR=True  KW=1.00  3.2s
-     pages => [92, 92, 91, 96]  (expected [])
+#6  [NG]  semantic_gap  CR=False  KW=1.00  3.7s
+     pages => [92, 92, 91, 95]  (expected [19])
+     Q: Điện thoại Samsung bị treo logo, làm thế nào để khắc phục?
+     Q: Chào bạn, rất tiếc khi biết điện thoại Samsung của bạn đang gặp tình trạng treo máy. Dựa trên tài liệu hướng dẫn, bạn có thể thực hiện các bước sau để khắc phục:
+
+1. **Khởi động lại thiết bị:** Nếu thiết bị bị đơ hoặc treo máy, bạn có thể cần tắt các ứng dụng hoặc tắt thiết bị rồi bật lại.
+2. **Buộc khởi động lại:** Nếu thiết bị bị treo và không phản hồi, hãy nhấn và giữ phím Cạnh và phím Giảm âm lượng cùng lúc trong hơn 7 giây để khởi động lại.
+3. **Cài đặt lại thiết bị:** Nếu các phương pháp trên không giải quyết được vấn đề, bạn có thể thực hiện khôi phục cài đặt gốc bằng cách vào: **Cài đặt → Quản lý chung → Đặt lại → Khôi phục cài đặt gốc → Đặt lại → Xóa hết**. (Lưu ý: Hãy sao lưu dữ liệu quan trọng trước khi thực hiện bước này).
+4. **Liên hệ hỗ trợ:** Nếu các cách trên vẫn không khắc phục được lỗi, bạn hãy liên hệ với Trung tâm bảo hành của Samsung.
+
+**Trích dẫn từ tài liệu:**
+> "Khởi động lại thiết bị: Nếu thiết bị của bạn bị đơ hoặc treo máy, bạn có thể cần phải tắt các ứng dụng hoặc tắt thiết bị và bật lại.
+> Buộc khởi động lại: Nếu thiết bị của bạn bị treo và không phản hồi, nhấn và giữ phím Cạnh và phím Giảm âm lượng cùng lúc trong hơn 7 giây để khởi động lại.
+> Cài đặt lại thiết bị: Nếu các phương pháp trên vẫn không giải quyết được vấn đề, thực hiện khôi phục lại cài đặt gốc. Khởi chạy ứng dụng Cài đặt và chạm vào Quản lý chung → Đặt lại → Khôi phục cài đặt gốc → Đặt lại → Xóa hết. Trước khi khôi phục lại cài đặt gốc, hãy nhớ sao lưu toàn bộ dữ liệu quan trọng được lưu trong thiết bị."
+> "Thiết bị bị treo máy hoặc có lỗi nghiêm trọng: Hãy thử các giải pháp sau. Nếu vẫn chưa giải quyết được vấn đề, liên hệ với Trung tâm bảo hành của Samsung."
+
+#7  [NG]  semantic_gap  CR=False  KW=1.00  3.3s
+     pages => [92, 92, 91, 96]  (expected [19])
      Q: Máy Samsung của tôi bị đơ, không bấm được gì, phải làm sao?
      Q: Chào bạn, rất tiếc khi biết bạn đang gặp vấn đề với thiết bị Samsung của mình. Để khắc phục tình trạng máy bị đơ hoặc treo, bạn có thể thực hiện theo các hướng dẫn sau từ tài liệu:
 
@@ -102,8 +180,8 @@ Nếu sau khi thử các giải pháp trên mà vấn đề vẫn chưa được
 > "Cài đặt lại thiết bị: Nếu các phương pháp trên vẫn không giải quyết được vấn đề, thực hiện khôi phục lại cài đặt gốc. Khởi chạy ứng dụng Cài đặt và chạm vào Quản lý chung → Đặt lại → Khôi phục cài đặt gốc → Đặt lại → Xóa hết. Trước khi khôi phục lại cài đặt gốc, hãy nhớ sao lưu toàn bộ dữ liệu quan trọng được lưu trong thiết bị."
 > "Thiết bị bị treo máy hoặc có lỗi nghiêm trọng: Hãy thử các giải pháp sau. Nếu vẫn chưa giải quyết được vấn đề, liên hệ với Trung tâm bảo hành của Samsung."
 
-#8  [OK]  semantic_gap  CR=True  KW=1.00  4.3s
-     pages => [7, 8, 6, 8]  (expected [])
+#8  [OK]  semantic_gap  CR=True  KW=1.00  4.2s
+     pages => [7, 8, 6, 8]  (expected [6, 7, 8])
      Q: Samsung của tôi bị nóng quá, có sao không?
      Q: Chào bạn, việc điện thoại Samsung bị nóng có thể do nhiều nguyên nhân khác nhau. Dưới đây là thông tin chi tiết để bạn tham khảo:
 
@@ -137,8 +215,30 @@ Theo tài liệu, thiết bị có thể nóng lên trong các trường hợp s
 *[Trang 6] Khi thiết bị nóng lên, hãy thực hiện các bước sau: [Danh sách các bước xử lý như cập nhật phần mềm, khởi động lại, tắt tính năng không dùng, v.v.]*
 *[Trang 7] Cẩn trọng khi thiết bị quá nhiệt: Nếu bạn bắt đầu cảm thấy không thoải mái do thiết bị quá nóng, hãy ngưng sử dụng thiết bị... Nếu xuất hiện thông báo thứ hai do nhiệt độ thiết bị tiếp tục tăng, thiết bị sẽ tắt nguồn. Không sử dụng thiết bị cho đến khi nhiệt độ giảm xuống dưới mức chỉ định.*
 
+#9  [OK]  semantic_gap  CR=True  KW=1.00  2.6s
+     pages => [22, 67, 21, 22]  (expected [22])
+     Q: Làm cách nào sao chép ảnh từ Samsung qua máy vi tính?
+     Q: Chào bạn, để sao chép dữ liệu (bao gồm ảnh) từ điện thoại Samsung sang máy tính, bạn có thể sử dụng ứng dụng **Smart Switch**. Dưới đây là hướng dẫn chi tiết dựa trên tài liệu:
+
+**Cách truyền dữ liệu từ thiết bị sang máy tính:**
+
+1. Trên máy tính, hãy truy cập [www.samsung.com/smartswitch](http://www.samsung.com/smartswitch) để tải về và cài đặt ứng dụng Smart Switch.
+2. Khởi chạy ứng dụng Smart Switch trên máy tính.
+3. Kết nối thiết bị của bạn với máy tính bằng cáp USB.
+4. Trên máy tính, làm theo hướng dẫn trên màn hình để sao lưu dữ liệu từ thiết bị.
+
+**Trích dẫn từ tài liệu [Trang 21]:**
+> "Truyền dữ liệu sao lưu từ máy tính: Truyền dữ liệu giữa thiết bị và máy tính. Bạn phải tải ứng dụng Smart Switch phiên bản cho máy tính về từ www.samsung.com/smartswitch. Sao lưu dữ liệu từ thiết bị trước sang máy tính và nhập dữ liệu vào thiết bị của bạn.
+> 1 Trên máy tính, hãy truy cập www.samsung.com/smartswitch để tải về Smart Switch.
+> 2 Trên máy tính, khởi chạy Smart Switch.
+> [...]
+> 5 Kết nối thiết bị của bạn với máy tính bằng cáp USB.
+> 6 Trên máy tính, làm theo hướng dẫn trên màn hình để truyền dữ liệu sang thiết bị của bạn."
+
+Hy vọng thông tin này giúp ích cho bạn!
+
 #10  [OK]  code_model  CR=True  KW=1.00  1.8s
-     pages => [1, 16, 15, 16]  (expected [])
+     pages => [1, 16, 15, 16]  (expected [15, 16])
      Q: SM-A125F/DS dùng loại thẻ SIM nào?
      Q: Chào bạn, cảm ơn bạn đã liên hệ với bộ phận hỗ trợ kỹ thuật của Samsung.
 
@@ -151,25 +251,50 @@ Thông tin chi tiết được trích dẫn từ tài liệu hướng dẫn sử
 
 Hy vọng thông tin này hữu ích với bạn! Nếu cần hỗ trợ thêm, bạn đừng ngần ngại đặt câu hỏi nhé.
 
-#11  [OK]  code_model  CR=True  KW=1.00  2.3s
-     pages => [1, 72, 97, 3]  (expected [])
-     Q: Điện thoại SM-A125F/DS có hỗ trợ Dolby Atmos không?
+#11  [OK]  code_model  CR=True  KW=1.00  2.5s
+     pages => [72, 97, 3, 4]  (expected [72])
+     Q: Điện thoại Samsung có hỗ trợ Dolby Atmos không?
      Q: Chào bạn, cảm ơn bạn đã liên hệ với bộ phận hỗ trợ kỹ thuật của Samsung.
 
-Dựa trên tài liệu hướng dẫn sử dụng của thiết bị SM-A125F/DS, điện thoại của bạn **có hỗ trợ tính năng Dolby Atmos**.
+Điện thoại Samsung có hỗ trợ tính năng Dolby Atmos. Bạn có thể trải nghiệm âm thanh vòm được tối ưu hóa cho nhiều thể loại như phim, nhạc và giọng nói, giúp âm thanh chuyển động vòng quanh bạn.
 
-Dưới đây là thông tin chi tiết được trích dẫn từ tài liệu:
+Dưới đây là thông tin chi tiết từ tài liệu hướng dẫn:
 
 **[Trang 71] Cài đặt**
-> **Hiệu ứng và chất lượng âm thanh**
-> Cài đặt chất lượng và hiệu ứng âm thanh của thiết bị.
-> Trên màn hình Cài đặt, chạm vào Âm thanh và rung → Hiệu ứng và chất lượng âm thanh.
-> • **Dolby Atmos**: Chọn một chế độ âm thanh vòm được tối ưu hóa cho các thể loại âm thanh đa dạng như phim, nhạc và giọng nói. Với Dolby Atmos, bạn có thể trải nghiệm dòng chảy âm thanh chuyển động vòng quanh bạn.
+> "• Dolby Atmos: Chọn một chế độ âm thanh vòm được tối ưu hóa cho các thể loại âm thanh đa dạng như phim, nhạc và giọng nói. Với Dolby Atmos, bạn có thể trải nghiệm dòng chảy âm thanh chuyển động vòng quanh bạn."
 
-Hy vọng thông tin này giúp ích cho bạn! Nếu cần hỗ trợ thêm, bạn đừng ngần ngại đặt câu hỏi nhé.
+Để sử dụng tính năng này, bạn có thể truy cập vào: **Cài đặt → Âm thanh và rung → Hiệu ứng và chất lượng âm thanh.**
 
-#13  [OK]  code_model  CR=True  KW=1.00  2.8s
-     pages => [56, 91, 92, 95]  (expected [])
+*Lưu ý: Tùy vào kiểu máy, bạn có thể cần kết nối tai nghe để sử dụng một số tính năng này.*
+
+Hy vọng thông tin này hữu ích với bạn! Nếu cần hỗ trợ thêm, bạn đừng ngần ngại đặt câu hỏi nhé.
+
+#12  [OK]  code_model  CR=True  KW=1.00  3.5s
+     pages => [21, 22, 22, 81]  (expected [21, 22])
+     Q: Smart Switch có thể chuyển dữ liệu bằng cách nào?
+     Q: Chào bạn, tôi là trợ lý hỗ trợ kỹ thuật của Samsung. Dựa trên tài liệu được cung cấp, Smart Switch hỗ trợ chuyển dữ liệu bằng 3 phương thức chính như sau:
+
+**1. Truyền dữ liệu không dây:**
+Sử dụng kết nối Wi-Fi Direct để chuyển dữ liệu trực tiếp giữa hai thiết bị.
+> *Trích dẫn:* "Truyền dữ liệu không dây từ thiết bị trước sang thiết bị của bạn qua Wi-Fi Direct. 1 Trên thiết bị trước, khởi chạy Smart Switch. Nếu bạn không có ứng dụng, hãy tải về từ Galaxy Store hoặc CH Play. 2 Trên thiết bị của bạn, khởi chạy ứng dụng Cài đặt và chạm vào Tài khoản và sao lưu → Smart Switch. 3 Đặt các thiết bị gần nhau. 4 Trên thiết bị trước đây, chạm vào Gửi dữ liệu → Không dây. 5 Trên thiết bị trước, chạm vào Cho phép. 6 Trên thiết bị, chọn một mục để nhận và chạm vào Truyền."
+
+**2. Sao lưu và khôi phục dữ liệu bằng thiết bị lưu trữ gắn ngoài:**
+Sử dụng các thiết bị như thẻ nhớ microSD để trung chuyển dữ liệu.
+> *Trích dẫn:* "Truyền dữ liệu bằng bộ nhớ gắn ngoài chẳng hạn như thẻ microSD. 1 Sao lưu dữ liệu từ thiết bị trước sang bộ nhớ gắn ngoài của bạn. 2 Gắn hoặc kết nối thiết bị lưu trữ gắn ngoài vào thiết bị của bạn. 3 Trên thiết bị của bạn, khởi chạy ứng dụng Cài đặt và chạm vào Tài khoản và sao lưu → Smart Switch → → Khôi phục. 4 Làm theo hướng dẫn trên màn hình để truyền dữ liệu từ bộ nhớ gắn ngoài."
+
+**3. Truyền dữ liệu sao lưu từ máy tính:**
+Sử dụng máy tính làm trung gian để sao lưu từ thiết bị cũ và nhập vào thiết bị mới thông qua cáp USB.
+> *Trích dẫn:* "Truyền dữ liệu giữa thiết bị và máy tính. Bạn phải tải ứng dụng Smart Switch phiên bản cho máy tính về từ www.samsung.com/smartswitch. Sao lưu dữ liệu từ thiết bị trước sang máy tính và nhập dữ liệu vào thiết bị của bạn. 1 Trên máy tính, hãy truy cập www.samsung.com/smartswitch để tải về Smart Switch. 2 Trên máy tính, khởi chạy Smart Switch... 3 Kết nối thiết bị trước của bạn với máy tính bằng cáp USB của thiết bị. 4 Trên máy tính, làm theo hướng dẫn trên màn hình để sao lưu dữ liệu từ thiết bị... 5 Kết nối thiết bị của bạn với máy tính bằng cáp USB. 6 Trên máy tính, làm theo hướng dẫn trên màn hình để truyền dữ liệu sang thiết bị của bạn."
+
+**Lưu ý quan trọng:**
+*   Tính năng này có thể không được hỗ trợ trên một số thiết bị hoặc máy tính.
+*   Bạn chỉ nên truyền các nội dung mà bạn có quyền sở hữu hoặc có quyền truyền.
+*   Để biết thông tin chi tiết về các giới hạn, bạn có thể truy cập trang www.samsung.com/smartswitch.
+
+Hy vọng thông tin này hữu ích với bạn!
+
+#13  [OK]  code_model  CR=True  KW=1.00  2.7s
+     pages => [56, 91, 92, 95]  (expected [56])
      Q: Samsung Members giúp ích gì khi máy gặp vấn đề?
      Q: Chào bạn, rất vui được hỗ trợ bạn!
 
@@ -195,7 +320,7 @@ Hy vọng thông tin này hữu ích với bạn!
      Q: Giá bán của sản phẩm này là bao nhiêu?
      Q: Chào bạn, rất tiếc là tài liệu không đề cập đến vấn đề này. Trong các trang thông tin được cung cấp không có nội dung nào nói về giá bán của sản phẩm.
 
-#15  [OK]  out_of_scope  CR=True  KW=1.00  2.4s
+#15  [OK]  out_of_scope  CR=True  KW=1.00  2.2s
      pages => [4, 4, 92, 93]  (expected [])
      Q: Bảo hành điện thoại Samsung bao lâu?
      Q: Chào bạn, cảm ơn bạn đã liên hệ với bộ phận hỗ trợ kỹ thuật của Samsung.
@@ -210,14 +335,14 @@ Nếu bạn có thắc mắc cụ thể về các ứng dụng được cung c�
 ============================================================
 VARIANT: vector_only_512/128
 ============================================================
-  Total cases : 10
-  Context Rec : None
-  Keyword Cov : 1.0
-  Avg Latency : 0.0s
+  Total cases : 15
+  Context Rec : 0.8462
+  Keyword Cov : 0.9778
+  Avg Latency : 3.804s
 ============================================================
 
-#1  [OK]  general  CR=True  KW=1.00  2.3s
-     pages => [66, 20, 70, 67]  (expected [])
+#1  [OK]  general  CR=True  KW=1.00  2.2s
+     pages => [66, 20, 70, 67]  (expected [65, 66])
      Q: Hãy hướng dẫn kết nối Wifi cho điện thoại Samsung.
      Q: Chào bạn, rất vui được hỗ trợ bạn kết nối Wi-Fi trên điện thoại Samsung. Dựa trên tài liệu hướng dẫn, bạn có thể thực hiện theo các bước sau:
 
@@ -234,8 +359,8 @@ VARIANT: vector_only_512/128
 
 Hy vọng thông tin này giúp ích cho bạn! Nếu cần hỗ trợ thêm, bạn cứ đặt câu hỏi nhé.
 
-#2  [OK]  general  CR=True  KW=1.00  2.3s
-     pages => [30, 12, 43, 2]  (expected [])
+#2  [OK]  general  CR=True  KW=1.00  19.7s
+     pages => [30, 12, 43, 2]  (expected [30])
      Q: Cách chụp màn hình trên điện thoại Samsung?
      Q: Chào bạn, để chụp màn hình trên điện thoại Samsung, bạn có thể thực hiện theo hướng dẫn sau:
 
@@ -252,8 +377,58 @@ Dưới đây là đoạn trích dẫn thông tin từ tài liệu để bạn t
 
 Hy vọng thông tin này hữu ích với bạn!
 
-#5  [OK]  semantic_gap  CR=True  KW=1.00  2.7s
-     pages => [66, 20, 66, 65]  (expected [])
+#3  [OK]  general  CR=True  KW=0.67  3.5s
+     pages => [13, 93, 14, 15]  (expected [13, 14])
+     Q: Pin điện thoại Samsung nên sạc như thế nào cho đúng?
+     Q: Chào bạn, để sạc pin điện thoại Samsung đúng cách và an toàn, bạn vui lòng tham khảo các hướng dẫn từ tài liệu như sau:
+
+**1. Lưu ý khi sạc:**
+*   Bạn nên sạc pin trước khi sử dụng lần đầu hoặc khi không sử dụng pin trong thời gian dài.
+*   Chỉ sử dụng pin, bộ sạc và cáp được thiết kế đặc biệt dành cho thiết bị của bạn và đã được Samsung chứng nhận. Việc sử dụng thiết bị không tương thích có thể gây chấn thương hoặc làm hư hỏng nghiêm trọng thiết bị và sẽ bị từ chối bảo hành.
+*   Đảm bảo kết nối bộ sạc đúng cách. Việc kết nối không đúng có thể làm thiết bị hư hỏng nặng.
+*   Nếu khe cắm đa năng bị ướt, hãy làm khô kỹ trước khi sạc để tránh làm hỏng thiết bị.
+
+**2. Một số tình huống thường gặp:**
+*   Nếu pin hoàn toàn hết, bạn hãy để thiết bị sạc trong vài phút trước khi bật nguồn.
+*   Trong khi sạc, thiết bị và bộ sạc có thể bị nóng lên, đây là điều bình thường. Tuy nhiên, nếu pin nóng hơn bình thường, bộ sạc có thể tự động ngừng sạc.
+*   Nếu bạn dùng nhiều ứng dụng cùng lúc (như ứng dụng mạng, ứng dụng cần kết nối thiết bị khác), pin sẽ hết nhanh. Hãy sạc đầy pin trước khi sử dụng các ứng dụng này để tránh mất nguồn khi đang truyền dữ liệu.
+*   Nếu thiết bị không sạc được, bạn hãy mang thiết bị và bộ sạc đến Trung tâm bảo hành của Samsung.
+
+**Trích dẫn từ tài liệu:**
+*   *[Trang 13]: "Sạc pin trước khi sử dụng lần đầu hoặc khi không sử dụng pin trong thời gian dài. Chỉ sử dụng pin, bộ sạc và cáp được thiết kế đặc biệt dành cho thiết bị của bạn và đã được Samsung chứng nhận... Việc kết nối bộ sạc không đúng có thể làm thiết bị hư hỏng nặng. Bất kỳ hỏng hóc nào gây ra bởi việc sử dụng không đúng thiết bị đều bị từ chối bảo hành."*
+*   *[Trang 92]: "Đảm bảo kết nối bộ sạc đúng cách."*
+*   *[Trang 13]: "Nếu pin hoàn toàn hết, bạn không thể bật thiết bị ngay khi mới kết nối vào bộ sạc. Hãy để pin đã cạn được sạc trong vài phút trước khi bật thiết bị. Nếu bạn dùng nhiều ứng dụng cùng một lúc... hãy luôn sử dụng các ứng dụng này sau khi đã sạc đầy pin."*
+*   *[Trang 14]: "Trong khi đang sạc, thiết bị và bộ sạc có thể bị nóng lên. Đây là điều bình thường... Nếu bạn sạc thiết bị khi khe cắm đa năng bị ướt thì thiết bị có thể bị hỏng. Hãy làm khô kỹ khe cắm đa năng trước khi sạc thiết bị. Nếu thiết bị không sạc được, hãy mang thiết bị và bộ sạc đến Trung tâm bảo hành của Samsung."*
+
+#4  [OK]  general  CR=True  KW=1.00  3.5s
+     pages => [22, 81, 21, 22]  (expected [21, 22])
+     Q: Làm thế nào để chuyển dữ liệu từ máy cũ sang máy Samsung mới?
+     Q: Chào bạn! Để chuyển dữ liệu từ máy cũ sang máy Samsung mới, bạn có thể sử dụng ứng dụng **Smart Switch**. Dưới đây là các cách thực hiện dựa trên tài liệu hướng dẫn:
+
+### Cách 1: Sử dụng máy tính (Dành cho việc sao lưu và khôi phục)
+1. Trên máy tính, truy cập **www.samsung.com/smartswitch** để tải về và khởi chạy ứng dụng Smart Switch.
+2. Kết nối thiết bị trước của bạn với máy tính bằng cáp USB.
+3. Làm theo hướng dẫn trên màn hình máy tính để sao lưu dữ liệu từ thiết bị cũ. Sau đó, ngắt kết nối thiết bị cũ.
+4. Kết nối thiết bị Samsung mới của bạn với máy tính bằng cáp USB.
+5. Làm theo hướng dẫn trên màn hình máy tính để truyền dữ liệu sang thiết bị mới.
+
+*Lưu ý: Nếu thiết bị trước của bạn không phải là thiết bị Samsung, hãy sao lưu dữ liệu sang máy tính bằng chương trình do nhà sản xuất thiết bị đó cung cấp, sau đó thực hiện bước kết nối thiết bị mới với máy tính để truyền dữ liệu.*
+
+### Cách 2: Chuyển trực tiếp giữa hai thiết bị
+1. Trên thiết bị cũ, khởi chạy ứng dụng **Smart Switch** (nếu chưa có, bạn có thể tải từ Galaxy Store hoặc CH Play).
+2. Trên thiết bị Samsung mới, vào **Cài đặt** → **Tài khoản và sao lưu** → **Smart Switch**.
+3. Làm theo các hướng dẫn trên màn hình để truyền dữ liệu.
+
+---
+**Trích dẫn từ tài liệu:**
+*   *[Trang 21] ...Sao lưu dữ liệu từ thiết bị trước sang máy tính và nhập dữ liệu vào thiết bị của bạn. 1 Trên máy tính, hãy truy cập www.samsung.com/smartswitch để tải về Smart Switch. 2 Trên máy tính, khởi chạy Smart Switch. Nếu thiết bị trước của bạn không phải là thiết bị Samsung, hãy sao lưu dữ liệu sang máy tính bằng cách sử dụng chương trình được nhà sản xuất thiết bị cung cấp. Sau đó, bỏ qua bước 5. 3 Kết nối thiết bị trước của bạn với máy tính bằng cáp USB của thiết bị. 4 Trên máy tính, làm theo hướng dẫn trên màn hình để sao lưu dữ liệu từ thiết bị. Sau đó ngắt kết nối thiết bị trước ra khỏi máy tính. 5 Kết nối thiết bị của bạn với máy tính bằng cáp USB. 6 Trên máy tính, làm theo hướng dẫn trên màn hình để truyền dữ liệu sang thiết bị của bạn.*
+*   *[Trang 20] 1 Trên thiết bị trước, khởi chạy Smart Switch. Nếu bạn không có ứng dụng, hãy tải về từ Galaxy Store hoặc CH Play. 2 Trên thiết bị của bạn, khởi chạy ứng dụng Cài đặt và chạm vào Tài khoản và sao lưu → Smart Switch.*
+*   *[Trang 80] • Smart Switch: Khởi chạy Smart Switch và truyền dữ liệu từ thiết bị trước của bạn.*
+
+Hy vọng thông tin này giúp ích cho bạn! Nếu cần hỗ trợ thêm, bạn cứ cho mình biết nhé.
+
+#5  [OK]  semantic_gap  CR=True  KW=1.00  2.5s
+     pages => [66, 20, 66, 65]  (expected [65, 66])
      Q: Làm sao để vào Internet qua Wifi trên máy Samsung?
      Q: Chào bạn, để kết nối Internet qua Wi-Fi trên điện thoại Samsung, bạn có thể thực hiện theo các bước hướng dẫn sau đây:
 
@@ -271,8 +446,26 @@ Sau khi thiết bị đã kết nối thành công với mạng Wi-Fi, thiết b
 > Các mạng với biểu tượng khóa cần có mật mã.
 > • Sau khi thiết bị kết nối với mạng Wi-Fi, thiết bị sẽ kết nối lại với mạng đó mỗi lần mạng này [khả dụng]."
 
-#7  [OK]  semantic_gap  CR=True  KW=1.00  2.9s
-     pages => [92, 92, 91, 95]  (expected [])
+#6  [NG]  semantic_gap  CR=False  KW=1.00  2.8s
+     pages => [92, 92, 4, 91]  (expected [19])
+     Q: Điện thoại Samsung bị treo logo, làm thế nào để khắc phục?
+     Q: Chào bạn, rất tiếc khi biết bạn đang gặp vấn đề với điện thoại Samsung của mình. Dựa trên tài liệu hướng dẫn, bạn có thể thử các bước sau để khắc phục tình trạng treo máy:
+
+1. **Khởi động lại thiết bị:** Nếu thiết bị bị đơ hoặc treo, bạn có thể tắt các ứng dụng hoặc tắt thiết bị rồi bật lại.
+2. **Buộc khởi động lại:** Nếu thiết bị bị treo và không phản hồi, hãy nhấn và giữ phím Cạnh và phím Giảm âm lượng cùng lúc trong hơn 7 giây để khởi động lại.
+3. **Cài đặt lại thiết bị:** Nếu các phương pháp trên không giải quyết được vấn đề, bạn có thể thực hiện khôi phục cài đặt gốc bằng cách: Vào **Cài đặt** → **Quản lý chung** → **Đặt lại** → **Khôi phục cài đặt gốc** → **Đặt**.
+
+**Lưu ý:** Nếu sau khi thực hiện các cách trên mà vấn đề vẫn chưa được giải quyết, bạn vui lòng liên hệ với Trung tâm bảo hành của Samsung để được hỗ trợ thêm.
+
+Dưới đây là đoạn trích dẫn từ tài liệu để bạn tham khảo:
+> "[Trang 91] Khởi động lại thiết bị: Nếu thiết bị của bạn bị đơ hoặc treo máy, bạn có thể cần phải tắt các ứng dụng hoặc tắt thiết bị và bật lại.
+> Buộc khởi động lại: Nếu thiết bị của bạn bị treo và không phản hồi, nhấn và giữ phím Cạnh và phím Giảm âm lượng cùng lúc trong hơn 7 giây để khởi động lại.
+> Cài đặt lại thiết bị: Nếu các phương pháp trên vẫn không giải quyết được vấn đề, thực hiện khôi phục lại cài đặt gốc. Khởi chạy ứng dụng Cài đặt và chạm vào Quản lý chung → Đặt lại → Khôi phục cài đặt gốc → Đặt."
+>
+> "[Trang 91] Thiết bị bị treo máy hoặc có lỗi nghiêm trọng: Hãy thử các giải pháp sau. Nếu vẫn chưa giải quyết được vấn đề, liên hệ với Trung tâm bảo hành của Samsung."
+
+#7  [NG]  semantic_gap  CR=False  KW=1.00  2.9s
+     pages => [92, 92, 91, 95]  (expected [19])
      Q: Máy Samsung của tôi bị đơ, không bấm được gì, phải làm sao?
      Q: Chào bạn, rất tiếc khi biết bạn đang gặp vấn đề với thiết bị Samsung của mình. Dựa trên tài liệu hướng dẫn, bạn có thể thử các cách sau để khắc phục tình trạng máy bị đơ hoặc treo:
 
@@ -289,8 +482,8 @@ Sau khi thiết bị đã kết nối thành công với mạng Wi-Fi, thiết b
 
 Hy vọng những thông tin này sẽ giúp bạn khắc phục được lỗi trên thiết bị!
 
-#8  [OK]  semantic_gap  CR=True  KW=1.00  19.7s
-     pages => [7, 6, 6, 8]  (expected [])
+#8  [OK]  semantic_gap  CR=True  KW=1.00  3.0s
+     pages => [7, 6, 6, 8]  (expected [6, 7, 8])
      Q: Samsung của tôi bị nóng quá, có sao không?
      Q: Chào bạn, tôi rất hiểu sự lo lắng của bạn khi điện thoại Samsung bị nóng. Dựa trên tài liệu hướng dẫn, tôi xin giải đáp như sau:
 
@@ -315,8 +508,31 @@ Khi thiết bị nóng lên, các tính năng và hiệu năng có thể bị gi
 *   [Trang 6]: "Nếu thiết bị nóng trong một thời gian dài hoặc trở nên quá nóng, hãy ngưng sử dụng thiết bị một lúc. Nếu thiết bị vẫn nóng, hãy liên hệ với Trung tâm bảo hành của Samsung."
 *   [Trang 7]: "Nếu bạn bắt đầu cảm thấy không thoải mái do thiết bị quá nóng, hãy ngưng sử dụng thiết bị. Khi thiết bị nóng lên, các tính năng và hiệu năng có thể bị giới hạn hoặc thiết bị có thể tắt để nguội đi... Nếu thiết bị quá nóng và đạt đến một nhiệt độ nhất định, một thông điệp cảnh báo sẽ xuất hiện để ngăn ngừa hỏng hóc thiết bị, kích ứng, tổn thương da và rò rỉ pin."
 
-#10  [OK]  code_model  CR=True  KW=1.00  1.8s
-     pages => [15, 1, 16, 16]  (expected [])
+#9  [OK]  semantic_gap  CR=True  KW=1.00  2.7s
+     pages => [22, 67, 22, 22]  (expected [22])
+     Q: Làm cách nào sao chép ảnh từ Samsung qua máy vi tính?
+     Q: Chào bạn, để sao chép hoặc truyền dữ liệu (bao gồm ảnh) từ điện thoại Samsung sang máy tính, bạn có thể sử dụng ứng dụng **Smart Switch**. Dưới đây là hướng dẫn chi tiết dựa trên tài liệu:
+
+**Cách truyền dữ liệu giữa thiết bị và máy tính bằng Smart Switch:**
+
+1. Trên máy tính, hãy truy cập [www.samsung.com/smartswitch](http://www.samsung.com/smartswitch) để tải về và cài đặt ứng dụng Smart Switch.
+2. Khởi chạy ứng dụng Smart Switch trên máy tính.
+3. Kết nối thiết bị của bạn với máy tính bằng cáp USB.
+4. Trên máy tính, làm theo hướng dẫn trên màn hình để thực hiện việc sao lưu hoặc truyền dữ liệu.
+
+**Trích dẫn từ tài liệu:**
+> "[Trang 21] Truyền dữ liệu sao lưu từ máy tính. Truyền dữ liệu giữa thiết bị và máy tính. Bạn phải tải ứng dụng Smart Switch phiên bản cho máy tính về từ www.samsung.com/smartswitch. Sao lưu dữ liệu từ thiết bị trước sang máy tính và nhập dữ liệu vào thiết bị của bạn.
+> 1. Trên máy tính, hãy truy cập www.samsung.com/smartswitch để tải về Smart Switch.
+> 2. Trên máy tính, khởi chạy Smart Switch.
+> 3. Kết nối thiết bị trước của bạn với máy tính bằng cáp USB của thiết bị.
+> 4. Trên máy tính, làm theo hướng dẫn trên màn hình để sao lưu dữ liệu từ thiết bị. Sau đó ngắt kết nối thiết bị trước ra khỏi máy tính.
+> 5. Kết nối thiết bị của bạn với máy tính bằng cáp USB.
+> 6. Trên máy tính, làm theo hướng dẫn trên màn hình để truyền dữ liệu sang thiết bị của bạn."
+
+Hy vọng thông tin này giúp ích cho bạn! Nếu cần hỗ trợ thêm, bạn cứ cho mình biết nhé.
+
+#10  [OK]  code_model  CR=True  KW=1.00  1.9s
+     pages => [15, 1, 16, 16]  (expected [15, 16])
      Q: SM-A125F/DS dùng loại thẻ SIM nào?
      Q: Chào bạn, cảm ơn bạn đã liên hệ hỗ trợ kỹ thuật Samsung.
 
@@ -329,28 +545,42 @@ Thông tin chi tiết được trích dẫn từ tài liệu hướng dẫn sử
 
 Hy vọng thông tin này giúp ích cho bạn! Nếu cần hỗ trợ thêm, bạn đừng ngần ngại đặt câu hỏi nhé.
 
-#11  [OK]  code_model  CR=True  KW=1.00  2.4s
-     pages => [1, 72, 97, 97]  (expected [])
-     Q: Điện thoại SM-A125F/DS có hỗ trợ Dolby Atmos không?
-     Q: Chào bạn, cảm ơn bạn đã liên hệ hỗ trợ Samsung.
+#11  [OK]  code_model  CR=True  KW=1.00  2.9s
+     pages => [97, 72, 97, 9]  (expected [72])
+     Q: Điện thoại Samsung có hỗ trợ Dolby Atmos không?
+     Q: Chào bạn, rất vui được hỗ trợ bạn!
 
-Dựa trên tài liệu hướng dẫn sử dụng của thiết bị SM-A125F/DS, điện thoại của bạn **có hỗ trợ tính năng Dolby Atmos**.
+Điện thoại Samsung có hỗ trợ Dolby Atmos. Bạn có thể trải nghiệm tính năng này để tận hưởng âm thanh vòm được tối ưu hóa cho nhiều thể loại như phim, nhạc và giọng nói.
 
-Dưới đây là thông tin chi tiết được trích dẫn từ tài liệu:
+Dưới đây là thông tin chi tiết từ tài liệu:
 
 **[Trang 71] Cài đặt**
-> "Hiệu ứng và chất lượng âm thanh
-> Cài đặt chất lượng và hiệu ứng âm thanh của thiết bị.
-> Trên màn hình Cài đặt, chạm vào Âm thanh và rung → Hiệu ứng và chất lượng âm thanh.
-> • Dolby Atmos: Chọn một chế độ âm thanh vòm được tối ưu hóa cho các thể loại âm thanh đa dạng như phim, nhạc và giọng nói. Với Dolby Atmos, bạn có thể trải nghiệm dòng chảy âm thanh chuyển động vòng quanh bạn."
+*   **Dolby Atmos:** Chọn một chế độ âm thanh vòm được tối ưu hóa cho các thể loại âm thanh đa dạng như phim, nhạc và giọng nói. Với Dolby Atmos, bạn có thể trải nghiệm dòng chảy âm thanh chuyển động vòng quanh bạn.
 
 **[Trang 96] Thương hiệu**
-> "Sản xuất theo giấy phép của Dolby Laboratories. Dolby, Dolby Atmos và biểu tượng hai chữ D là các thương hiệu của Dolby Laboratories."
+*   Sản xuất theo giấy phép của Dolby Laboratories. Dolby, Dolby Atmos và biểu tượng hai chữ D là các thương hiệu của Dolby Laboratories.
 
-Hy vọng thông tin này hữu ích với bạn! Nếu cần hỗ trợ thêm, bạn đừng ngần ngại đặt câu hỏi nhé.
+Để sử dụng, bạn có thể vào màn hình **Cài đặt**, chọn **Âm thanh và rung**, sau đó chọn **Hiệu ứng và chất lượng âm thanh**.
+
+#12  [OK]  code_model  CR=True  KW=1.00  2.6s
+     pages => [21, 22, 21, 81]  (expected [21, 22])
+     Q: Smart Switch có thể chuyển dữ liệu bằng cách nào?
+     Q: Chào bạn, dựa trên tài liệu được cung cấp, Smart Switch hỗ trợ chuyển dữ liệu bằng các cách sau:
+
+1. **Truyền dữ liệu không dây:** Truyền từ thiết bị trước sang thiết bị của bạn thông qua Wi-Fi Direct.
+2. **Truyền dữ liệu từ thiết bị lưu trữ gắn ngoài:** Kết nối thiết bị lưu trữ gắn ngoài vào điện thoại của bạn và thực hiện khôi phục dữ liệu.
+3. **Truyền dữ liệu từ máy tính:** Bạn cần tải ứng dụng Smart Switch phiên bản dành cho máy tính từ trang web của Samsung, sau đó sao lưu dữ liệu từ thiết bị trước sang máy tính rồi nhập dữ liệu vào thiết bị mới.
+
+**Nội dung trích dẫn chi tiết:**
+
+*   **[Trang 20]** "Truyền dữ liệu không dây: Truyền dữ liệu không dây từ thiết bị trước sang thiết bị của bạn qua Wi-Fi Direct. 1 Trên thiết bị trước, khởi chạy Smart Switch."
+*   **[Trang 21]** "2 Gắn hoặc kết nối thiết bị lưu trữ gắn ngoài vào thiết bị của bạn. 3 Trên thiết bị của bạn, khởi chạy ứng dụng Cài đặt và chạm vào Tài khoản và sao lưu → Smart Switch → → Khôi phục. 4 Làm theo hướng dẫn trên màn hình để truyền dữ liệu từ bộ nhớ gắn ngoài."
+*   **[Trang 21]** "Truyền dữ liệu sao lưu từ máy tính: Truyền dữ liệu giữa thiết bị và máy tính. Bạn phải tải ứng dụng Smart Switch phiên bản cho máy tính về từ www.samsung.com/smartswitch. Sao lưu dữ liệu từ thiết bị trước sang máy tính và nhập dữ liệu"
+
+Hy vọng thông tin này giúp ích cho bạn!
 
 #13  [OK]  code_model  CR=True  KW=1.00  2.6s
-     pages => [56, 91, 92, 4]  (expected [])
+     pages => [56, 91, 92, 4]  (expected [56])
      Q: Samsung Members giúp ích gì khi máy gặp vấn đề?
      Q: Chào bạn, rất vui được hỗ trợ bạn! Khi thiết bị Samsung của bạn gặp vấn đề, ứng dụng **Samsung Members** sẽ giúp ích cho bạn như sau:
 
@@ -369,14 +599,14 @@ Dưới đây là nội dung trích dẫn từ tài liệu để bạn tham kh�
 
 Hy vọng thông tin này hữu ích với bạn! Nếu cần hỗ trợ thêm, bạn cứ thoải mái đặt câu hỏi nhé.
 
-#14  [OK]  out_of_scope  CR=True  KW=1.00  1.5s
+#14  [OK]  out_of_scope  CR=True  KW=1.00  1.6s
      pages => [9, 9, 4, 4]  (expected [])
      Q: Giá bán của sản phẩm này là bao nhiêu?
      Q: Chào bạn, rất vui được hỗ trợ bạn.
 
 Về câu hỏi của bạn, tài liệu không đề cập đến vấn đề này. Các thông tin được cung cấp chỉ bao gồm các lưu ý về phụ kiện, dịch vụ dữ liệu và bản quyền nội dung, không có thông tin về giá bán của sản phẩm.
 
-#15  [OK]  out_of_scope  CR=True  KW=1.00  2.3s
+#15  [OK]  out_of_scope  CR=True  KW=1.00  2.4s
      pages => [4, 9, 92, 97]  (expected [])
      Q: Bảo hành điện thoại Samsung bao lâu?
      Q: Chào bạn, cảm ơn bạn đã liên hệ với bộ phận hỗ trợ kỹ thuật của Samsung.
@@ -393,14 +623,14 @@ Nếu bạn cần biết chính xác thời hạn bảo hành cho thiết bị c
 ============================================================
 VARIANT: hybrid
 ============================================================
-  Total cases : 10
-  Context Rec : None
+  Total cases : 15
+  Context Rec : 1.0
   Keyword Cov : 1.0
-  Avg Latency : 0.0s
+  Avg Latency : 4.173s
 ============================================================
 
-#1  [OK]  general  CR=True  KW=1.00  2.8s
-     pages => [65, 66, 90, 15, 66, 95, 20, 22, 70, 92, 67, 5, 67, 94, 66, 37, 35, 70, 68, 95, 3, 69, 22, 4, 97, 21, 20]  (expected [])
+#1  [OK]  general  CR=True  KW=1.00  3.1s
+     pages => [65, 66, 90, 15, 66, 95, 20, 22, 70, 92, 67, 5, 67, 94, 66, 37, 35, 70, 68, 95, 3, 69, 22, 4, 97, 21, 20]  (expected [65, 66])
      Q: Hãy hướng dẫn kết nối Wifi cho điện thoại Samsung.
      Q: Chào bạn, để kết nối Wi-Fi cho điện thoại Samsung, bạn có thể thực hiện theo các bước hướng dẫn sau đây:
 
@@ -419,7 +649,7 @@ Sau khi thiết bị đã kết nối với mạng Wi-Fi, thiết bị sẽ tự
 > • Nếu bạn không thể kết nối đúng với mạng Wi-Fi, khởi động lại tính năng Wi-Fi của thiết bị hoặc bộ định tuyến không dây."
 
 #2  [OK]  general  CR=True  KW=1.00  2.7s
-     pages => [30, 42, 43, 45, 42, 45, 37, 35, 12, 15, 2, 25, 90, 55, 84, 92, 92, 55, 44, 45, 23, 97, 83, 44]  (expected [])
+     pages => [30, 42, 43, 45, 42, 45, 37, 35, 12, 15, 2, 25, 90, 55, 84, 92, 92, 55, 44, 45, 23, 97, 83, 44]  (expected [30])
      Q: Cách chụp màn hình trên điện thoại Samsung?
      Q: Chào bạn, để chụp màn hình trên điện thoại Samsung, bạn có thể thực hiện theo hướng dẫn sau:
 
@@ -437,8 +667,72 @@ Dưới đây là đoạn trích dẫn từ tài liệu để bạn tham khảo 
 
 Hy vọng thông tin này hữu ích với bạn!
 
+#3  [OK]  general  CR=True  KW=1.00  21.8s
+     pages => [93, 13, 14, 6, 13, 6, 14, 13, 14, 15, 14, 93, 37, 35, 6, 15, 90, 97, 3, 86, 87, 8]  (expected [13, 14])
+     Q: Pin điện thoại Samsung nên sạc như thế nào cho đúng?
+     Q: Chào bạn, để sạc pin điện thoại Samsung đúng cách và an toàn, bạn vui lòng tham khảo các hướng dẫn sau đây từ tài liệu:
+
+**1. Sử dụng thiết bị sạc chính hãng:**
+*   Chỉ sử dụng pin, bộ sạc và cáp được thiết kế đặc biệt dành cho thiết bị của bạn và đã được Samsung chứng nhận. Việc sử dụng các phụ kiện không tương thích có thể gây chấn thương hoặc làm hư hỏng nghiêm trọng thiết bị.
+*   Chỉ sử dụng cáp USB Type-C được cung cấp cùng với thiết bị. Tránh sử dụng cáp Micro USB vì có thể gây hỏng thiết bị.
+*   Không sử dụng dây cáp có vỏ ngoài bị tróc, hư hỏng hoặc bộ sạc/pin bị trục trặc.
+
+**2. Quy trình sạc:**
+*   Sạc pin trước khi sử dụng lần đầu hoặc khi không sử dụng pin trong thời gian dài.
+*   Gắn cáp USB vào bộ cấp nguồn và kết nối vào khe cắm đa năng của thiết bị. Sau khi sạc đầy, hãy ngắt bộ sạc khỏi thiết bị.
+*   Nếu pin hoàn toàn hết, hãy để thiết bị sạc trong vài phút trước khi bật nguồn.
+*   Để tiết kiệm điện năng, hãy tháo bộ sạc khỏi ổ cắm điện khi không sử dụng.
+
+**3. Lưu ý quan trọng khi sạc:**
+*   **Nhiệt độ:** Nếu thiết bị nóng lên trong quá trình sạc, hãy ngắt bộ sạc, đóng các ứng dụng đang chạy và chờ thiết bị hạ nhiệt rồi mới sạc tiếp. Không để thiết bị ở nơi quá nóng hoặc quá lạnh.
+*   **Khe cắm:** Nếu khe cắm đa năng bị ướt, hãy làm khô kỹ trước khi sạc để tránh hư hỏng.
+*   **Sạc không dây:** Không để các vật lạ như đồ kim loại, nam châm, thẻ từ ở giữa thiết bị và bộ sạc không dây.
+*   **Nguồn điện:** Sử dụng nguồn điện không phải từ bộ sạc (như máy tính) có thể làm tốc độ sạc chậm hơn. Nếu nguồn điện không ổn định, màn hình cảm ứng có thể không hoạt động, lúc này bạn hãy rút bộ sạc ra.
+*   **Sử dụng khi sạc:** Bạn có thể sử dụng thiết bị trong khi sạc nhưng quá trình sạc đầy sẽ mất nhiều thời gian hơn.
+
+**Trích dẫn từ tài liệu:**
+> "[Trang 12] Chỉ sử dụng pin, bộ sạc và cáp được thiết kế đặc biệt dành cho thiết bị của bạn và đã được Samsung chứng nhận... Chỉ sử dụng cáp USB Type-C được cung cấp cùng với thiết bị. Thiết bị có thể bị hỏng nếu bạn sử dụng cáp Micro USB."
+> "[Trang 12] Gắn cáp USB vào bộ cấp nguồn USB và gắn cáp vào khe cắm đa năng của thiết bị để sạc pin. Sau khi đã sạc đầy, ngắt bộ sạc khỏi thiết bị."
+> "[Trang 14] Nếu bạn sạc thiết bị khi khe cắm đa năng bị ướt thì thiết bị có thể bị hỏng. Hãy làm khô kỹ khe cắm đa năng trước khi sạc thiết bị."
+> "[Trang 5] Ngắt bộ sạc ra khỏi thiết bị và tắt tất cả các ứng dụng đang chạy. Chờ đến khi thiết bị hạ nhiệt rồi bắt đầu sạc lại."
+
+Nếu thiết bị không sạc được, bạn hãy mang thiết bị và bộ sạc đến Trung tâm bảo hành của Samsung để được hỗ trợ nhé!
+
+#4  [OK]  general  CR=True  KW=1.00  3.1s
+     pages => [22, 22, 81, 22, 21, 21, 81, 82, 81, 21, 43, 65, 81, 22, 18, 82, 41, 82, 82, 45, 38]  (expected [21, 22])
+     Q: Làm thế nào để chuyển dữ liệu từ máy cũ sang máy Samsung mới?
+     Q: Chào bạn, để chuyển dữ liệu từ thiết bị cũ sang máy Samsung mới, bạn có thể sử dụng ứng dụng **Smart Switch**. Dưới đây là các cách thực hiện dựa trên tài liệu hướng dẫn:
+
+### 1. Truyền dữ liệu không dây (qua Wi-Fi Direct)
+*   **Bước 1:** Trên thiết bị cũ, khởi chạy ứng dụng Smart Switch (nếu chưa có, hãy tải từ Galaxy Store hoặc CH Play).
+*   **Bước 2:** Trên thiết bị Samsung mới, vào **Cài đặt** → **Tài khoản và sao lưu** → **Smart Switch**.
+*   **Bước 3:** Đặt hai thiết bị gần nhau.
+*   **Bước 4:** Trên thiết bị cũ, chạm vào **Gửi dữ liệu** → **Không dây**.
+*   **Bước 5:** Trên thiết bị cũ, chạm vào **Cho phép**.
+*   **Bước 6:** Trên thiết bị mới, chọn các mục muốn nhận và chạm vào **Truyền**.
+
+### 2. Truyền dữ liệu qua máy tính
+*   **Bước 1:** Tải và cài đặt Smart Switch phiên bản cho máy tính từ [www.samsung.com/smartswitch](http://www.samsung.com/smartswitch).
+*   **Bước 2:** Khởi chạy Smart Switch trên máy tính.
+*   **Bước 3:** Kết nối thiết bị cũ với máy tính bằng cáp USB, làm theo hướng dẫn trên màn hình để sao lưu dữ liệu, sau đó ngắt kết nối thiết bị cũ.
+*   **Bước 4:** Kết nối thiết bị Samsung mới với máy tính bằng cáp USB.
+*   **Bước 5:** Làm theo hướng dẫn trên màn hình máy tính để truyền dữ liệu sang thiết bị mới.
+
+### 3. Truyền dữ liệu bằng thiết bị lưu trữ gắn ngoài (như thẻ nhớ microSD)
+*   **Bước 1:** Sao lưu dữ liệu từ thiết bị cũ sang bộ nhớ gắn ngoài.
+*   **Bước 2:** Gắn thiết bị lưu trữ đó vào máy Samsung mới.
+*   **Bước 3:** Trên thiết bị mới, vào **Cài đặt** → **Tài khoản và sao lưu** → **Smart Switch** → **Khôi phục**.
+*   **Bước 4:** Làm theo hướng dẫn trên màn hình để truyền dữ liệu.
+
+**Lưu ý quan trọng:**
+*   Không được tháo bộ nhớ gắn ngoài khi thiết bị đang truyền dữ liệu để tránh làm hỏng hoặc mất dữ liệu.
+*   Tính năng này có thể không được hỗ trợ trên một số thiết bị.
+*   Bạn chỉ nên truyền các nội dung mà bạn có quyền sở hữu.
+
+Bạn có thể tham khảo thêm thông tin chi tiết tại trang [www.samsung.com/smartswitch](http://www.samsung.com/smartswitch).
+
 #5  [OK]  semantic_gap  CR=True  KW=1.00  2.6s
-     pages => [66, 21, 22, 22, 20, 38, 66, 81, 65, 81, 70, 69, 65, 70, 22, 41, 41, 4, 83, 67, 81, 70, 82, 67, 23, 66, 39, 69]  (expected [])
+     pages => [66, 21, 22, 22, 20, 38, 66, 81, 65, 81, 70, 69, 65, 70, 22, 41, 41, 4, 83, 67, 81, 70, 82, 67, 23, 66, 39, 69]  (expected [65, 66])
      Q: Làm sao để vào Internet qua Wifi trên máy Samsung?
      Q: Chào bạn, để kết nối Internet qua Wi-Fi trên thiết bị Samsung, bạn có thể thực hiện theo các bước hướng dẫn sau đây:
 
@@ -455,8 +749,34 @@ Sau khi thiết bị đã kết nối thành công với mạng Wi-Fi, thiết b
 > Các mạng với biểu tượng khóa cần có mật mã.
 > • Sau khi thiết bị kết nối với mạng Wi-Fi, thiết bị sẽ kết nối lại với mạng đó mỗi lần mạng này"
 
-#7  [OK]  semantic_gap  CR=True  KW=1.00  3.2s
-     pages => [4, 91, 4, 92, 2, 92, 43, 13, 95, 95, 19, 20, 56, 91, 22, 11, 76, 7, 11, 21, 95, 82, 94, 81, 93, 78, 81, 96]  (expected [])
+#6  [OK]  semantic_gap  CR=True  KW=1.00  3.2s
+     pages => [92, 92, 19, 35, 36, 2, 4, 84, 91, 2, 95, 13, 95, 37, 91, 28, 16, 7, 95, 18, 92, 35, 4, 6, 97, 11, 93]  (expected [19])
+     Q: Điện thoại Samsung bị treo logo, làm thế nào để khắc phục?
+     Q: Chào bạn, nếu điện thoại Samsung của bạn bị treo logo hoặc bị treo máy, bạn có thể thực hiện các bước sau đây để khắc phục:
+
+**1. Khởi động lại thiết bị:**
+Nếu thiết bị bị đơ hoặc treo, bạn có thể tắt các ứng dụng hoặc tắt thiết bị rồi bật lại.
+
+**2. Buộc khởi động lại:**
+Nếu thiết bị bị treo và không phản hồi, hãy nhấn và giữ phím Cạnh và phím Giảm âm lượng cùng lúc trong hơn 7 giây để khởi động lại.
+
+**3. Khôi phục cài đặt gốc:**
+Nếu các phương pháp trên không giải quyết được vấn đề, bạn có thể thực hiện khôi phục cài đặt gốc. 
+*Lưu ý: Hãy nhớ sao lưu toàn bộ dữ liệu quan trọng trước khi thực hiện.*
+Cách thực hiện: Khởi chạy ứng dụng **Cài đặt** → chạm vào **Quản lý chung** → **Đặt lại** → **Khôi phục cài đặt gốc** → **Đặt lại** → **Xóa hết**.
+
+**4. Liên hệ hỗ trợ:**
+Nếu sau khi thực hiện các cách trên mà vấn đề vẫn chưa được giải quyết, bạn vui lòng liên hệ với Trung tâm bảo hành của Samsung để được hỗ trợ.
+
+---
+*Trích dẫn từ tài liệu:*
+> "[Trang 91] Khởi động lại thiết bị: Nếu thiết bị của bạn bị đơ hoặc treo máy, bạn có thể cần phải tắt các ứng dụng hoặc tắt thiết bị và bật lại."
+> "[Trang 91] Buộc khởi động lại: Nếu thiết bị của bạn bị treo và không phản hồi, nhấn và giữ phím Cạnh và phím Giảm âm lượng cùng lúc trong hơn 7 giây để khởi động lại."
+> "[Trang 91] Cài đặt lại thiết bị: Nếu các phương pháp trên vẫn không giải quyết được vấn đề, thực hiện khôi phục lại cài đặt gốc. Khởi chạy ứng dụng Cài đặt và chạm vào Quản lý chung → Đặt lại → Khôi phục cài đặt gốc → Đặt lại → Xóa hết. Trước khi khôi phục lại cài đặt gốc, hãy nhớ sao lưu toàn bộ dữ liệu quan trọng được lưu trong thiết bị."
+> "[Trang 91] Thiết bị bị treo máy hoặc có lỗi nghiêm trọng: Hãy thử các giải pháp sau. Nếu vẫn chưa giải quyết được vấn đề, liên hệ với Trung tâm bảo hành của Samsung."
+
+#7  [OK]  semantic_gap  CR=True  KW=1.00  3.1s
+     pages => [4, 91, 4, 92, 2, 92, 43, 13, 95, 95, 19, 20, 56, 91, 22, 11, 76, 7, 11, 21, 95, 82, 94, 81, 93, 78, 81, 96]  (expected [19])
      Q: Máy Samsung của tôi bị đơ, không bấm được gì, phải làm sao?
      Q: Chào bạn, rất tiếc khi biết thiết bị của bạn đang gặp tình trạng bị đơ. Để khắc phục vấn đề này, bạn có thể thực hiện theo các hướng dẫn từ tài liệu như sau:
 
@@ -477,8 +797,8 @@ Nếu các phương pháp trên vẫn không giải quyết được vấn đề
 
 Nếu sau khi thực hiện các bước trên mà vấn đề vẫn chưa được giải quyết, bạn vui lòng liên hệ với Trung tâm bảo hành của Samsung để được hỗ trợ thêm nhé.
 
-#8  [OK]  semantic_gap  CR=True  KW=1.00  4.1s
-     pages => [6, 6, 8, 15, 82, 7, 6, 81, 82, 8, 81, 7, 8, 21, 7, 82, 8, 82, 21, 6, 81, 7, 93, 20, 81, 8]  (expected [])
+#8  [OK]  semantic_gap  CR=True  KW=1.00  4.3s
+     pages => [6, 6, 8, 15, 82, 7, 6, 81, 82, 8, 81, 7, 8, 21, 7, 82, 8, 82, 21, 6, 81, 7, 93, 20, 81, 8]  (expected [6, 7, 8])
      Q: Samsung của tôi bị nóng quá, có sao không?
      Q: Chào bạn, về vấn đề thiết bị Samsung của bạn bị nóng, mình xin giải đáp dựa trên thông tin từ tài liệu như sau:
 
@@ -503,8 +823,24 @@ Nếu thiết bị nóng quá mức, bạn nên thực hiện các bước sau:
 > "[Trang 5] Nếu bạn dùng các tính năng hoặc ứng dụng nào lâu hay cần nhiều điện năng hơn, thiết bị có thể tạm thời nóng lên do sự gia tăng tiêu thụ pin. Đóng tất cả ứng dụng đang chạy và ngưng sử dụng thiết bị một lúc."
 > "[Trang 6] Nếu thiết bị nóng trong một thời gian dài hoặc trở nên quá nóng, hãy ngưng sử dụng thiết bị một lúc. Nếu thiết bị vẫn nóng, hãy liên hệ với Trung tâm bảo hành của Samsung."
 
-#10  [OK]  code_model  CR=True  KW=1.00  1.8s
-     pages => [15, 16, 1, 16, 66, 16, 17, 17, 91, 18, 15, 91, 2, 17, 10, 49, 18, 9, 18, 78]  (expected [])
+#9  [OK]  semantic_gap  CR=True  KW=1.00  2.9s
+     pages => [22, 22, 81, 21, 82, 81, 81, 97, 81, 67, 22, 52, 68, 82, 21, 43, 21, 42, 62, 82, 94, 38, 67]  (expected [22])
+     Q: Làm cách nào sao chép ảnh từ Samsung qua máy vi tính?
+     Q: Chào bạn, để sao chép hoặc truyền dữ liệu (bao gồm ảnh) từ thiết bị Samsung sang máy tính, bạn có thể sử dụng ứng dụng **Smart Switch**. Dưới đây là các bước thực hiện dựa trên tài liệu hướng dẫn:
+
+1. **Tải và cài đặt:** Trên máy tính, bạn hãy truy cập trang web [www.samsung.com/smartswitch](http://www.samsung.com/smartswitch) để tải về và cài đặt ứng dụng Smart Switch phiên bản dành cho máy tính.
+2. **Kết nối:** Khởi chạy ứng dụng Smart Switch trên máy tính, sau đó kết nối thiết bị Samsung của bạn với máy tính bằng cáp USB.
+3. **Sao lưu/Truyền dữ liệu:** Làm theo các hướng dẫn hiển thị trên màn hình máy tính để thực hiện việc sao lưu hoặc truyền dữ liệu từ thiết bị sang máy tính.
+
+**Trích dẫn từ tài liệu:**
+> "[Trang 21] Truyền dữ liệu sao lưu từ máy tính. Truyền dữ liệu giữa thiết bị và máy tính. Bạn phải tải ứng dụng Smart Switch phiên bản cho máy tính về từ www.samsung.com/smartswitch. Sao lưu dữ liệu từ thiết bị trước sang máy tính và nhập dữ liệu... 3 Kết nối thiết bị trước của bạn với máy tính bằng cáp USB của thiết bị. 4 Trên máy tính, làm theo hướng dẫn trên màn hình để sao lưu dữ liệu từ thiết bị."
+
+Ngoài ra, tài liệu cũng gợi ý rằng bạn có thể đồng bộ ảnh và video với **Microsoft OneDrive** bằng cách kết nối Samsung account và tài khoản Microsoft của mình (Trang 81).
+
+Hy vọng thông tin này giúp ích cho bạn!
+
+#10  [OK]  code_model  CR=True  KW=1.00  1.9s
+     pages => [15, 16, 1, 16, 66, 16, 17, 17, 91, 18, 15, 91, 2, 17, 10, 49, 18, 9, 18, 78]  (expected [15, 16])
      Q: SM-A125F/DS dùng loại thẻ SIM nào?
      Q: Chào bạn, dựa trên tài liệu hướng dẫn sử dụng của thiết bị SM-A125F/DS, mình xin giải đáp thắc mắc của bạn như sau:
 
@@ -516,22 +852,46 @@ Thông tin này được trích dẫn từ tài liệu như sau:
 
 Hy vọng thông tin này hữu ích với bạn! Nếu cần hỗ trợ thêm, bạn cứ thoải mái đặt câu hỏi nhé.
 
-#11  [OK]  code_model  CR=True  KW=1.00  2.6s
-     pages => [97, 1, 35, 72, 94, 89, 97, 35, 3, 72, 84, 4, 89, 71, 90, 9, 37, 71, 36, 56, 94, 9, 34, 88, 36, 3, 4, 4]  (expected [])
-     Q: Điện thoại SM-A125F/DS có hỗ trợ Dolby Atmos không?
-     Q: Chào bạn, cảm ơn bạn đã liên hệ với bộ phận hỗ trợ kỹ thuật của Samsung.
+#11  [OK]  code_model  CR=True  KW=1.00  2.5s
+     pages => [97, 94, 56, 2, 35, 72, 97, 9, 89, 4, 9, 35, 3, 68, 4, 84, 89, 72, 21, 90, 92, 37, 36, 4, 2, 1]  (expected [72])
+     Q: Điện thoại Samsung có hỗ trợ Dolby Atmos không?
+     Q: Chào bạn, cảm ơn bạn đã liên hệ hỗ trợ Samsung.
 
-Dựa trên tài liệu hướng dẫn sử dụng được cung cấp, thiết bị của bạn có hỗ trợ tính năng **Dolby Atmos**. Bạn có thể tìm thấy và tùy chỉnh tính năng này theo hướng dẫn sau:
+Điện thoại Samsung có hỗ trợ tính năng Dolby Atmos. Bạn có thể tìm thấy và tùy chỉnh tính năng này trong phần cài đặt của thiết bị.
 
-*   **Cách truy cập:** Trên màn hình **Cài đặt**, chạm vào **Âm thanh và rung** → **Hiệu ứng và chất lượng âm thanh**.
-*   **Thông tin về tính năng:** "Dolby Atmos: Chọn một chế độ âm thanh vòm được tối ưu hóa cho các thể loại âm thanh đa dạng như phim, nhạc và giọng nói. Với Dolby Atmos, bạn có thể trải nghiệm dòng chảy âm thanh chuyển động vòng quanh bạn."
+Dưới đây là thông tin chi tiết từ tài liệu hướng dẫn:
 
-**Lưu ý:** Tài liệu cũng có đề cập rằng "Tùy vào kiểu máy, bạn phải kết nối tai nghe để sử dụng một số tính năng" và "Một số tính năng có thể không khả dụng tùy theo mẫu máy" (Trang 70, 71).
+**[Trang 71]**
+> **Hiệu ứng và chất lượng âm thanh**
+> Cài đặt chất lượng và hiệu ứng âm thanh của thiết bị.
+> Trên màn hình Cài đặt, chạm vào Âm thanh và rung → Hiệu ứng và chất lượng âm thanh.
+> • **Dolby Atmos**: Chọn một chế độ âm thanh vòm được tối ưu hóa cho các thể loại âm thanh đa dạng như phim, nhạc và giọng nói. Với Dolby Atmos, bạn có thể trải nghiệm dòng chảy âm thanh chuyển động vòng quanh bạn.
+
+Ngoài ra, tài liệu cũng xác nhận thương hiệu này trong phần thông tin bản quyền:
+
+**[Trang 96]**
+> • Sản xuất theo giấy phép của Dolby Laboratories. Dolby, Dolby Atmos và biểu tượng hai chữ D là các thương hiệu của Dolby Laboratories.
 
 Hy vọng thông tin này hữu ích với bạn!
 
-#13  [OK]  code_model  CR=True  KW=1.00  2.6s
-     pages => [56, 91, 95, 93, 4, 2, 4, 94, 92, 93, 4, 94, 49, 92, 11, 95, 75, 49, 23, 60, 11, 76, 63]  (expected [])
+#12  [OK]  code_model  CR=True  KW=1.00  4.4s
+     pages => [22, 81, 21, 21, 22, 81, 81, 81, 21, 88, 68, 22, 22, 96, 69, 67, 4, 65, 77, 82, 66, 68]  (expected [21, 22])
+     Q: Smart Switch có thể chuyển dữ liệu bằng cách nào?
+     Q: Chào bạn, dựa trên tài liệu được cung cấp, Smart Switch hỗ trợ chuyển dữ liệu bằng các cách sau:
+
+1. **Truyền dữ liệu không dây:** Truyền dữ liệu từ thiết bị trước sang thiết bị của bạn qua Wi-Fi Direct.
+   * *Trích dẫn:* "Truyền dữ liệu không dây từ thiết bị trước sang thiết bị của bạn qua Wi-Fi Direct." (Trang 20)
+
+2. **Truyền dữ liệu qua máy tính:** Bạn cần tải ứng dụng Smart Switch phiên bản cho máy tính từ www.samsung.com/smartswitch, sau đó sao lưu dữ liệu từ thiết bị trước vào máy tính rồi nhập dữ liệu đó vào thiết bị mới.
+   * *Trích dẫn:* "Truyền dữ liệu giữa thiết bị và máy tính. Bạn phải tải ứng dụng Smart Switch phiên bản cho máy tính về từ www.samsung.com/smartswitch. Sao lưu dữ liệu từ thiết bị trước sang máy tính và nhập dữ liệu vào thiết bị của bạn." (Trang 21)
+
+3. **Truyền dữ liệu bằng thiết bị lưu trữ gắn ngoài:** Sử dụng các thiết bị như thẻ nhớ microSD để sao lưu dữ liệu từ thiết bị trước, sau đó kết nối thiết bị lưu trữ đó vào thiết bị mới để khôi phục dữ liệu.
+   * *Trích dẫn:* "Truyền dữ liệu bằng bộ nhớ gắn ngoài chẳng hạn như thẻ microSD. 1 Sao lưu dữ liệu từ thiết bị trước sang bộ nhớ gắn ngoài của bạn. 2 Gắn hoặc kết nối thiết bị lưu trữ gắn ngoài vào thiết bị của bạn. 3 Trên thiết bị của bạn, khởi chạy ứng dụng Cài đặt và chạm vào Tài khoản và sao lưu → Smart Switch → → Khôi phục. 4 Làm theo hướng dẫn trên màn hình để truyền dữ liệu từ bộ nhớ gắn ngoài." (Trang 21, 22)
+
+Hy vọng thông tin này giúp ích cho bạn!
+
+#13  [OK]  code_model  CR=True  KW=1.00  2.5s
+     pages => [56, 91, 95, 93, 4, 2, 4, 94, 92, 93, 4, 94, 49, 92, 11, 95, 75, 49, 23, 60, 11, 76, 63]  (expected [56])
      Q: Samsung Members giúp ích gì khi máy gặp vấn đề?
      Q: Chào bạn, khi thiết bị gặp vấn đề, ứng dụng **Samsung Members** sẽ hỗ trợ bạn thông qua các tính năng sau:
 
@@ -548,14 +908,14 @@ Dưới đây là đoạn trích dẫn từ tài liệu để bạn tham khảo 
 > **[Trang 90]**
 > Bạn cũng có thể sử dụng Samsung Members để giải quyết bất cứ vấn đề nào bạn có thể gặp khi sử dụng thiết bị.
 
-#14  [OK]  out_of_scope  CR=True  KW=1.00  1.8s
+#14  [OK]  out_of_scope  CR=True  KW=1.00  1.7s
      pages => [9, 4, 96, 9, 97, 47, 4, 97, 1, 47, 17, 10, 22, 25, 2, 81, 5, 63, 94, 5, 2, 18, 9, 97, 4]  (expected [])
      Q: Giá bán của sản phẩm này là bao nhiêu?
      Q: Chào bạn, cảm ơn bạn đã liên hệ với bộ phận hỗ trợ kỹ thuật của Samsung.
 
 Về câu hỏi của bạn, tài liệu không đề cập đến vấn đề này. Các thông tin trong tài liệu chỉ cung cấp hướng dẫn sử dụng, thông số kỹ thuật và các lưu ý về thiết bị, không bao gồm thông tin về giá bán sản phẩm.
 
-#15  [OK]  out_of_scope  CR=True  KW=1.00  2.4s
+#15  [OK]  out_of_scope  CR=True  KW=1.00  2.5s
      pages => [93, 97, 4, 90, 87, 9, 37, 92, 35, 15, 9, 3, 92, 4, 92, 80, 11, 7, 2, 96, 84, 95, 87, 91, 94, 18]  (expected [])
      Q: Bảo hành điện thoại Samsung bao lâu?
      Q: Chào bạn, cảm ơn bạn đã liên hệ với bộ phận hỗ trợ kỹ thuật của Samsung.
