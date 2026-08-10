@@ -104,7 +104,7 @@ def _format_number(value) -> str:
 
 
 def calculator(expr: str) -> str:
-    print(f"tools đang thực hiện phép tính cho: {expr}")
+    print(f"tools đang thực hiện phép tính cho: {expr}. Ví dụ: 102.3 * 2 ; 100 - 3 * 2 ; etc.")
     try:
         tree = ast.parse(expr, mode="eval")
         return _format_number(_eval_node(tree.body))
