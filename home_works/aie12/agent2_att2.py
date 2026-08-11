@@ -393,8 +393,8 @@ def _short(msg) -> str:
 def main():
     question = "Dân số Việt Nam 2026 nhân đôi cộng dân số nhật bản 2025 nhân 3 bằng bao nhiêu?"
     # run_with_create_agent(question)
-    run_with_manual_grpah(question)
-    # demo_memory_cases()
+    # run_with_manual_grpah(question)
+    demo_memory_cases()
 
 
 if __name__ == "__main__":
