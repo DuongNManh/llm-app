@@ -1,0 +1,241 @@
+# import fitz  # Thư viện PyMuPDF
+# import nltk
+# import pandas as pd
+# import numpy as np
+# import matplotlib.pyplot as plt
+
+# # Tải gói dữ liệu tách câu của NLTK (chỉ cần chạy lần đầu)
+# nltk.download("punkt", quiet=True)
+
+
+# def extract_with_pymupdf(pdf_path):
+#     # Mở file PDF
+#     doc = fitz.open(pdf_path)
+#     structured_data = []
+#     block_location = []  # Danh sách lưu vị trí các block trên trang global
+#     count_blocks_theo_vi_tri = {}  # Dictionary để đếm số lượng block theo vị trí
+#     # 1. Duyệt qua từng trang (Sử dụng enumerate để lấy số thứ tự trang)
+#     for page_idx, page in enumerate(doc):
+#         page_num = page_idx + 1  # Số trang thực tế (bắt đầu từ 1)
+
+#         # Trích xuất văn bản dạng "blocks" để giữ mạch văn bản tốt hơn "text" thô
+#         # Kiểu này giúp gom các dòng thuộc cùng một đoạn lại với nhau trước khi tách câu
+#         blocks = page.get_text("blocks", sort=True)  # sort=True để sắp xếp theo vị trí từ trên xuống dưới
+#         page_text = ""
+#         for block in blocks:
+#             block_location.append(block[0:4])
+#             # Đếm số lượng block theo vị trí
+#             position = tuple(block[0:4])
+#             count_blocks_theo_vi_tri[position] = count_blocks_theo_vi_tri.get(position, 0) + 1
+#             print(f"Trang {page_num} - vị trí {block[0:4]}...")
+#             print(f"Trang {page_num} - Block: {block[4]}...")
+#             print(f"{'-'*40}")
+#             block_text = block[4].strip()  # Vị trí index 4 chứa nội dung text của block
+#             if block_text:
+#                 # Thay thế các dấu xuống dòng đơn lẻ trong block thành dấu cách
+#                 # để tránh câu bị gãy giữa chừng khi gặp xuống dòng (line-break)
+#                 page_text += block_text.replace("\n", " ") + " "
+
+#     # show block location trên pandas và numpy và matplotlib
+#     block_location_array = np.array(block_location)
+#     # Vẽ biểu đồ scatter để hiển thị vị trí các block trên trang
+#     plt.figure(figsize=(8, 10))
+#     plt.scatter(block_location_array[:, 0], block_location_array[:, 1], c='blue', marker='o')
+#     # plt.title(f"Vị trí các block trên trang {page_num}")
+#     plt.xlabel("X")
+#     plt.ylabel("Y")
+#     plt.show()
+    
+#     # tính phần trăm phân bố các block trên trang trên toàn bộ tài liệu
+#     total_blocks = len(block_location)
+#     if total_blocks > 0:
+#         # Tính toán phần trăm phân bố các block
+#         pass
+    
+#     block_location_percentages = []
+#     # tính toán phần tram phân bố các block theo vị trí
+#     for position, count in count_blocks_theo_vi_tri.items():
+#         percentage = (count / total_blocks) * 100
+#         # print(f"Vị trí {position}: {count} block(s), chiếm {percentage:.2f}% tổng số block.")
+#         block_location_percentages.append((position, percentage))
+        
+#     # sort block_location_percentages theo phần trăm giảm dần
+#     block_location_percentages.sort(key=lambda x: x[1], reverse=True)
+    
+#     # show block_location_percentages trên pandas
+#     df_block_location_percentages = pd.DataFrame(block_location_percentages, columns=["Position", "Percentage"])
+#     print(df_block_location_percentages)
+
+#         # # 2. Tách văn bản của trang thành từng câu bằng NLTK
+#         # sentences = nltk.sent_tokenize(page_text)
+
+#         # # 3. Lưu thông tin cấu trúc kèm số trang
+#         # for sentence_idx, sentence in enumerate(sentences):
+#         #     clean_sentence = sentence.strip()
+#         #     if clean_sentence:
+#         #         structured_data.append(
+#         #             {
+#         #                 "page": page_num,
+#         #                 "sentence_index": sentence_idx + 1,
+#         #                 "text": clean_sentence,
+#         #             }
+#         #         )
+
+#     doc.close()
+#     return structured_data
+
+
+# # --- Chạy thử nghiệm ---
+# pdf_file = "documents/huongdansudungSamsung.pdf"  # Thay bằng đường dẫn PDF của bạn
+# results = extract_with_pymupdf(pdf_file)
+
+# # # In thử 3 câu đầu tiên tìm được
+# # for item in results[:3]:
+# #     print(
+# #         f"[Trang {item['page']} - Câu {item['sentence_index']}]: {item['text']}\n"
+# #     )
+
+# # from langchain_community.document_loaders import PyMuPDFLoader
+
+# # def load_pdf_and_print(pdf_path):
+# #     loader = PyMuPDFLoader(pdf_path)
+# #     docs = loader.load()
+# #     for doc in docs:
+# #         print(f"Trang {doc.metadata.get('page', 'N/A')}: {doc.page_content}")
+# #     # return docs
+
+# # load_pdf_and_print(pdf_file)
+
+# # def extract_sentences_from_pdf(pdf_path):
+# #     with fitz.open(pdf_path) as doc:
+# #         all_sentences = []
+# #         for page_idx, page in enumerate(doc):
+# #             page_num = page_idx + 1
+# #             blocks = page.get_text("blocks", sort=True)
+# #             page_text = ""
+# #             for block in blocks:
+# #                 block_text = block[4].strip()
+# #                 if block_text:
+# #                     page_text += block_text.replace("\n", " ") + " "
+# #             sentences = nltk.sent_tokenize(page_text)
+# #             for sentence_idx, sentence in enumerate(sentences):
+# #                 clean_sentence = sentence.strip()
+# #                 if clean_sentence:
+# #                     all_sentences.append(
+# #                         {
+# #                             "page": page_num,
+# #                             "sentence_index": sentence_idx + 1,
+# #                             "text": clean_sentence,
+# #                         }
+# #                     )
+# #     return all_sentences
+
+# # import fitz
+
+# # def heading_based_chunker(pdf_path: str) -> list[dict]:
+# #     toc = {}  # page -> heading chain
+# #     doc = fitz.open(pdf_path)
+# #     for item in doc.get_toc():  # [level, title, page]
+# #         toc[item[2]] = item[1]  # page_num -> section title
+
+# #     chunks = []
+# #     for page_idx, page in enumerate(doc):
+# #         page_num = page_idx + 1
+# #         blocks = page.get_text("blocks")
+# #         current_heading = toc.get(page_num, "")
+# #         page_text = ""
+
+# #         for block in blocks:
+# #             if _is_heading(block):  # detect bold/larger font
+# #                 if page_text.strip():
+# #                     chunks.append({"heading": current_heading, "page": page_num, "text": page_text.strip()})
+# #                     page_text = ""
+# #                 current_heading = block[4].strip()
+# #             else:
+# #                 page_text += block[4].strip().replace("\n", " ") + " "
+
+# #         if page_text.strip():
+# #             chunks.append({"heading": current_heading, "page": page_num, "text": page_text.strip()})
+
+# #     doc.close()
+# #     return chunks
+
+# # def extract_sentences_from_chunks(chunks: list[dict]) -> list[dict]:
+# #     all_sentences = []
+# #     for chunk in chunks:
+# #         sentences = nltk.sent_tokenize(chunk["text"])
+# #         for sentence_idx, sentence in enumerate(sentences):
+# #             clean_sentence = sentence.strip()
+# #             if clean_sentence:
+# #                 all_sentences.append(
+# #                     {
+# #                         "heading": chunk["heading"],
+# #                         "page": chunk["page"],
+# #                         "sentence_index": sentence_idx + 1,
+# #                         "text": clean_sentence,
+# #                     }
+# #                 )
+# #     return all_sentences
+
+# # def _is_heading(block) -> bool:
+# #     # Kiểm tra xem block có phải là heading dựa trên font size và style
+# #     # Đây là một ví dụ đơn giản, bạn có thể điều chỉnh theo nhu cầu
+# #     font_size = block[3]  # Lấy font size từ block
+# #     is_bold = "bold" in block[4].lower()  # Kiểm tra xem text có chứa từ "bold"
+# #     return font_size > 12 or is_bold  # Giả sử heading có font size > 12 hoặc in đậm
+
+# # def main():
+# #     pdf_path = "documents/huongdansudungSamsung.pdf"  # Thay bằng đường dẫn PDF của bạn
+# #     chunks = heading_based_chunker(pdf_path)
+# #     sentences = extract_sentences_from_chunks(chunks)
+    
+# #     # In thử 3 chunks đầu tiên tìm được
+# #     for item in chunks[:3]:
+# #         print(
+# #             f"[Trang {item['page']} - Heading: {item['heading']}]: {item['text']}\n"
+# #         )
+
+# #     # In thử 3 câu đầu tiên tìm được
+# #     for item in sentences[:3]:
+# #         print(
+# #             f"[Trang {item['page']} - Câu {item['sentence_index']} - Heading: {item['heading']}]: {item['text']}\n"
+# #         )
+        
+# # if __name__ == "__main__":
+# #     main()
+
+
+# import fitz  # Thư viện PyMuPDF
+
+# def extract_toc_pymupdf(pdf_path):
+#     doc = fitz.open(pdf_path)
+#     toc = doc.get_toc()  # Lấy bảng mục lục (table of contents)
+    
+#     if not toc:
+#         print("Không tìm thấy mục lục trong tài liệu PDF.")
+#         return []
+    
+#     print(f"Đã tìm thấy {len(toc)} mục lục trong tài liệu PDF.")
+#     print("Mục lục:")
+#     print("=" * 40)
+    
+#     for level, title, page in toc:
+#         indent = " " * (level - 1) * 4
+#         print(f"{indent}- Title: {title}, Page: {page}")
+#     doc.close()
+#     return toc
+
+# def main():
+#     pdf_path = "documents/huongdansudungLG.pdf"  # Thay bằng đường dẫn PDF của bạn
+#     toc = extract_toc_pymupdf(pdf_path)
+    
+#     # Nếu muốn lưu mục lục vào một file CSV
+#     if toc:
+#         import pandas as pd
+#         df_toc = pd.DataFrame(toc, columns=["Level", "Title", "Page"])
+#         df_toc.to_csv("toc_output.csv", index=False)
+#         print("Mục lục đã được lưu vào 'toc_output.csv'.")
+        
+        
+# if __name__ == "__main__":
+#     main()
